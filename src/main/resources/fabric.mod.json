@@ -4,12 +4,12 @@
   "version": "${version}",
 
   "name": "The Winterly",
-  "description": "Tyap-Lyap WinterJam 2021 submission. A mod that adds some winter and holiday-themed things.",
+  "description": "Tyap-Lyap WinterJam 2021 Submission. A Mod revolving around winter and holiday-themed things.",
   "authors": [
-    "PinkGoosik"
-	"Librarian_Night"
-	"Spusik"
-	"aSomik"
+    "PinkGoosik",
+    "Librarian_Night",
+    "Spusik",
+    "aSomik"
   ],
   "contact": {
     "homepage": "https://github.com/tyap-lyap/winterly",
@@ -25,6 +25,7 @@
       "ru.tlmclub.winterly.WinterlyMod"
     ]
   },
+  
   "mixins": [
     "winterly.mixins.json"
   ],
