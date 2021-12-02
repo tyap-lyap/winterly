@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "winterly",
+  "version": "${version}",
+
+  "name": "The Winterly",
+  "description": "Tyap-Lyap WinterJam 2021 submission. A mod that adds some winter and holiday-themed things.",
+  "authors": [
+    "PinkGoosik"
+	"Librarian_Night"
+	"Spusik"
+	"aSomik"
+  ],
+  "contact": {
+    "homepage": "https://github.com/tyap-lyap/winterly",
+    "sources": "https://github.com/tyap-lyap/winterly"
+  },
+
+  "license": "NIT",
+  "icon": "assets/winterly/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "ru.tlmclub.winterly.WinterlyMod"
+    ]
+  },
+  "mixins": [
+    "winterly.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.18.x",
+    "java": ">=17"
+  }
+}
