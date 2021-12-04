@@ -12,7 +12,11 @@ group = project.maven_group
 
 repositories {
 	maven {url "https://maven.pinkgoosik.ru"}
-	maven { url "https://maven.gegy.dev" }
+	maven { url "https://maven.gegy.dev" } //databreaker
+	//maven { url "https://jitpack.io" } //bclib
+	maven { url "https://ladysnake.jfrog.io/artifactory/mods" } //CCA
+	maven { url "https://maven.terraformersmc.com" } //modmenu, trinkets
+	maven { url "https://maven.shedaniel.me" } //rei
 }
 
 dependencies {
@@ -21,10 +25,14 @@ dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	modImplementation "dev.emi:trinkets:${project.trinkets_version}"
+	//modImplementation 'com.github.paulevsgitch:bclib:1.0.0'
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	modRuntime "supercoder79:databreaker:0.2.8"
+	modRuntime "com.terraformersmc:modmenu:3.0.0"
+	modRuntime "me.shedaniel:RoughlyEnoughItems-fabric:7.0.343"
 }
 
 processResources {
