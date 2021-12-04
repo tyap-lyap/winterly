@@ -1,7 +1,9 @@
 package ru.tlmclub.winterly.block;
 
 
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
@@ -12,9 +14,10 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class WinterlyBlocks {
-
     public static final Map<Identifier, BlockItem> ITEMS = new LinkedHashMap<>();
     public static final Map<Identifier, Block> BLOCKS = new LinkedHashMap<>();
+
+    public static final Block RED_PRESENT = add("red_present", new PresentBlock(FabricBlockSettings.copyOf(Blocks.RED_WOOL)));
 
     public static Block add(String name, Block block) {
         Item.Settings settings = new Item.Settings();
