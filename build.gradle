@@ -12,6 +12,7 @@ group = project.maven_group
 
 repositories {
 	maven {url "https://maven.pinkgoosik.ru"}
+	maven { url "https://maven.gegy.dev" }
 }
 
 dependencies {
@@ -22,6 +23,8 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	modRuntime "supercoder79:databreaker:0.2.8"
 }
 
 processResources {
