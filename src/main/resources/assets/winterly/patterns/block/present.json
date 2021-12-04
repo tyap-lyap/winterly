@@ -1,6 +1,6 @@
 {
   "parent": "winterly:block/present_model",
   "textures": {
-    "present": "winterly:block/red_present_model"
+    "present": "%modid%:block/%texture%_model"
   }
 }
