@@ -17,6 +17,7 @@ repositories {
 	maven { url "https://ladysnake.jfrog.io/artifactory/mods" } //CCA
 	maven { url "https://maven.terraformersmc.com" } //modmenu, trinkets
 	maven { url "https://maven.shedaniel.me" } //rei
+	maven { url "https://cursemaven.com"}
 }
 
 dependencies {
@@ -27,6 +28,7 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "dev.emi:trinkets:${project.trinkets_version}"
 	//modImplementation 'com.github.paulevsgitch:bclib:1.0.0'
+	modImplementation "curse.maven:bclib-495191:3548701"
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
