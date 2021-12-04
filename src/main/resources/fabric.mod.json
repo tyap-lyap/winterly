@@ -29,6 +29,8 @@
   "depends": {
     "fabricloader": ">=0.11.3",
     "fabric": "*",
+    "bclib": ">=1.0.0",
+    "trinkets": ">=3.1.0",
     "minecraft": "1.18.x",
     "java": ">=17"
   }
