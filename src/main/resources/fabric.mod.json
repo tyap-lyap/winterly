@@ -16,19 +16,15 @@
     "sources": "https://github.com/tyap-lyap/winterly"
   },
 
-  "license": "NIT",
+  "license": "MIT",
   "icon": "assets/winterly/icon.png",
 
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "ru.tlmclub.winterly.WinterlyMod"
-    ]
+    "main": ["ru.tlmclub.winterly.WinterlyMod"],
+    "client": ["ru.tlmclub.winterly.client.WinterlyClient"]
   },
-  
-  "mixins": [
-    "winterly.mixins.json"
-  ],
+  "mixins": ["winterly.mixins.json"],
 
   "depends": {
     "fabricloader": ">=0.11.3",
