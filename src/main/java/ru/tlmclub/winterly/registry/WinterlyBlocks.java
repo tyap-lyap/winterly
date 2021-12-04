@@ -1,30 +1,39 @@
-package ru.tlmclub.winterly.block;
+package ru.tlmclub.winterly.registry;
 
 
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import static net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings.copyOf;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
+import static net.minecraft.block.Blocks.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
+import ru.bclib.blocks.BaseBlock;
 import ru.tlmclub.winterly.WinterlyMod;
+import ru.tlmclub.winterly.block.PresentBlock;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+@SuppressWarnings("unused")
 public class WinterlyBlocks {
     public static final Map<Identifier, BlockItem> ITEMS = new LinkedHashMap<>();
     public static final Map<Identifier, Block> BLOCKS = new LinkedHashMap<>();
 
-    public static final Block RED_PRESENT = add("red_present", new PresentBlock(FabricBlockSettings.copyOf(Blocks.RED_WOOL)));
+    public static final Block PAPER_BLOCK = add("paper_block", new BaseBlock(copyOf(WHITE_WOOL)));
+    public static final Block PAPER_BRICKS = add("paper_bricks", new BaseBlock(copyOf(WHITE_WOOL)));
 
-    public static Block add(String name, Block block) {
+    public static final Block WHITE_PRESENT = add("white_present", new PresentBlock(copyOf(WHITE_WOOL)));
+    public static final Block RED_PRESENT = add("red_present", new PresentBlock(copyOf(RED_WOOL)));
+    public static final Block GREEN_PRESENT = add("green_present", new PresentBlock(copyOf(GREEN_WOOL)));
+
+    private static Block add(String name, Block block) {
         Item.Settings settings = new Item.Settings();
+        settings.group(WinterlyMod.ITEM_GROUP);
         return addBlockItem(name, block, new BlockItem(block, settings));
     }
 
-    public static Block addBlockItem(String name, Block block, BlockItem item) {
+    private static Block addBlockItem(String name, Block block, BlockItem item) {
         addBlock(name, block);
         if (item != null) {
             item.appendBlocks(Item.BLOCK_ITEMS, item);
@@ -33,7 +42,7 @@ public class WinterlyBlocks {
         return block;
     }
 
-    public static Block addBlock(String name, Block block) {
+    private static Block addBlock(String name, Block block) {
         BLOCKS.put(WinterlyMod.newId(name), block);
         return block;
     }

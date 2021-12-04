@@ -14,12 +14,14 @@ import org.jetbrains.annotations.Nullable;
 import ru.bclib.blocks.BaseBlock;
 import ru.bclib.client.models.ModelsHelper;
 import ru.bclib.client.models.PatternsHelper;
+import ru.bclib.client.render.BCLRenderLayer;
+import ru.bclib.interfaces.RenderLayerProvider;
 import ru.tlmclub.winterly.data.WinterlyPatterns;
 
 import java.util.Optional;
 
 @SuppressWarnings("deprecation")
-public class PresentBlock extends BaseBlock {
+public class PresentBlock extends BaseBlock implements RenderLayerProvider {
     public static final VoxelShape SHAPE = Block.createCuboidShape(2, 0, 2, 14, 14, 14);
 
     public PresentBlock(Settings settings) {
@@ -31,17 +33,16 @@ public class PresentBlock extends BaseBlock {
         return SHAPE;
     }
 
-//    @Environment(EnvType.CLIENT)
-//    @Override
-//    public JsonUnbakedModel getItemModel(Identifier blockId) {
-//        return this.getBlockModel(blockId, this.getDefaultState());
-//    }
-
     @Environment(EnvType.CLIENT)
     @Nullable
     @Override
     public JsonUnbakedModel getBlockModel(Identifier blockId, BlockState blockState) {
         Optional<String> pattern = PatternsHelper.createJson(WinterlyPatterns.PRESENT, blockId);
         return ModelsHelper.fromPattern(pattern);
+    }
+
+    @Override
+    public BCLRenderLayer getRenderLayer() {
+        return BCLRenderLayer.CUTOUT;
     }
 }
