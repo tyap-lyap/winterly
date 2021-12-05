@@ -1,4 +1,16 @@
 {
   "itemGroup.winterly.items": "Winterly",
-  "block.winterly.red_present": "Red Present"
+
+  "item.winterly.candle_hat": "Candle Hat",
+
+  "block.winterly.paper_block": "Paper Block",
+  "block.winterly.paper_bricks": "Paper Bricks",
+
+  "block.winterly.white_present": "White Present",
+  "block.winterly.red_present": "Red Present",
+  "block.winterly.green_present": "Green Present",
+  "block.winterly.blue_present": "Blue Present",
+
+  "misc.winterly.placeable": "Placeable",
+  "misc.winterly.cosmetic": "Cosmetic"
 }

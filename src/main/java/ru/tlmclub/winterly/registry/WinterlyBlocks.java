@@ -26,6 +26,7 @@ public class WinterlyBlocks {
     public static final Block WHITE_PRESENT = add("white_present", new PresentBlock(copyOf(WHITE_WOOL)));
     public static final Block RED_PRESENT = add("red_present", new PresentBlock(copyOf(RED_WOOL)));
     public static final Block GREEN_PRESENT = add("green_present", new PresentBlock(copyOf(GREEN_WOOL)));
+    public static final Block BLUE_PRESENT = add("blue_present", new PresentBlock(copyOf(BLUE_WOOL)));
 
     private static Block add(String name, Block block) {
         Item.Settings settings = new Item.Settings();

@@ -5,7 +5,11 @@ import net.fabricmc.api.Environment;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.render.model.json.JsonUnbakedModel;
+import net.minecraft.item.ItemStack;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
@@ -18,6 +22,7 @@ import ru.bclib.client.render.BCLRenderLayer;
 import ru.bclib.interfaces.RenderLayerProvider;
 import ru.tlmclub.winterly.data.WinterlyPatterns;
 
+import java.util.List;
 import java.util.Optional;
 
 @SuppressWarnings("deprecation")
@@ -34,9 +39,14 @@ public class PresentBlock extends BaseBlock implements RenderLayerProvider {
     }
 
     @Environment(EnvType.CLIENT)
+    public JsonUnbakedModel getItemModel(Identifier id) {
+        return ModelsHelper.createItemModel(id);
+    }
+
+    @Environment(EnvType.CLIENT)
     @Nullable
     @Override
-    public JsonUnbakedModel getBlockModel(Identifier blockId, BlockState blockState) {
+    public JsonUnbakedModel getBlockModel(Identifier blockId, BlockState state) {
         Optional<String> pattern = PatternsHelper.createJson(WinterlyPatterns.PRESENT, blockId);
         return ModelsHelper.fromPattern(pattern);
     }
@@ -44,5 +54,11 @@ public class PresentBlock extends BaseBlock implements RenderLayerProvider {
     @Override
     public BCLRenderLayer getRenderLayer() {
         return BCLRenderLayer.CUTOUT;
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
+        tooltip.add(new TranslatableText("misc.winterly.placeable"));
+        super.appendTooltip(stack, world, tooltip, options);
     }
 }
