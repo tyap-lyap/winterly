@@ -1,0 +1,6 @@
+{
+  "parent": "winterly:item/santa_hat_model",
+  "textures": {
+    "hat": "winterly:item/red_santa_hat_model"
+  }
+}

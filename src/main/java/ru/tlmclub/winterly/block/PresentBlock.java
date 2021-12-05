@@ -10,6 +10,7 @@ import net.minecraft.client.render.model.json.JsonUnbakedModel;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
@@ -58,7 +59,7 @@ public class PresentBlock extends BaseBlock implements RenderLayerProvider {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
-        tooltip.add(new TranslatableText("misc.winterly.placeable"));
+        tooltip.add(new TranslatableText("misc.winterly.placeable").formatted(Formatting.GRAY));
         super.appendTooltip(stack, world, tooltip, options);
     }
 }
