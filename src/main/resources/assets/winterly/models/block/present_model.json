@@ -1,14 +1,12 @@
 {
-	"parent": "block/block",
 	"textures": {
 		"present": "#present",
 		"particle": "#present"
 	},
 	"elements": [
 		{
-			"from": [5, 0, 5],
-			"to": [13, 10, 13],
-			"rotation": {"angle": 0, "axis": "y", "origin": [1, 0, 1]},
+			"from": [4, 0, 4],
+			"to": [12, 10, 12],
 			"faces": {
 				"north": {"uv": [0, 0, 4, 5], "texture": "#present"},
 				"east": {"uv": [0, 0, 4, 5], "texture": "#present"},
@@ -19,29 +17,29 @@
 			}
 		},
 		{
-			"from": [1, 10, 3.5],
-			"to": [1, 26, 19.5],
-			"rotation": {"angle": 45, "axis": "y", "origin": [1, 0, 1]},
+			"from": [7.5, 10, 0],
+			"to": [15.5, 15, 0],
+			"rotation": {"angle": -45, "axis": "y", "origin": [0, 0, 0]},
 			"faces": {
-				"north": {"uv": [0, 0, 0, 8], "texture": "#present"},
-				"east": {"uv": [8, 8, 16, 16], "texture": "#present"},
-				"south": {"uv": [0, 0, 0, 8], "texture": "#present"},
-				"west": {"uv": [0, 8, 8, 16], "texture": "#present"},
-				"up": {"uv": [0, 0, 0, 8], "texture": "#present"},
-				"down": {"uv": [0, 0, 0, 8], "texture": "#present"}
+				"north": {"uv": [2, 13.5, 6, 16], "texture": "#present"},
+				"east": {"uv": [0, 0, 0, 2.5], "texture": "#present"},
+				"south": {"uv": [10, 13.5, 14, 16], "texture": "#present"},
+				"west": {"uv": [0, 0, 0, 2.5], "texture": "#present"},
+				"up": {"uv": [0, 0, 4, 0], "texture": "#present"},
+				"down": {"uv": [0, 0, 4, 0], "texture": "#present"}
 			}
 		},
 		{
-			"from": [-7.5, 10, 12.5],
-			"to": [8.5, 26, 12.5],
-			"rotation": {"angle": 45, "axis": "y", "origin": [1, 0, 1]},
+			"from": [-4, 10, 11.5],
+			"to": [4, 15, 11.5],
+			"rotation": {"angle": 45, "axis": "y", "origin": [0, 0, 0]},
 			"faces": {
-				"north": {"uv": [8, 8, 16, 16], "texture": "#present"},
-				"east": {"uv": [0, 0, 0, 8], "texture": "#present"},
-				"south": {"uv": [0, 8, 8, 16], "texture": "#present"},
-				"west": {"uv": [0, 0, 0, 8], "texture": "#present"},
-				"up": {"uv": [0, 0, 8, 0], "texture": "#present"},
-				"down": {"uv": [0, 0, 8, 0], "texture": "#present"}
+				"north": {"uv": [2, 13.5, 6, 16], "texture": "#present"},
+				"east": {"uv": [0, 0, 0, 2.5], "texture": "#present"},
+				"south": {"uv": [10, 13.5, 14, 16], "texture": "#present"},
+				"west": {"uv": [0, 0, 0, 2.5], "texture": "#present"},
+				"up": {"uv": [0, 0, 4, 0], "texture": "#present"},
+				"down": {"uv": [0, 0, 4, 0], "texture": "#present"}
 			}
 		}
 	]
