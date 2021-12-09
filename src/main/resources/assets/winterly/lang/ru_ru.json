@@ -1,0 +1,20 @@
+{
+  "itemGroup.winterly.items": "Winterly",
+
+  "item.winterly.candle_hat": "Шапка-свечка",
+  "item.winterly.red_santa_hat": "Шапочка Деда Мороза",
+  "item.winterly.blue_santa_hat": "Шапочка Санты",
+  "item.winterly.blue_scarf": "Синий шарф",
+  "item.winterly.red_scarf": "Красный шарф",
+  "item.winterly.green_scarf": "Зелёный шарф",
+
+  "block.winterly.paper_block": "Блок бумаги",
+  "block.winterly.paper_bricks": "Бумажные кирпичи",
+  "block.winterly.white_present": "Белый подарок",
+  "block.winterly.red_present": "Красный подарок",
+  "block.winterly.green_present": "Зелёный подарок",
+  "block.winterly.blue_present": "Синий подарок",
+
+  "misc.winterly.placeable": "Размещаемый предмет",
+  "misc.winterly.cosmetic": "Косметический предмет"
+}
