@@ -8,7 +8,6 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import ru.bclib.blocks.BaseBlock;
 import ru.tlmclub.winterly.WinterlyMod;
 import ru.tlmclub.winterly.block.PresentBlock;
 
@@ -20,8 +19,8 @@ public class WinterlyBlocks {
     public static final Map<Identifier, BlockItem> ITEMS = new LinkedHashMap<>();
     public static final Map<Identifier, Block> BLOCKS = new LinkedHashMap<>();
 
-    public static final Block PAPER_BLOCK = add("paper_block", new BaseBlock(copyOf(WHITE_WOOL)));
-    public static final Block PAPER_BRICKS = add("paper_bricks", new BaseBlock(copyOf(WHITE_WOOL)));
+    public static final Block PAPER_BLOCK = add("paper_block", new Block(copyOf(WHITE_WOOL)));
+    public static final Block PAPER_BRICKS = add("paper_bricks", new Block(copyOf(WHITE_WOOL)));
 
     public static final Block WHITE_PRESENT = add("white_present", new PresentBlock(copyOf(WHITE_WOOL)));
     public static final Block RED_PRESENT = add("red_present", new PresentBlock(copyOf(RED_WOOL)));

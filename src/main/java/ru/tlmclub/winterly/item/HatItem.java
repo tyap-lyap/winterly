@@ -10,26 +10,28 @@ import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.render.item.ItemRenderer;
+import net.minecraft.client.render.model.BakedModel;
 import net.minecraft.client.render.model.json.ModelTransformation;
 import net.minecraft.client.util.ModelIdentifier;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.math.Vec3f;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-import ru.bclib.items.ModelProviderItem;
 
 import java.util.List;
 
-public class SantaHatItem extends ModelProviderItem implements Trinket, TrinketRenderer {
+public class HatItem extends Item implements Trinket, TrinketRenderer {
+    private final ModelIdentifier model;
 
-    public SantaHatItem(Settings settings) {
+    public HatItem(Settings settings, ModelIdentifier model) {
         super(settings);
+        this.model = model;
         TrinketsApi.registerTrinket(this, this);
     }
 
@@ -49,8 +51,9 @@ public class SantaHatItem extends ModelProviderItem implements Trinket, TrinketR
         matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(180.0F));
         matrices.translate(0D, 1D, 0D);
 
-        itemRenderer.renderItem(getDefaultStack(), ModelTransformation.Mode.FIXED, false, matrices, vertexConsumers, light, OverlayTexture.DEFAULT_UV,
-                itemRenderer.getModels().getModelManager().getModel(new ModelIdentifier("winterly:" + Registry.ITEM.getId(this).getPath() + "_on_head#inventory")));
+        BakedModel model = itemRenderer.getModels().getModelManager().getModel(this.model);
+
+        itemRenderer.renderItem(this.getDefaultStack(), ModelTransformation.Mode.FIXED, false, matrices, vertexConsumers, light, OverlayTexture.DEFAULT_UV, model);
         matrices.pop();
     }
 

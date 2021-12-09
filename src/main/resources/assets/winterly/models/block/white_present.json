@@ -1,0 +1,6 @@
+{
+  "parent": "winterly:block/base/present_model",
+  "textures": {
+    "present": "winterly:block/white_present_model"
+  }
+}

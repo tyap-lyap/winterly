@@ -3,26 +3,26 @@ package ru.tlmclub.winterly.client;
 import dev.emi.trinkets.api.client.TrinketRenderer;
 import dev.emi.trinkets.api.client.TrinketRendererRegistry;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.model.ModelLoadingRegistry;
-import net.minecraft.client.util.ModelIdentifier;
-import ru.tlmclub.winterly.WinterlyMod;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.minecraft.client.render.RenderLayer;
+import ru.tlmclub.winterly.block.PresentBlock;
+import ru.tlmclub.winterly.registry.WinterlyBlocks;
 import ru.tlmclub.winterly.registry.WinterlyItems;
 
 public class WinterlyClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        WinterlyModels.register();
 
-        ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) -> {
-            out.accept(new ModelIdentifier(WinterlyMod.MOD_ID + ":red_santa_hat_on_head" + "#inventory"));
-            out.accept(new ModelIdentifier(WinterlyMod.MOD_ID + ":blue_santa_hat_on_head" + "#inventory"));
-            out.accept(new ModelIdentifier(WinterlyMod.MOD_ID + ":candle_hat_on_head" + "#inventory"));
+        BlockRenderLayerMap map = BlockRenderLayerMap.INSTANCE;
+
+        WinterlyBlocks.BLOCKS.forEach((id, block) -> {
+            if(block instanceof PresentBlock) map.putBlock(block, RenderLayer.getCutout());
         });
 
         WinterlyItems.ITEMS.forEach((id, item) -> {
-            if(item instanceof TrinketRenderer renderer) {
-                TrinketRendererRegistry.registerRenderer(item, renderer);
-            }
+            if(item instanceof TrinketRenderer renderer) TrinketRendererRegistry.registerRenderer(item, renderer);
         });
     }
 }

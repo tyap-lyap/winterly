@@ -2,10 +2,14 @@
   "itemGroup.winterly.items": "Winterly",
 
   "item.winterly.candle_hat": "Candle Hat",
+  "item.winterly.red_santa_hat": "Red Santa Hat",
+  "item.winterly.blue_santa_hat": "Blue Santa Hat",
+  "item.winterly.blue_scarf": "Blue Scarf",
+  "item.winterly.red_scarf": "Red Scarf",
+  "item.winterly.green_scarf": "Green Scarf",
 
   "block.winterly.paper_block": "Paper Block",
   "block.winterly.paper_bricks": "Paper Bricks",
-
   "block.winterly.white_present": "White Present",
   "block.winterly.red_present": "Red Present",
   "block.winterly.green_present": "Green Present",

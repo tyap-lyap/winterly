@@ -5,15 +5,11 @@
 
   "name": "Winterly",
   "description": "Tyap-Lyap WinterJam 2021 Submission. A Mod revolving around Winter and Holiday-Themed Things.",
-  "authors": [
-    "PinkGoosik",
-    "Librarian_Night",
-    "Spusik",
-    "aSomik"
-  ],
+  "authors": ["PinkGoosik", "Librarian_Night", "Spusik", "aSomik"],
   "contact": {
     "homepage": "https://github.com/tyap-lyap/winterly",
-    "sources": "https://github.com/tyap-lyap/winterly"
+    "sources": "https://github.com/tyap-lyap/winterly",
+    "issues": "https://github.com/tyap-lyap/winterly/issues"
   },
 
   "license": "MIT",
@@ -27,9 +23,8 @@
   "mixins": ["winterly.mixins.json"],
 
   "depends": {
-    "fabricloader": ">=0.11.3",
+    "fabricloader": ">=0.12",
     "fabric": "*",
-    "bclib": ">=1.0.0",
     "trinkets": ">=3.1.0",
     "minecraft": "1.18.x",
     "java": ">=17"

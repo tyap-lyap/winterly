@@ -8,12 +8,15 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.VertexConsumerProvider;
+import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.render.item.ItemRenderer;
+import net.minecraft.client.render.model.BakedModel;
 import net.minecraft.client.render.model.json.ModelTransformation;
 import net.minecraft.client.util.ModelIdentifier;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
@@ -21,14 +24,15 @@ import net.minecraft.util.Formatting;
 import net.minecraft.util.math.Vec3f;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-import ru.bclib.items.ModelProviderItem;
 
 import java.util.List;
 
-public class CandleHatItem extends ModelProviderItem implements Trinket, TrinketRenderer {
+public class ScarfItem extends Item implements Trinket, TrinketRenderer {
+    private final ModelIdentifier model;
 
-    public CandleHatItem(Settings settings) {
+    public ScarfItem(Settings settings, ModelIdentifier model) {
         super(settings);
+        this.model = model;
         TrinketsApi.registerTrinket(this, this);
     }
 
@@ -43,27 +47,22 @@ public class CandleHatItem extends ModelProviderItem implements Trinket, Trinket
         ItemRenderer itemRenderer = MinecraftClient.getInstance().getItemRenderer();
         matrices.push();
 
-        translateToHead(matrices, entity, headYaw, headPitch);
+        translateToBody(matrices, (BipedEntityModel<?>)contextModel, entity);
         matrices.multiply(Vec3f.POSITIVE_X.getDegreesQuaternion(180.0F));
         matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(180.0F));
-        matrices.translate(0D, 1D, 0D);
+        matrices.translate(0.0D, 0.1D, 0.0D);
 
-        itemRenderer.renderItem(getDefaultStack(), ModelTransformation.Mode.FIXED, false, matrices, vertexConsumers, light, OverlayTexture.DEFAULT_UV,
-                itemRenderer.getModels().getModelManager().getModel(new ModelIdentifier("winterly:candle_hat_on_head#inventory")));
+        BakedModel model = itemRenderer.getModels().getModelManager().getModel(this.model);
+
+        itemRenderer.renderItem(this.getDefaultStack(), ModelTransformation.Mode.FIXED, false, matrices, vertexConsumers, light, OverlayTexture.DEFAULT_UV, model);
         matrices.pop();
     }
 
-    static void translateToHead(MatrixStack matrices, LivingEntity entity, float headYaw, float headPitch) {
-        if (entity.isInSwimmingPose() || entity.isFallFlying()) {
-            matrices.multiply(Vec3f.POSITIVE_Z.getDegreesQuaternion(headPitch));
-            matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(headYaw));
-            matrices.multiply(Vec3f.POSITIVE_X.getDegreesQuaternion(-45.0F));
-        } else {
-            if (entity.isInSneakingPose() && !entity.hasVehicle()) {
-                matrices.translate(0.0F, 0.25F, 0.0F);
-            }
-            matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(headYaw));
-            matrices.multiply(Vec3f.POSITIVE_X.getDegreesQuaternion(headPitch));
+    static void translateToBody(MatrixStack matrices, BipedEntityModel<?> model, LivingEntity player) {
+        if (player.isInSneakingPose() && !model.riding && !player.isSwimming()) {
+            matrices.translate(0.0F, 0.2F, 0.0F);
+            matrices.multiply(Vec3f.POSITIVE_X.getDegreesQuaternion(model.body.pitch * TrinketRenderer.MAGIC_ROTATION));
         }
+        matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(model.body.yaw * TrinketRenderer.MAGIC_ROTATION));
     }
 }

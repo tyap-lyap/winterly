@@ -1,5 +1,5 @@
 {
-  "parent": "winterly:item/santa_hat_model",
+  "parent": "winterly:item/base/santa_hat_model",
   "textures": {
     "hat": "winterly:item/blue_santa_hat_model"
   }
