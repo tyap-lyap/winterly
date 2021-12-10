@@ -16,5 +16,7 @@
   "block.winterly.blue_present": "Синий подарок",
 
   "misc.winterly.placeable": "Размещаемый предмет",
-  "misc.winterly.cosmetic": "Косметический предмет"
+  "misc.winterly.cosmetic": "Косметический предмет",
+
+  "itemGroup.winterly.items.button.discord": "Join Our Discord"
 }
