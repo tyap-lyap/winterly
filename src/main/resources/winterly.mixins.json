@@ -4,8 +4,11 @@
   "package": "ru.tlmclub.winterly.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
+    "common.SkeletonExtension",
+    "common.ZombieExtension"
   ],
   "client": [
+    "client.ArmorRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1

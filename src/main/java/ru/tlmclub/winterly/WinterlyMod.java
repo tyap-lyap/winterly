@@ -27,7 +27,7 @@ public class WinterlyMod implements ModInitializer {
         WinterlyBlocks.register();
     }
 
-    public static Identifier newId(String path){
+    public static Identifier newId(String path) {
         return new Identifier(MOD_ID, path);
     }
 }
