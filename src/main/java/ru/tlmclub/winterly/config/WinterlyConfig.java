@@ -13,6 +13,6 @@ public class WinterlyConfig extends Config {
     public void init() {
         addBoolean("enabled", "decorations_on_mobs", true);
         addBoolean("only_in_winter", "decorations_on_mobs", true);
-        addInteger("chance_percentage", "decorations_on_mobs", 10);
+        addInteger("chance_percentage", "decorations_on_mobs", 15);
     }
 }
