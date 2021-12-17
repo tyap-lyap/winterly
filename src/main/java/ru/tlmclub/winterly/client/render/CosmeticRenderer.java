@@ -32,12 +32,12 @@ public class CosmeticRenderer {
         matrices.pop();
     }
 
-    public static void renderHat(ModelIdentifier model, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, LivingEntity entity, float headYaw, float headPitch) {
+    public static void renderHat(BipedEntityModel<?> contextModel, ModelIdentifier model, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, LivingEntity entity, float headYaw, float headPitch) {
         if(entity.isInvisible()) return;
         ItemRenderer itemRenderer = MinecraftClient.getInstance().getItemRenderer();
         matrices.push();
 
-        translateToHead(matrices, entity, headYaw, headPitch);
+        translateToHead(matrices, contextModel, entity, headYaw, headPitch);
         matrices.multiply(Vec3f.POSITIVE_X.getDegreesQuaternion(180.0F));
         matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(180.0F));
         matrices.translate(0D, 1D, 0D);
@@ -48,13 +48,13 @@ public class CosmeticRenderer {
         matrices.pop();
     }
 
-    static void translateToHead(MatrixStack matrices, LivingEntity entity, float headYaw, float headPitch) {
+    static void translateToHead(MatrixStack matrices, BipedEntityModel<?> model, LivingEntity entity, float headYaw, float headPitch) {
         if (entity.isInSwimmingPose() || entity.isFallFlying()) {
-            matrices.multiply(Vec3f.POSITIVE_Z.getDegreesQuaternion(headPitch));
+            matrices.multiply(Vec3f.POSITIVE_Z.getDegreesQuaternion(model.head.roll));
             matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(headYaw));
             matrices.multiply(Vec3f.POSITIVE_X.getDegreesQuaternion(-45.0F));
         } else {
-            if (entity.isInSneakingPose() && !entity.hasVehicle()) {
+            if (entity.isInSneakingPose() && !model.riding) {
                 matrices.translate(0.0F, 0.25F, 0.0F);
             }
             matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(headYaw));

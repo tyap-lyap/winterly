@@ -2,7 +2,6 @@ package ru.tlmclub.winterly.registry;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
-import net.minecraft.item.ScaffoldingItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import ru.tlmclub.winterly.WinterlyMod;
@@ -21,6 +20,7 @@ public class WinterlyItems {
     public static final Item RED_SANTA_HAT = add("red_santa_hat", new HatItem(settings(), WinterlyModels.RED_SANTA_HAT));
     public static final Item BLUE_SANTA_HAT = add("blue_santa_hat", new HatItem(settings(), WinterlyModels.BLUE_SANTA_HAT));
 
+    public static final Item WHITE_SCARF = add("white_scarf", new ScarfItem(settings(), WinterlyModels.WHITE_SCARF));
     public static final Item RED_SCARF = add("red_scarf", new ScarfItem(settings(), WinterlyModels.RED_SCARF));
     public static final Item GREEN_SCARF = add("green_scarf", new ScarfItem(settings(), WinterlyModels.GREEN_SCARF));
     public static final Item BLUE_SCARF = add("blue_scarf", new ScarfItem(settings(), WinterlyModels.BLUE_SCARF));
@@ -37,8 +37,6 @@ public class WinterlyItems {
     }
 
     public static void register(){
-        for (Identifier id : ITEMS.keySet()) {
-            Registry.register(Registry.ITEM, id, ITEMS.get(id));
-        }
+        ITEMS.forEach((id, item) -> Registry.register(Registry.ITEM, id, item));
     }
 }

@@ -17,6 +17,7 @@ public class WinterlyModels {
     public static final ModelIdentifier RED_SCARF = add("red_scarf_on_body");
     public static final ModelIdentifier GREEN_SCARF = add("green_scarf_on_body");
     public static final ModelIdentifier BLUE_SCARF = add("blue_scarf_on_body");
+    public static final ModelIdentifier WHITE_SCARF = add("white_scarf_on_body");
 
     private static ModelIdentifier add(String model) {
         ModelIdentifier id = new ModelIdentifier(WinterlyMod.MOD_ID + ":" + model + "#inventory");

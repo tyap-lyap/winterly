@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "winterly:block/garland_lights",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "winterly:block/garland_lights",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "winterly:block/garland_lights"
+    },
+    "facing=west": {
+      "model": "winterly:block/garland_lights",
+      "y": 90
+    }
+  }
+}

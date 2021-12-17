@@ -9,8 +9,9 @@ import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.DrownedEntityRenderer;
 import net.minecraft.client.render.entity.SkeletonEntityRenderer;
 import net.minecraft.client.render.entity.ZombieEntityRenderer;
+import ru.tlmclub.winterly.block.GarlandLightsBlock;
 import ru.tlmclub.winterly.block.PresentBlock;
-import ru.tlmclub.winterly.client.render.WinterlyFeatureRenderer;
+import ru.tlmclub.winterly.client.render.DecorationFeatureRenderer;
 import ru.tlmclub.winterly.registry.WinterlyBlocks;
 import ru.tlmclub.winterly.registry.WinterlyItems;
 
@@ -23,6 +24,7 @@ public class WinterlyClient implements ClientModInitializer {
         BlockRenderLayerMap map = BlockRenderLayerMap.INSTANCE;
         WinterlyBlocks.BLOCKS.forEach((id, block) -> {
             if(block instanceof PresentBlock) map.putBlock(block, RenderLayer.getCutout());
+            if(block instanceof GarlandLightsBlock) map.putBlock(block, RenderLayer.getCutout());
         });
         WinterlyItems.ITEMS.forEach((id, item) -> {
             if(item instanceof TrinketRenderer renderer) TrinketRendererRegistry.registerRenderer(item, renderer);
@@ -30,13 +32,13 @@ public class WinterlyClient implements ClientModInitializer {
 
         LivingEntityFeatureRendererRegistrationCallback.EVENT.register((entityType, entityRenderer, registrationHelper, context) -> {
             if(entityRenderer instanceof ZombieEntityRenderer renderer) {
-                registrationHelper.register(new WinterlyFeatureRenderer<>(renderer));
+                registrationHelper.register(new DecorationFeatureRenderer<>(renderer));
             }
             if(entityRenderer instanceof DrownedEntityRenderer renderer) {
-                registrationHelper.register(new WinterlyFeatureRenderer<>(renderer));
+                registrationHelper.register(new DecorationFeatureRenderer<>(renderer));
             }
             if(entityRenderer instanceof SkeletonEntityRenderer renderer) {
-                registrationHelper.register(new WinterlyFeatureRenderer<>(renderer));
+                registrationHelper.register(new DecorationFeatureRenderer<>(renderer));
             }
         });
     }

@@ -10,9 +10,9 @@ import net.minecraft.entity.LivingEntity;
 import ru.tlmclub.winterly.client.WinterlyModels;
 import ru.tlmclub.winterly.extension.DecoratedMob;
 
-public class WinterlyFeatureRenderer<T extends LivingEntity, M extends BipedEntityModel<T>> extends FeatureRenderer<T, M> {
+public class DecorationFeatureRenderer<T extends LivingEntity, M extends BipedEntityModel<T>> extends FeatureRenderer<T, M> {
 
-    public WinterlyFeatureRenderer(FeatureRendererContext<T, M> context) {
+    public DecorationFeatureRenderer(FeatureRendererContext<T, M> context) {
         super(context);
     }
 
@@ -21,7 +21,7 @@ public class WinterlyFeatureRenderer<T extends LivingEntity, M extends BipedEnti
         if(entity instanceof DecoratedMob decorated){
             if(decorated.winterly$decorated()){
                 ModelIdentifier model = WinterlyModels.MODELS.get(decorated.winterly$getIndex());
-                if (model.toString().contains("hat")) CosmeticRenderer.renderHat(model, matrices, vertexConsumers, light, entity, headYaw, headPitch);
+                if (model.toString().contains("hat")) CosmeticRenderer.renderHat(this.getContextModel(), model, matrices, vertexConsumers, light, entity, headYaw, headPitch);
                 else if(model.toString().contains("scarf")) CosmeticRenderer.renderScarf(this.getContextModel(), model, matrices, vertexConsumers, light, entity);
             }
         }

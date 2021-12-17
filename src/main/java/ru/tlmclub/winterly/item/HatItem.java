@@ -6,6 +6,7 @@ import dev.emi.trinkets.api.TrinketsApi;
 import dev.emi.trinkets.api.client.TrinketRenderer;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.render.VertexConsumerProvider;
+import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.util.ModelIdentifier;
 import net.minecraft.client.util.math.MatrixStack;
@@ -38,6 +39,6 @@ public class HatItem extends Item implements Trinket, TrinketRenderer {
 
     @Override
     public void render(ItemStack stack, SlotReference slotReference, EntityModel<? extends LivingEntity> contextModel, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, LivingEntity entity, float limbAngle, float limbDistance, float tickDelta, float animationProgress, float headYaw, float headPitch) {
-        CosmeticRenderer.renderHat(model, matrices, vertexConsumers, light, entity, headYaw, headPitch);
+        CosmeticRenderer.renderHat((BipedEntityModel<?>)contextModel, model, matrices, vertexConsumers, light, entity, headYaw, headPitch);
     }
 }
