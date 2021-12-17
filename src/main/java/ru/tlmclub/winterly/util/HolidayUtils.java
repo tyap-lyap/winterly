@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoField;
 
 public class HolidayUtils {
+    protected HolidayUtils(){}
 
     public static boolean isWinter(){
         LocalDate date = LocalDate.now();

@@ -1,6 +1,8 @@
 package ru.tlmclub.winterly.client.render;
 
 import dev.emi.trinkets.api.client.TrinketRenderer;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.OverlayTexture;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -14,6 +16,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.Items;
 import net.minecraft.util.math.Vec3f;
 
+@Environment(EnvType.CLIENT)
 public class CosmeticRenderer {
 
     public static void renderScarf(BipedEntityModel<?> contextModel, ModelIdentifier model, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, LivingEntity entity) {

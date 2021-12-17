@@ -20,9 +20,13 @@ public class WinterlyModels {
     public static final ModelIdentifier WHITE_SCARF = add("white_scarf_on_body");
 
     private static ModelIdentifier add(String model) {
-        ModelIdentifier id = new ModelIdentifier(WinterlyMod.MOD_ID + ":" + model + "#inventory");
+        ModelIdentifier id = of(model);
         MODELS.add(id);
         return id;
+    }
+
+    public static ModelIdentifier of(String path){
+        return new ModelIdentifier(WinterlyMod.MOD_ID + ":" + path + "#inventory");
     }
 
     public static void register(){

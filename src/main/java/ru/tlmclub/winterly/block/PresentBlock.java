@@ -1,5 +1,7 @@
 package ru.tlmclub.winterly.block;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
@@ -52,6 +54,7 @@ public class PresentBlock extends Block {
         return SHAPE;
     }
 
+    @Environment(EnvType.CLIENT)
     @Override
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
         tooltip.add(new TranslatableText("misc.winterly.placeable").formatted(Formatting.GRAY));
