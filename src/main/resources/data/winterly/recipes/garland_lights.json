@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "RGB"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:glowstone_dust"
+        },
+        "R": {
+            "item": "minecraft:red_dye"
+        },
+        "G": {
+            "item": "minecraft:green_dye"
+        },
+        "B": {
+            "item": "minecraft:blue_dye"
+        }
+    },
+    "result": {
+        "item": "winterly:garland_lights",
+        "count": 8
+    }
+}

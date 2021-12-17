@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "GGG",
+        "GGG"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:string"
+        },
+        "G": {
+            "item": "minecraft:glowstone_dust"
+        }
+    },
+    "result": {
+        "item": "winterly:rainy_garland_lights",
+        "count": 1
+    }
+}
