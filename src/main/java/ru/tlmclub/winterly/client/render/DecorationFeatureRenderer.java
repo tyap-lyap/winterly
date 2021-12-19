@@ -18,8 +18,8 @@ public class DecorationFeatureRenderer<T extends LivingEntity, M extends BipedEn
 
     @Override
     public void render(MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, T entity, float limbAngle, float limbDistance, float tickDelta, float animationProgress, float headYaw, float headPitch) {
-        if(entity instanceof DecoratedMob decorated){
-            if(decorated.winterly$decorated()){
+        if(entity instanceof DecoratedMob decorated) {
+            if(decorated.winterly$decorated()) {
                 ModelIdentifier model = WinterlyModels.MODELS.get(decorated.winterly$getIndex());
                 if (model.toString().contains("hat")) CosmeticRenderer.renderHat(this.getContextModel(), model, matrices, vertexConsumers, light, entity, headYaw, headPitch);
                 else if(model.toString().contains("scarf")) CosmeticRenderer.renderScarf(this.getContextModel(), model, matrices, vertexConsumers, light, entity);

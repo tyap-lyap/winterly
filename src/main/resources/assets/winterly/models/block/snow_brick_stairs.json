@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "winterly:block/snow_bricks",
+    "top": "winterly:block/snow_bricks",
+    "side": "winterly:block/snow_bricks"
+  }
+}

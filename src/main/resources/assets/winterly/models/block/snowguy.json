@@ -1,0 +1,93 @@
+{
+	"textures": {
+		"guy": "winterly:block/snowguy_model",
+		"particle": "minecraft:block/snow"
+	},
+	"elements": [
+		{
+			"from": [4, 0, 4],
+			"to": [12, 8, 12],
+			"faces": {
+				"north": {"uv": [12, 4, 16, 8], "texture": "#guy"},
+				"east": {"uv": [4, 4, 8, 8], "texture": "#guy"},
+				"south": {"uv": [4, 4, 8, 8], "texture": "#guy"},
+				"west": {"uv": [4, 4, 8, 8], "texture": "#guy"},
+				"up": {"uv": [4, 4, 8, 8], "texture": "#guy"},
+				"down": {"uv": [4, 4, 8, 8], "texture": "#guy"}
+			}
+		},
+		{
+			"from": [5, 8, 5],
+			"to": [11, 14, 11],
+			"faces": {
+				"north": {"uv": [13, 0, 16, 3], "texture": "#guy"},
+				"east": {"uv": [5, 0, 8, 3], "texture": "#guy"},
+				"south": {"uv": [5, 0, 8, 3], "texture": "#guy"},
+				"west": {"uv": [5, 0, 8, 3], "texture": "#guy"},
+				"up": {"uv": [5, 0, 8, 3], "texture": "#guy"},
+				"down": {"uv": [5, 0, 8, 3], "texture": "#guy"}
+			}
+		},
+		{
+			"from": [5, 10, 5],
+			"to": [6, 11, 9],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [0, 0, 0]},
+			"faces": {
+				"north": {"uv": [8, 10, 8.5, 10.5], "texture": "#guy"},
+				"east": {"uv": [8, 10, 10, 10.5], "texture": "#guy"},
+				"south": {"uv": [8, 8, 8.5, 8.5], "texture": "#guy"},
+				"west": {"uv": [8, 10, 10, 10.5], "texture": "#guy"},
+				"up": {"uv": [8, 8, 8.5, 10.5], "texture": "#guy"},
+				"down": {"uv": [8, 8, 8.5, 10.5], "texture": "#guy"}
+			}
+		},
+		{
+			"from": [-2, 5, 8],
+			"to": [5, 10, 8],
+			"faces": {
+				"north": {"uv": [4.5, 8, 8, 10.5], "texture": "#guy"},
+				"east": {"uv": [0, 0, 0, 5], "texture": "#guy"},
+				"south": {"uv": [0, 8, 3.5, 10.5], "texture": "#guy"},
+				"west": {"uv": [0, 0, 0, 5], "texture": "#guy"},
+				"up": {"uv": [0, 0, 7, 0], "texture": "#guy"},
+				"down": {"uv": [0, 0, 7, 0], "texture": "#guy"}
+			}
+		},
+		{
+			"from": [11, 5, 8],
+			"to": [18, 10, 8],
+			"faces": {
+				"north": {"uv": [0, 8, 3.5, 10.5], "texture": "#guy"},
+				"east": {"uv": [0, 0, 0, 5], "texture": "#guy"},
+				"south": {"uv": [4.5, 8, 8, 10.5], "texture": "#guy"},
+				"west": {"uv": [0, 0, 0, 5], "texture": "#guy"},
+				"up": {"uv": [0, 0, 7, 0], "texture": "#guy"},
+				"down": {"uv": [0, 0, 7, 0], "texture": "#guy"}
+			}
+		},
+		{
+			"from": [4.5, 13.5, 4.5],
+			"to": [11.5, 14.5, 11.5],
+			"faces": {
+				"north": {"uv": [0, 12.5, 3.5, 13], "texture": "#guy"},
+				"east": {"uv": [0, 15.5, 3.5, 16], "texture": "#guy"},
+				"south": {"uv": [0, 12.5, 3.5, 13], "texture": "#guy"},
+				"west": {"uv": [0, 15.5, 3.5, 16], "texture": "#guy"},
+				"up": {"uv": [0, 12.5, 3.5, 16], "texture": "#guy"},
+				"down": {"uv": [0, 12.5, 3.5, 16], "texture": "#guy"}
+			}
+		},
+		{
+			"from": [5.5, 13.5, 5.5],
+			"to": [10.5, 18.5, 10.5],
+			"faces": {
+				"north": {"uv": [4.5, 13.5, 7, 16], "texture": "#guy"},
+				"east": {"uv": [4.5, 13.5, 7, 16], "texture": "#guy"},
+				"south": {"uv": [4.5, 13.5, 7, 16], "texture": "#guy"},
+				"west": {"uv": [4.5, 13.5, 7, 16], "texture": "#guy"},
+				"up": {"uv": [4.5, 13.5, 7, 16], "texture": "#guy"},
+				"down": {"uv": [4.5, 13.5, 7, 16], "texture": "#guy"}
+			}
+		}
+	]
+}

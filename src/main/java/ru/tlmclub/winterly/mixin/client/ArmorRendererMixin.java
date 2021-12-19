@@ -30,18 +30,18 @@ public abstract class ArmorRendererMixin <T extends LivingEntity, M extends Bipe
     }
 
     @Inject(method = "renderArmor", at = @At("HEAD"), cancellable = true)
-    void render(MatrixStack matrices, VertexConsumerProvider vertexConsumers, T entity, EquipmentSlot armorSlot, int light, A model, CallbackInfo ci){
-        if(entity instanceof PlayerEntity player){
-            if(armorSlot.equals(EquipmentSlot.HEAD)){
+    void render(MatrixStack matrices, VertexConsumerProvider vertexConsumers, T entity, EquipmentSlot armorSlot, int light, A model, CallbackInfo ci) {
+        if(entity instanceof PlayerEntity player) {
+            if(armorSlot.equals(EquipmentSlot.HEAD)) {
                 if(winterly$hasHatOn(player)) ci.cancel();
             }
         }
     }
 
-    boolean winterly$hasHatOn(PlayerEntity player){
+    boolean winterly$hasHatOn(PlayerEntity player) {
         Optional<TrinketComponent> component = TrinketsApi.getTrinketComponent(player);
         if(component.isPresent()){
-            for(Pair<SlotReference, ItemStack> pair : component.get().getAllEquipped()){
+            for(Pair<SlotReference, ItemStack> pair : component.get().getAllEquipped()) {
                 if(pair.getRight().getItem() instanceof HatItem) return true;
             }
         }

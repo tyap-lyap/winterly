@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "winterly:block/snowball_wall",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "winterly:block/snowball_wall"
+    },
+    "facing=south": {
+      "model": "winterly:block/snowball_wall",
+	  "y": 180
+    },
+    "facing=west": {
+      "model": "winterly:block/snowball_wall",
+      "y": 270
+    }
+  }
+}

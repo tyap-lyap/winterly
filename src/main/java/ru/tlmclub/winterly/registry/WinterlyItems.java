@@ -35,7 +35,7 @@ public class WinterlyItems {
         return settings;
     }
 
-    public static void register(){
+    public static void register() {
         ITEMS.forEach((id, item) -> Registry.register(Registry.ITEM, id, item));
     }
 }

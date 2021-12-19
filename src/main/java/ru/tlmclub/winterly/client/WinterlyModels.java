@@ -25,11 +25,11 @@ public class WinterlyModels {
         return id;
     }
 
-    public static ModelIdentifier of(String path){
+    public static ModelIdentifier of(String path) {
         return new ModelIdentifier(WinterlyMod.MOD_ID + ":" + path + "#inventory");
     }
 
-    public static void register(){
+    public static void register() {
         ModelLoadingRegistry.INSTANCE.registerModelProvider((manager, out) -> MODELS.forEach(out));
     }
 }
