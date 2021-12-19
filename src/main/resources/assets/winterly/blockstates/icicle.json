@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "": [
+      { "model": "winterly:block/icicle_1" },
+      { "model": "winterly:block/icicle_2"},
+      { "model": "winterly:block/icicle_3"}
+    ]
+  }
+}

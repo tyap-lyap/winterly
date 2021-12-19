@@ -10,7 +10,9 @@ import net.minecraft.client.render.entity.DrownedEntityRenderer;
 import net.minecraft.client.render.entity.SkeletonEntityRenderer;
 import net.minecraft.client.render.entity.ZombieEntityRenderer;
 import ru.tlmclub.winterly.block.GarlandLightsBlock;
+import ru.tlmclub.winterly.block.IcicleBlock;
 import ru.tlmclub.winterly.block.PresentBlock;
+import ru.tlmclub.winterly.block.SnowguyBlock;
 import ru.tlmclub.winterly.client.render.DecorationFeatureRenderer;
 import ru.tlmclub.winterly.registry.WinterlyBlocks;
 import ru.tlmclub.winterly.registry.WinterlyItems;
@@ -25,6 +27,8 @@ public class WinterlyClient implements ClientModInitializer {
         WinterlyBlocks.BLOCKS.forEach((id, block) -> {
             if(block instanceof PresentBlock) map.putBlock(block, RenderLayer.getCutout());
             if(block instanceof GarlandLightsBlock) map.putBlock(block, RenderLayer.getCutout());
+            if(block instanceof SnowguyBlock) map.putBlock(block, RenderLayer.getCutout());
+            if(block instanceof IcicleBlock) map.putBlock(block, RenderLayer.getCutout());
         });
         WinterlyItems.ITEMS.forEach((id, item) -> {
             if(item instanceof TrinketRenderer renderer) TrinketRendererRegistry.registerRenderer(item, renderer);

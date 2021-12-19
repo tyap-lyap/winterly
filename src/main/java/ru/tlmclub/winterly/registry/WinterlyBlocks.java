@@ -1,14 +1,16 @@
 package ru.tlmclub.winterly.registry;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.SlabBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import ru.tlmclub.winterly.WinterlyMod;
-import ru.tlmclub.winterly.block.GarlandLightsBlock;
-import ru.tlmclub.winterly.block.PresentBlock;
+import ru.tlmclub.winterly.block.*;
+import ru.tlmclub.winterly.block.base.BaseStairsBlock;
+
 import static net.minecraft.block.Blocks.*;
 import static net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings.copyOf;
 
@@ -19,6 +21,13 @@ import java.util.Map;
 public class WinterlyBlocks {
     public static final Map<Identifier, BlockItem> ITEMS = new LinkedHashMap<>();
     public static final Map<Identifier, Block> BLOCKS = new LinkedHashMap<>();
+
+    public static final Block ICICLE = add("icicle", new IcicleBlock(copyOf(ICE)));
+    public static final Block SNOWGUY = add("snowguy", new SnowguyBlock(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
+    public static final Block SNOWBALL_WALL = add("snowball_wall", new SnowballWallBlock(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW).nonOpaque()));
+    public static final Block SNOW_BRICKS = add("snow_bricks", new Block(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
+    public static final Block SNOW_BRICK_STAIRS = add("snow_brick_stairs", new BaseStairsBlock(SNOW_BLOCK.getDefaultState(), copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
+    public static final Block SNOW_BRICK_SLAB = add("snow_brick_slab", new SlabBlock(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
 
     public static final Block PAPER_BLOCK = add("paper_block", new Block(copyOf(WHITE_WOOL)));
     public static final Block PAPER_BRICKS = add("paper_bricks", new Block(copyOf(WHITE_WOOL)));
@@ -62,6 +71,7 @@ public class WinterlyBlocks {
         BLOCKS.put(WinterlyMod.newId(name), block);
         return block;
     }
+
     public static void register(){
         ITEMS.forEach((id, item) -> Registry.register(Registry.ITEM, id, item));
         BLOCKS.forEach((id, block) -> Registry.register(Registry.BLOCK, id, block));

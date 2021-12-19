@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "winterly:block/snowguy",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "winterly:block/snowguy"
+    },
+    "facing=south": {
+      "model": "winterly:block/snowguy",
+	  "y": 180
+    },
+    "facing=west": {
+      "model": "winterly:block/snowguy",
+      "y": 270
+    }
+  }
+}
