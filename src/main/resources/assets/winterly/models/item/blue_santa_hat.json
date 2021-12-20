@@ -1,40 +1,6 @@
 {
-  "parent": "winterly:item/base/santa_hat_model",
+  "parent": "item/generated",
   "textures": {
-    "hat": "winterly:item/blue_santa_hat_model"
-  },
-  "gui_light": "side",
-  "display": {
-    "thirdperson_righthand": {
-      "rotation": [75, 45, 0],
-      "translation": [0, 2.5, 3],
-      "scale": [0.375, 0.375, 0.375]
-    },
-    "firstperson_righthand": {
-      "rotation": [0, 45, 0],
-      "translation": [2.5, 4.5, 0],
-      "scale": [0.4, 0.4, 0.4]
-    },
-    "firstperson_lefthand": {
-      "rotation": [0, -135, 0],
-      "translation": [2.5, 4.5, 0],
-      "scale": [0.4, 0.4, 0.4]
-    },
-    "ground": {
-      "translation": [0, 4, 0],
-      "scale": [0.5, 0.5, 0.5]
-    },
-    "gui": {
-      "rotation": [30, -135, 0],
-      "translation": [0, 4.5, 0],
-      "scale": [0.8, 0.8, 0.8]
-    },
-    "head": {
-      "translation": [0, 16, 0],
-      "scale": [1.7, 1.7, 1.7]
-    },
-    "fixed": {
-      "translation": [0, 6.5, 0]
-    }
+    "layer0": "winterly:item/blue_santa_hat"
   }
 }

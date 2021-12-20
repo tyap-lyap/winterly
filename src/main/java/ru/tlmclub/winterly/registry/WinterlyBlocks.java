@@ -23,8 +23,10 @@ public class WinterlyBlocks {
     public static final Map<Identifier, Block> BLOCKS = new LinkedHashMap<>();
 
     public static final Block ICICLE = add("icicle", new IcicleBlock(copyOf(ICE)));
+    public static final Block ICICLE_BARS = add("icicle_bars", new IcicleBarsBlock(copyOf(ICE)));
     public static final Block SNOWGUY = add("snowguy", new SnowguyBlock(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
     public static final Block SNOWBALL_WALL = add("snowball_wall", new SnowballWallBlock(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW).nonOpaque()));
+    public static final Block DENSE_SNOW = add("dense_snow", new Block(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
     public static final Block SNOW_BRICKS = add("snow_bricks", new Block(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
     public static final Block SNOW_BRICK_STAIRS = add("snow_brick_stairs", new BaseStairsBlock(SNOW_BLOCK.getDefaultState(), copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
     public static final Block SNOW_BRICK_SLAB = add("snow_brick_slab", new SlabBlock(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));

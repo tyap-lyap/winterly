@@ -14,6 +14,7 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
@@ -37,6 +38,7 @@ public class HatItem extends Item implements Trinket, TrinketRenderer {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         tooltip.add(new TranslatableText("misc.winterly.cosmetic").formatted(Formatting.GRAY));
+        tooltip.add(new LiteralText(" "));
         super.appendTooltip(stack, world, tooltip, context);
     }
 

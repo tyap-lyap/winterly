@@ -1,7 +1,7 @@
 {
 	"textures": {
 		"guy": "winterly:block/snowguy_model",
-		"particle": "minecraft:block/snow"
+		"particle": "winterly:block/snow_bricks"
 	},
 	"elements": [
 		{

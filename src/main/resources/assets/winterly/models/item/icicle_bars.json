@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "winterly:item/red_santa_hat"
+    "layer0": "winterly:block/icicle_bars"
   }
 }

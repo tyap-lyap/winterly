@@ -1,9 +1,34 @@
 {
   "variants": {
-    "": [
-      { "model": "winterly:block/icicle_1" },
-      { "model": "winterly:block/icicle_2"},
-      { "model": "winterly:block/icicle_3"}
+    "facing=down": [
+      {"model": "winterly:block/icicle_1", "x": 180},
+      {"model": "winterly:block/icicle_2", "x": 180},
+      {"model": "winterly:block/icicle_3", "x": 180}
+    ],
+    "facing=east": [
+      {"model": "winterly:block/icicle_1", "x": 90, "y": 90},
+      {"model": "winterly:block/icicle_2", "x": 90, "y": 90},
+      {"model": "winterly:block/icicle_3", "x": 90, "y": 90}
+    ],
+    "facing=north": [
+      {"model": "winterly:block/icicle_1", "x": 90},
+      {"model": "winterly:block/icicle_2", "x": 90},
+      {"model": "winterly:block/icicle_3", "x": 90}
+    ],
+    "facing=south": [
+      {"model": "winterly:block/icicle_1", "x": 90, "y": 180},
+      {"model": "winterly:block/icicle_2", "x": 90, "y": 180},
+      {"model": "winterly:block/icicle_3", "x": 90, "y": 180}
+    ],
+    "facing=up": [
+      {"model": "winterly:block/icicle_1"},
+      {"model": "winterly:block/icicle_2"},
+      {"model": "winterly:block/icicle_3"}
+    ],
+    "facing=west": [
+      {"model": "winterly:block/icicle_1", "x": 90, "y": 270},
+      {"model": "winterly:block/icicle_2", "x": 90, "y": 270},
+      {"model": "winterly:block/icicle_3", "x": 90, "y": 270}
     ]
   }
 }
