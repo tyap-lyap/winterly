@@ -2,7 +2,7 @@
 	"parent": "block/block",
 	"textures": {
 		"wall": "winterly:block/snowball_wall",
-		"particle": "minecraft:block/snow"
+		"particle": "winterly:block/snow_bricks"
 	},
 	"elements": [
 		{

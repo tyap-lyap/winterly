@@ -1,16 +1,17 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "##",
-        "##"
+        "###",
+        "###",
+		"###"
     ],
     "key": {
         "#": {
-            "item": "winterly:dense_snow"
+            "item": "minecraft:snow_block"
         }
     },
     "result": {
-        "item": "winterly:snow_bricks",
+        "item": "winterly:dense_snow",
         "count": 4
     }
 }

@@ -22,7 +22,7 @@ import java.util.List;
 
 @SuppressWarnings("deprecation")
 public class SnowguyBlock extends HorizontalFacingBlock {
-    public static final VoxelShape SHAPE = createCuboidShape(2, 0, 2, 14, 14, 14);
+    public static final VoxelShape SHAPE = createCuboidShape(4, 0, 4, 12, 14, 12);
 
     public SnowguyBlock(Settings settings) {
         super(settings);

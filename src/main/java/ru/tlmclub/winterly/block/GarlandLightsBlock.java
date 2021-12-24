@@ -41,12 +41,12 @@ public class GarlandLightsBlock extends Block {
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         Direction direction = state.get(FACING);
-        return this.canPlaceOn(world, pos.offset(direction.getOpposite()), direction);
+        return this.canPlaceOn(world, pos.offset(direction.getOpposite()));
     }
 
-    private boolean canPlaceOn(BlockView world, BlockPos pos, Direction side) {
-        BlockState blockState = world.getBlockState(pos);
-        return blockState.isSideSolidFullSquare(world, pos, side);
+    private boolean canPlaceOn(BlockView world, BlockPos pos) {
+        BlockState state = world.getBlockState(pos);
+        return !state.isAir();
     }
 
     @Nullable

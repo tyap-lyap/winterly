@@ -1,16 +1,16 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        "##",
-        "##"
+        "###",
+        "###"
     ],
     "key": {
         "#": {
-            "item": "winterly:dense_snow"
+            "item": "winterly:icicle"
         }
     },
     "result": {
-        "item": "winterly:snow_bricks",
-        "count": 4
+        "item": "winterly:icicle_bars",
+        "count": 8
     }
 }
