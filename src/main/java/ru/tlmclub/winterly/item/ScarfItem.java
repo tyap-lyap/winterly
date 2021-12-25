@@ -21,9 +21,9 @@ import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
-import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
+import ru.tlmclub.winterly.WinterlyMod;
 import ru.tlmclub.winterly.client.model.WinterlyModels;
 
 import java.util.List;
@@ -50,7 +50,7 @@ public class ScarfItem extends Item implements Trinket, TrinketRenderer {
     public void render(ItemStack stack, SlotReference slotReference, EntityModel<? extends LivingEntity> contextModel, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, LivingEntity entity, float limbAngle, float limbDistance, float tickDelta, float animationProgress, float headYaw, float headPitch) {
         if(contextModel instanceof BipedEntityModel<? extends LivingEntity> biped){
             WinterlyModels.SCARF_MODEL.scarf.copyTransform(biped.body);
-            VertexConsumer vertexConsumer = vertexConsumers.getBuffer(RenderLayer.getEntityCutout(new Identifier("winterly", "textures/entity/" + color + "_scarf.png")));
+            VertexConsumer vertexConsumer = vertexConsumers.getBuffer(RenderLayer.getEntityCutout(WinterlyMod.newId("textures/entity/" + color + "_scarf.png")));
             WinterlyModels.SCARF_MODEL.render(matrices, vertexConsumer, light, OverlayTexture.DEFAULT_UV, 1.0F, 1.0F, 1.0F, 1.0F);
         }
     }

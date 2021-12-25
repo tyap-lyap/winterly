@@ -29,8 +29,8 @@ dependencies {
 	include modImplementation("ru.pinkgoosik:goosik-config:0.2.0-1.17.1-fabric")
 
 	modRuntimeOnly "supercoder79:databreaker:0.2.8"
-	modRuntimeOnly "com.terraformersmc:modmenu:3.0.0"
-	modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:7.0.343"
+	modRuntimeOnly "com.terraformersmc:modmenu:3.0.1"
+	modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:7.1.356"
 }
 
 processResources {

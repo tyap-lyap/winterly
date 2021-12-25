@@ -1,15 +1,10 @@
 package ru.tlmclub.winterly.registry;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.FoodComponent;
-import net.minecraft.item.FoodComponents;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import ru.tlmclub.winterly.WinterlyMod;
-import ru.tlmclub.winterly.item.EdibleItem;
 import ru.tlmclub.winterly.item.SantaHatItem;
 import ru.tlmclub.winterly.item.ScarfItem;
 
