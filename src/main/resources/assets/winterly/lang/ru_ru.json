@@ -1,7 +1,6 @@
 {
   "itemGroup.winterly.items": "Winterly",
 
-  "item.winterly.candle_hat": "Шапка-свечка",
   "item.winterly.red_santa_hat": "Шапочка Деда Мороза",
   "item.winterly.blue_santa_hat": "Шапочка Санты",
   "item.winterly.white_scarf": "Белый шарф",
@@ -10,9 +9,9 @@
   "item.winterly.green_scarf": "Зелёный шарф",
 
   "block.winterly.icicle": "Сосульки",
-  "block.winterly.icicle_bars": "Icicle Bars",
+  "block.winterly.icicle_bars": "Прутья из сосулек",
   "block.winterly.snowguy": "Снежночел",
-  "block.winterly.dense_snow": "Dense Snow",
+  "block.winterly.dense_snow": "Плотный снег",
   "block.winterly.snowball_wall": "Стена из снежков",
   "block.winterly.snow_bricks": "Снежные кирпичи",
   "block.winterly.snow_brick_stairs": "Ступеньки из снежных кирпичей",
@@ -42,7 +41,5 @@
   "block.winterly.yellow_present": "Жёлтый подарок",
 
   "tag.winterly.placeable": "Размещаемый предмет",
-  "tag.winterly.cosmetic": "Косметический предмет",
-
-  "itemGroup.winterly.items.button.discord": "Заходите в наш Дискорд"
+  "tag.winterly.cosmetic": "Косметический предмет"
 }

@@ -18,7 +18,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import ru.tlmclub.winterly.item.HatItem;
+import ru.tlmclub.winterly.item.SantaHatItem;
 
 import java.util.Optional;
 
@@ -42,7 +42,7 @@ public abstract class ArmorRendererMixin <T extends LivingEntity, M extends Bipe
         Optional<TrinketComponent> component = TrinketsApi.getTrinketComponent(player);
         if(component.isPresent()){
             for(Pair<SlotReference, ItemStack> pair : component.get().getAllEquipped()) {
-                if(pair.getRight().getItem() instanceof HatItem) return true;
+                if(pair.getRight().getItem() instanceof SantaHatItem) return true;
             }
         }
         return false;

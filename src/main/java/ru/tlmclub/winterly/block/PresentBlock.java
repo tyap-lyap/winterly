@@ -57,7 +57,7 @@ public class PresentBlock extends Block {
     @Environment(EnvType.CLIENT)
     @Override
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
-        tooltip.add(new TranslatableText("misc.winterly.placeable").formatted(Formatting.GRAY));
+        tooltip.add(new TranslatableText("tag.winterly.placeable").formatted(Formatting.GRAY));
         super.appendTooltip(stack, world, tooltip, options);
     }
 }

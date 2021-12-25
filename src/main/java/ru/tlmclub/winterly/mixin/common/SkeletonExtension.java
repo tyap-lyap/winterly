@@ -65,7 +65,7 @@ public abstract class SkeletonExtension extends AbstractSkeletonEntity implement
                 int chance = WinterlyMod.CONFIG.getInteger("chance_percentage", "decorations_on_mobs");
                 if(chance > 0 && Math.random() < (double)chance / 100) {
                     getDataTracker().set(winterly$DECORATED, true);
-                    getDataTracker().set(winterly$INDEX, world.getRandom().nextInt(6));
+                    getDataTracker().set(winterly$INDEX, world.getRandom().nextInt(5));
                 }
             }
         }

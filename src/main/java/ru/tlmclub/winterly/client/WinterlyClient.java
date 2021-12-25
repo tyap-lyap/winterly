@@ -11,6 +11,7 @@ import net.minecraft.client.render.entity.SkeletonEntityRenderer;
 import net.minecraft.client.render.entity.ZombieEntityRenderer;
 import ru.tlmclub.winterly.block.*;
 import ru.tlmclub.winterly.client.render.DecorationFeatureRenderer;
+import ru.tlmclub.winterly.client.render.MobDecorationRenderers;
 import ru.tlmclub.winterly.registry.WinterlyBlocks;
 import ru.tlmclub.winterly.registry.WinterlyItems;
 
@@ -18,7 +19,8 @@ public class WinterlyClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        WinterlyModels.register();
+        WinterlyModelLayers.register();
+        MobDecorationRenderers.register();
 
         BlockRenderLayerMap map = BlockRenderLayerMap.INSTANCE;
         WinterlyBlocks.BLOCKS.forEach((id, block) -> {

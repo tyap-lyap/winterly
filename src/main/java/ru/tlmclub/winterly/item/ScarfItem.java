@@ -7,6 +7,9 @@ import dev.emi.trinkets.api.client.TrinketRenderer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.client.render.OverlayTexture;
+import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.entity.model.BipedEntityModel;
 import net.minecraft.client.render.entity.model.EntityModel;
@@ -18,26 +21,26 @@ import net.minecraft.text.LiteralText;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
+import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-import ru.tlmclub.winterly.client.WinterlyModels;
-import ru.tlmclub.winterly.client.render.CosmeticRenderer;
+import ru.tlmclub.winterly.client.model.WinterlyModels;
 
 import java.util.List;
 
 public class ScarfItem extends Item implements Trinket, TrinketRenderer {
-    private final String model;
+    private final String color;
 
-    public ScarfItem(Settings settings, String model) {
+    public ScarfItem(Settings settings, String color) {
         super(settings);
-        this.model = model;
+        this.color = color;
         TrinketsApi.registerTrinket(this, this);
     }
 
     @Environment(EnvType.CLIENT)
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(new TranslatableText("misc.winterly.cosmetic").formatted(Formatting.GRAY));
+        tooltip.add(new TranslatableText("tag.winterly.cosmetic").formatted(Formatting.GRAY));
         tooltip.add(new LiteralText(" "));
         super.appendTooltip(stack, world, tooltip, context);
     }
@@ -45,6 +48,10 @@ public class ScarfItem extends Item implements Trinket, TrinketRenderer {
     @Environment(EnvType.CLIENT)
     @Override
     public void render(ItemStack stack, SlotReference slotReference, EntityModel<? extends LivingEntity> contextModel, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, LivingEntity entity, float limbAngle, float limbDistance, float tickDelta, float animationProgress, float headYaw, float headPitch) {
-        CosmeticRenderer.renderScarf((BipedEntityModel<?>)contextModel, WinterlyModels.of(model), matrices, vertexConsumers, light, entity);
+        if(contextModel instanceof BipedEntityModel<? extends LivingEntity> biped){
+            WinterlyModels.SCARF_MODEL.scarf.copyTransform(biped.body);
+            VertexConsumer vertexConsumer = vertexConsumers.getBuffer(RenderLayer.getEntityCutout(new Identifier("winterly", "textures/entity/" + color + "_scarf.png")));
+            WinterlyModels.SCARF_MODEL.render(matrices, vertexConsumer, light, OverlayTexture.DEFAULT_UV, 1.0F, 1.0F, 1.0F, 1.0F);
+        }
     }
 }

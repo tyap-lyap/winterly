@@ -16,7 +16,6 @@ repositories {
 	maven { url "https://ladysnake.jfrog.io/artifactory/mods" } //CCA
 	maven { url "https://maven.terraformersmc.com" } //modmenu, trinkets
 	maven { url "https://maven.shedaniel.me" } //rei
-	maven { url 'https://maven.wispforest.io' } //owo-lib
 }
 
 dependencies {
@@ -26,7 +25,6 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	modImplementation "dev.emi:trinkets:${project.trinkets_version}"
-	modImplementation "io.wispforest:owo-lib:${project.owo_version}"
 
 	include modImplementation("ru.pinkgoosik:goosik-config:0.2.0-1.17.1-fabric")
 

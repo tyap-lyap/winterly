@@ -1,6 +1,0 @@
-{
-  "parent": "winterly:item/base/scarf_model",
-  "textures": {
-    "scarf": "winterly:item/green_scarf_model"
-  }
-}

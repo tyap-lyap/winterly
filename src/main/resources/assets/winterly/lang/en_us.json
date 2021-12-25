@@ -1,7 +1,6 @@
 {
   "itemGroup.winterly.items": "Winterly",
 
-  "item.winterly.candle_hat": "Candle Hat",
   "item.winterly.red_santa_hat": "Red Santa Hat",
   "item.winterly.blue_santa_hat": "Blue Santa Hat",
   "item.winterly.white_scarf": "White Scarf",
@@ -41,8 +40,6 @@
   "block.winterly.purple_present": "Purple Present",
   "block.winterly.yellow_present": "Yellow Present",
 
-  "misc.winterly.placeable": "Placeable",
-  "misc.winterly.cosmetic": "Cosmetic",
-
-  "itemGroup.winterly.items.button.discord": "Join Our Discord"
+  "tag.winterly.placeable": "Placeable",
+  "tag.winterly.cosmetic": "Cosmetic"
 }

@@ -3,8 +3,7 @@ package ru.tlmclub.winterly.util;
 import java.time.LocalDate;
 import java.time.temporal.ChronoField;
 
-public class HolidayUtils {
-    protected HolidayUtils() {}
+public final class HolidayUtils {
 
     public static boolean isWinter() {
         LocalDate date = LocalDate.now();
