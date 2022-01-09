@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "winterly:snow_brick_stairs"
+    "winterly:snow_brick_stairs",
+    "winterly:dense_snow_stairs"
   ]
 }

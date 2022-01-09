@@ -9,9 +9,13 @@
   "item.winterly.green_scarf": "Зелёный шарф",
 
   "block.winterly.icicle": "Сосульки",
+  "block.winterly.icicle_block": "Icicle Block",
   "block.winterly.icicle_bars": "Прутья из сосулек",
+  "block.winterly.icicle_pane": "Icicle Pane",
   "block.winterly.snowguy": "Снежночел",
   "block.winterly.dense_snow": "Плотный снег",
+  "block.winterly.dense_snow_stairs": "Dense Snow Stairs",
+  "block.winterly.dense_snow_slab": "Dense Snow Slab",
   "block.winterly.snowball_wall": "Стена из снежков",
   "block.winterly.snow_bricks": "Снежные кирпичи",
   "block.winterly.snow_brick_stairs": "Ступеньки из снежных кирпичей",

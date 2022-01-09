@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "winterly:block/dense_snow",
+    "top": "winterly:block/dense_snow",
+    "side": "winterly:block/dense_snow"
+  }
+}

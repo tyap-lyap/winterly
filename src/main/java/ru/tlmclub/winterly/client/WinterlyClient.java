@@ -19,8 +19,8 @@ public class WinterlyClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        WinterlyModelLayers.register();
-        MobDecorationRenderers.register();
+        WinterlyModelLayers.init();
+        MobDecorationRenderers.init();
 
         BlockRenderLayerMap map = BlockRenderLayerMap.INSTANCE;
         WinterlyBlocks.BLOCKS.forEach((id, block) -> {
@@ -28,8 +28,11 @@ public class WinterlyClient implements ClientModInitializer {
             if(block instanceof GarlandLightsBlock) map.putBlock(block, RenderLayer.getCutout());
             if(block instanceof SnowguyBlock) map.putBlock(block, RenderLayer.getCutout());
             if(block instanceof IcicleBlock) map.putBlock(block, RenderLayer.getCutout());
-            if(block instanceof IcicleBarsBlock) map.putBlock(block, RenderLayer.getCutout());
         });
+        map.putBlock(WinterlyBlocks.ICICLE_BLOCK, RenderLayer.getTranslucent());
+        map.putBlock(WinterlyBlocks.ICICLE_PANE, RenderLayer.getTranslucent());
+        map.putBlock(WinterlyBlocks.ICICLE_BARS, RenderLayer.getCutout());
+
         WinterlyItems.ITEMS.forEach((id, item) -> {
             if(item instanceof TrinketRenderer renderer) TrinketRendererRegistry.registerRenderer(item, renderer);
         });

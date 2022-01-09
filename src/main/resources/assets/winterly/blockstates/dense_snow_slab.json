@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "winterly:block/dense_snow_slab"
+    },
+    "type=double": {
+      "model": "winterly:block/dense_snow"
+    },
+    "type=top": {
+      "model": "winterly:block/dense_snow_slab_top"
+    }
+  }
+}

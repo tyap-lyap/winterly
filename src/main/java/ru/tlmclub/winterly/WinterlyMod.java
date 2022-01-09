@@ -16,8 +16,8 @@ public class WinterlyMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        WinterlyItems.register();
-        WinterlyBlocks.register();
+        WinterlyItems.init();
+        WinterlyBlocks.init();
     }
 
     private static ItemGroup createItemGroup() {

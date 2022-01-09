@@ -15,7 +15,7 @@ public class WinterlyModelLayers {
         return new EntityModelLayer(newId(name), "main");
     }
 
-    public static void register() {
+    public static void init() {
         registerModelLayer(SANTA_HAT_LAYER, SantaHatModel::getTexturedModelData);
         registerModelLayer(SCARF_LAYER, ScarfModel::getTexturedModelData);
     }

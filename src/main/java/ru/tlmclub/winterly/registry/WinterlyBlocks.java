@@ -1,6 +1,7 @@
 package ru.tlmclub.winterly.registry;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.GlassBlock;
 import net.minecraft.block.SlabBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -9,6 +10,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import ru.tlmclub.winterly.WinterlyMod;
 import ru.tlmclub.winterly.block.*;
+import ru.tlmclub.winterly.block.base.BasePaneBlock;
 import ru.tlmclub.winterly.block.base.BaseStairsBlock;
 
 import static net.minecraft.block.Blocks.*;
@@ -23,10 +25,15 @@ public class WinterlyBlocks {
     public static final Map<Identifier, Block> BLOCKS = new LinkedHashMap<>();
 
     public static final Block ICICLE = add("icicle", new IcicleBlock(copyOf(ICE)));
-    public static final Block ICICLE_BARS = add("icicle_bars", new IcicleBarsBlock(copyOf(ICE)));
+    public static final Block ICICLE_BLOCK = add("icicle_block", new GlassBlock(copyOf(PACKED_ICE).nonOpaque()));
+    public static final Block ICICLE_PANE = add("icicle_pane", new BasePaneBlock(copyOf(PACKED_ICE).nonOpaque()));
+    public static final Block ICICLE_BARS = add("icicle_bars", new BasePaneBlock(copyOf(ICE).nonOpaque()));
     public static final Block SNOWGUY = add("snowguy", new SnowguyBlock(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
     public static final Block SNOWBALL_WALL = add("snowball_wall", new SnowballWallBlock(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW).nonOpaque()));
     public static final Block DENSE_SNOW = add("dense_snow", new Block(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
+    public static final Block DENSE_SNOW_STAIRS = add("dense_snow_stairs", new BaseStairsBlock(SNOW_BLOCK.getDefaultState(), copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
+    public static final Block DENSE_SNOW_SLAB = add("dense_snow_slab", new SlabBlock(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
+
     public static final Block SNOW_BRICKS = add("snow_bricks", new Block(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
     public static final Block SNOW_BRICK_STAIRS = add("snow_brick_stairs", new BaseStairsBlock(SNOW_BLOCK.getDefaultState(), copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
     public static final Block SNOW_BRICK_SLAB = add("snow_brick_slab", new SlabBlock(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
@@ -74,7 +81,7 @@ public class WinterlyBlocks {
         return block;
     }
 
-    public static void register(){
+    public static void init(){
         ITEMS.forEach((id, item) -> Registry.register(Registry.ITEM, id, item));
         BLOCKS.forEach((id, block) -> Registry.register(Registry.BLOCK, id, block));
     }

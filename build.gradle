@@ -30,7 +30,7 @@ dependencies {
 
 	modRuntimeOnly "supercoder79:databreaker:0.2.8"
 	modRuntimeOnly "com.terraformersmc:modmenu:3.0.1"
-	modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:7.1.356"
+	modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:7.1.357"
 }
 
 processResources {

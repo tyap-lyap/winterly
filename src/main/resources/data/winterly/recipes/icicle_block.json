@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+		"###"
+    ],
+    "key": {
+        "#": {
+            "item": "winterly:icicle"
+        }
+    },
+    "result": {
+        "item": "winterly:icicle_block",
+        "count": 1
+    }
+}

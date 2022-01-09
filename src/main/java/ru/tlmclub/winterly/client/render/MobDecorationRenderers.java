@@ -10,7 +10,7 @@ import java.util.List;
 public class MobDecorationRenderers {
     public static final List<MobDecorationRenderer> LIST = new ArrayList<>();
 
-    public static void register() {
+    public static void init() {
         scarf("red_scarf");
         scarf("green_scarf");
         scarf("blue_scarf");
