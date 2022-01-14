@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:iron_shovel"
+  },
+  "addition": {
+    "item": "winterly:cryomarble"
+  },
+  "result": {
+    "item": "winterly:cryomarble_shovel"
+  }
+}

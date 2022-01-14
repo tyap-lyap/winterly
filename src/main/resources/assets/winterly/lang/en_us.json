@@ -1,6 +1,19 @@
 {
   "itemGroup.winterly.items": "Winterly",
 
+  "item.winterly.red_candy_cane": "Red Candy Cane",
+  "item.winterly.green_candy_cane": "Green Candy Cane",
+  "item.winterly.blue_candy_cane": "Blue Candy Cane",
+
+  "item.winterly.cryomarble_shard": "Cryomarble Shard",
+  "item.winterly.cryomarble": "Cryomarble",
+
+  "item.winterly.cryomarble_sword": "Cryomarble Sword",
+  "item.winterly.cryomarble_shovel": "Cryomarble Shovel",
+  "item.winterly.cryomarble_pickaxe": "Cryomarble Pickaxe",
+  "item.winterly.cryomarble_axe": "Cryomarble Axe",
+  "item.winterly.cryomarble_hoe": "Cryomarble Hoe",
+
   "item.winterly.red_santa_hat": "Red Santa Hat",
   "item.winterly.blue_santa_hat": "Blue Santa Hat",
   "item.winterly.white_scarf": "White Scarf",
@@ -20,6 +33,8 @@
   "block.winterly.snow_bricks": "Snow Bricks",
   "block.winterly.snow_brick_stairs": "Snow Brick Stairs",
   "block.winterly.snow_brick_slab": "Snow Brick Slab",
+
+  "block.winterly.raw_cryomarble_shard": "Raw Cryomarble Shard",
 
   "block.winterly.paper_block": "Paper Block",
   "block.winterly.paper_bricks": "Paper Bricks",

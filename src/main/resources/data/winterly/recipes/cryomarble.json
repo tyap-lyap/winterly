@@ -1,17 +1,16 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        " # ",
-        "# #",
-        " # "
+        "##",
+        "##"
     ],
     "key": {
         "#": {
-            "item": "winterly:green_paper_block"
+            "item": "winterly:cryomarble_shard"
         }
     },
     "result": {
-        "item": "winterly:green_present",
+        "item": "winterly:cryomarble",
         "count": 1
     }
 }
