@@ -7,6 +7,7 @@ import net.minecraft.util.Identifier;
 import ru.pinkgoosik.goosikconfig.api.Config;
 import ru.tlmclub.winterly.config.WinterlyConfig;
 import ru.tlmclub.winterly.registry.WinterlyBlocks;
+import ru.tlmclub.winterly.registry.WinterlyFeatures;
 import ru.tlmclub.winterly.registry.WinterlyItems;
 
 public class WinterlyMod implements ModInitializer {
@@ -18,6 +19,7 @@ public class WinterlyMod implements ModInitializer {
     public void onInitialize() {
         WinterlyItems.init();
         WinterlyBlocks.init();
+        WinterlyFeatures.init();
     }
 
     private static ItemGroup createItemGroup() {
