@@ -64,8 +64,8 @@ publishing {
 		maven {
 			url "https://maven.pinkgoosik.ru/"
 			credentials {
-				username System.getenv("MAVEN_REPO_USER")
-				password System.getenv("MAVEN_REPO_PASS")
+				username System.getenv("MAVEN_USER")
+				password System.getenv("MAVEN_PASS")
 			}
 		}
 	}
