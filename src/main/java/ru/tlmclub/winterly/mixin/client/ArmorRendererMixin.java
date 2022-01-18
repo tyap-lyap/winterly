@@ -40,7 +40,7 @@ public abstract class ArmorRendererMixin <T extends LivingEntity, M extends Bipe
 
     boolean winterly$hasHatOn(PlayerEntity player) {
         Optional<TrinketComponent> component = TrinketsApi.getTrinketComponent(player);
-        if(component.isPresent()){
+        if(component.isPresent()) {
             for(Pair<SlotReference, ItemStack> pair : component.get().getAllEquipped()) {
                 if(pair.getRight().getItem() instanceof SantaHatItem) return true;
             }

@@ -6,6 +6,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import ru.tlmclub.winterly.WinterlyMod;
 import ru.tlmclub.winterly.item.*;
+import ru.tlmclub.winterly.item.tool.*;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -30,8 +31,8 @@ public class WinterlyItems {
     public static final Item CRYOMARBLE_SHARD = add("cryomarble_shard", new Item(settings()));
     public static final Item CRYOMARBLE = add("cryomarble", new Item(settings()));
 
-    public static final Item CRYOMARBLE_SWORD = add("cryomarble_sword", new SwordItem(ToolMaterials.DIAMOND, 3, -2.4F, settings()));
-    public static final Item CRYOMARBLE_SHOVEL = add("cryomarble_shovel", new ShovelItem(ToolMaterials.DIAMOND, 1.5F, -3.0F, settings()));
+    public static final Item CRYOMARBLE_SWORD = add("cryomarble_sword", new CryomarbleSwordItem(ToolMaterials.DIAMOND, 3, -2.4F, settings()));
+    public static final Item CRYOMARBLE_SHOVEL = add("cryomarble_shovel", new CryomarbleShovelItem(ToolMaterials.DIAMOND, 1.5F, -3.0F, settings()));
     public static final Item CRYOMARBLE_PICKAXE = add("cryomarble_pickaxe", new CryomarblePickaxeItem(ToolMaterials.DIAMOND, 1, -2.8F, settings()));
     public static final Item CRYOMARBLE_AXE = add("cryomarble_axe", new CryomarbleAxeItem(ToolMaterials.DIAMOND, 5.0F, -3.0F, settings()));
     public static final Item CRYOMARBLE_HOE = add("cryomarble_hoe", new CryomarbleHoeItem(ToolMaterials.DIAMOND, -3, 0.0F, settings()));

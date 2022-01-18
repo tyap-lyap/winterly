@@ -24,6 +24,10 @@ public class WinterlyBlocks {
     public static final Map<Identifier, BlockItem> ITEMS = new LinkedHashMap<>();
     public static final Map<Identifier, Block> BLOCKS = new LinkedHashMap<>();
 
+//    public static final Block RED_SOCK = add("red_sock", new SockBlock(copyOf(CANDLE).sounds(BlockSoundGroup.WOOL)));
+//    public static final Block GREEN_SOCK = add("green_sock", new SockBlock(copyOf(CANDLE).sounds(BlockSoundGroup.WOOL)));
+//    public static final Block BLUE_SOCK = add("blue_sock", new SockBlock(copyOf(CANDLE).sounds(BlockSoundGroup.WOOL)));
+
     public static final Block ICICLE = add("icicle", new IcicleBlock(copyOf(ICE)));
     public static final Block ICICLE_BLOCK = add("icicle_block", new GlassBlock(copyOf(PACKED_ICE).nonOpaque()));
     public static final Block ICICLE_PANE = add("icicle_pane", new BasePaneBlock(copyOf(PACKED_ICE).nonOpaque()));
@@ -83,7 +87,7 @@ public class WinterlyBlocks {
         return block;
     }
 
-    public static void init(){
+    public static void init() {
         ITEMS.forEach((id, item) -> Registry.register(Registry.ITEM, id, item));
         BLOCKS.forEach((id, block) -> Registry.register(Registry.BLOCK, id, block));
     }
