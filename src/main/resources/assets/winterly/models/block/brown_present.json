@@ -1,0 +1,7 @@
+{
+  "parent": "winterly:block/base/present_model",
+  "textures": {
+    "present": "winterly:block/brown_present_model",
+    "particle": "winterly:block/brown_paper_block"
+  }
+}

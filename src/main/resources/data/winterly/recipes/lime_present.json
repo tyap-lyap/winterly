@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "# #",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "winterly:lime_paper_block"
+        }
+    },
+    "result": {
+        "item": "winterly:lime_present",
+        "count": 1
+    }
+}

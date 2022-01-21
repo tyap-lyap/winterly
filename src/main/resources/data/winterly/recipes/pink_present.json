@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "# #",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "winterly:pink_paper_block"
+        }
+    },
+    "result": {
+        "item": "winterly:pink_present",
+        "count": 1
+    }
+}

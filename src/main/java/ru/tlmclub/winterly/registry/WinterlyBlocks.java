@@ -50,6 +50,15 @@ public class WinterlyBlocks {
     public static final Block BLUE_PRESENT = add("blue_present", new PresentBlock(copyOf(BLUE_WOOL)));
     public static final Block PURPLE_PRESENT = add("purple_present", new PresentBlock(copyOf(PURPLE_WOOL)));
     public static final Block YELLOW_PRESENT = add("yellow_present", new PresentBlock(copyOf(YELLOW_WOOL)));
+    public static final Block BLACK_PRESENT = add("black_present", new PresentBlock(copyOf(BLACK_WOOL)));
+    public static final Block LIGHT_BLUE_PRESENT = add("light_blue_present", new PresentBlock(copyOf(LIGHT_BLUE_WOOL)));
+    public static final Block LIME_PRESENT = add("lime_present", new PresentBlock(copyOf(LIME_WOOL)));
+    public static final Block PINK_PRESENT = add("pink_present", new PresentBlock(copyOf(PINK_WOOL)));
+    public static final Block CYAN_PRESENT = add("cyan_present", new PresentBlock(copyOf(CYAN_WOOL)));
+    public static final Block LIGHT_GRAY_PRESENT = add("light_gray_present", new PresentBlock(copyOf(LIGHT_GRAY_WOOL)));
+    public static final Block GRAY_PRESENT = add("gray_present", new PresentBlock(copyOf(GRAY_WOOL)));
+    public static final Block MAGENTA_PRESENT = add("magenta_present", new PresentBlock(copyOf(MAGENTA_WOOL)));
+    public static final Block BROWN_PRESENT = add("brown_present", new PresentBlock(copyOf(BROWN_WOOL)));
 
     public static final Block GARLAND_LIGHTS = add("garland_lights", new GarlandLightsBlock(copyOf(GREEN_WOOL).noCollision().sounds(BlockSoundGroup.CANDLE)));
     public static final Block RAINY_GARLAND_LIGHTS = add("rainy_garland_lights", new GarlandLightsBlock(copyOf(WHITE_WOOL).noCollision().sounds(BlockSoundGroup.CANDLE)));
@@ -66,6 +75,24 @@ public class WinterlyBlocks {
     public static final Block PURPLE_PAPER_BRICKS = add("purple_paper_bricks", new Block(copyOf(PURPLE_WOOL)));
     public static final Block YELLOW_PAPER_BLOCK = add("yellow_paper_block", new Block(copyOf(YELLOW_WOOL)));
     public static final Block YELLOW_PAPER_BRICKS = add("yellow_paper_bricks", new Block(copyOf(YELLOW_WOOL)));
+    public static final Block BLACK_PAPER_BLOCK = add("black_paper_block", new Block(copyOf(BLACK_WOOL)));
+    public static final Block BLACK_PAPER_BRICKS = add("black_paper_bricks", new Block(copyOf(BLACK_WOOL)));
+    public static final Block LIGHT_BLUE_PAPER_BLOCK = add("light_blue_paper_block", new Block(copyOf(LIGHT_BLUE_WOOL)));
+    public static final Block LIGHT_BLUE_PAPER_BRICKS = add("light_blue_paper_bricks", new Block(copyOf(LIGHT_BLUE_WOOL)));
+    public static final Block LIME_PAPER_BLOCK = add("lime_paper_block", new Block(copyOf(LIME_WOOL)));
+    public static final Block LIME_PAPER_BRICKS = add("lime_paper_bricks", new Block(copyOf(LIME_WOOL)));
+    public static final Block PINK_PAPER_BLOCK = add("pink_paper_block", new Block(copyOf(PINK_WOOL)));
+    public static final Block PINK_PAPER_BRICKS = add("pink_paper_bricks", new Block(copyOf(PINK_WOOL)));
+    public static final Block CYAN_PAPER_BLOCK = add("cyan_paper_block", new Block(copyOf(CYAN_WOOL)));
+    public static final Block CYAN_PAPER_BRICKS = add("cyan_paper_bricks", new Block(copyOf(CYAN_WOOL)));
+    public static final Block LIGHT_GRAY_PAPER_BLOCK = add("light_gray_paper_block", new Block(copyOf(LIGHT_GRAY_WOOL)));
+    public static final Block LIGHT_GRAY_PAPER_BRICKS = add("light_gray_paper_bricks", new Block(copyOf(LIGHT_GRAY_WOOL)));
+    public static final Block GRAY_PAPER_BLOCK = add("gray_paper_block", new Block(copyOf(GRAY_WOOL)));
+    public static final Block GRAY_PAPER_BRICKS = add("gray_paper_bricks", new Block(copyOf(GRAY_WOOL)));
+    public static final Block MAGENTA_PAPER_BLOCK = add("magenta_paper_block", new Block(copyOf(MAGENTA_WOOL)));
+    public static final Block MAGENTA_PAPER_BRICKS = add("magenta_paper_bricks", new Block(copyOf(MAGENTA_WOOL)));
+    public static final Block BROWN_PAPER_BLOCK = add("brown_paper_block", new Block(copyOf(BROWN_WOOL)));
+    public static final Block BROWN_PAPER_BRICKS = add("brown_paper_bricks", new Block(copyOf(BROWN_WOOL)));
 
     private static Block add(String name, Block block) {
         Item.Settings settings = new Item.Settings();

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+	"all": "winterly:block/magenta_paper_block"  
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "##",
+        "##"
+    ],
+    "key": {
+        "#": {
+            "item": "winterly:gray_paper_block"
+        }
+    },
+    "result": {
+        "item": "winterly:gray_paper_bricks",
+        "count": 4
+    }
+}

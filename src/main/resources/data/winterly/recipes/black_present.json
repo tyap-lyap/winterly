@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " # ",
+        "# #",
+        " # "
+    ],
+    "key": {
+        "#": {
+            "item": "winterly:black_paper_block"
+        }
+    },
+    "result": {
+        "item": "winterly:black_present",
+        "count": 1
+    }
+}
