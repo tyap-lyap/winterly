@@ -61,11 +61,13 @@ public abstract class SkeletonExtension extends AbstractSkeletonEntity implement
     public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, EntityData entityData, NbtCompound entityNbt){
         entityData = super.initialize(world, difficulty, spawnReason, entityData, entityNbt);
         if(!spawnReason.equals(SpawnReason.SPAWNER) && !spawnReason.equals(SpawnReason.CHUNK_GENERATION)) {
-            if(WinterlyMod.CONFIG.getBoolean("enabled", "decorations_on_mobs") && HolidayUtils.isWinter() || !WinterlyMod.CONFIG.getBoolean("only_in_winter", "decorations_on_mobs")) {
-                int chance = WinterlyMod.CONFIG.getInteger("chance_percentage", "decorations_on_mobs");
-                if(chance > 0 && Math.random() < (double)chance / 100) {
-                    getDataTracker().set(winterly$DECORATED, true);
-                    getDataTracker().set(winterly$INDEX, world.getRandom().nextInt(5));
+            if(WinterlyMod.CONFIG.getBoolean("enabled", "decorations_on_mobs") && HolidayUtils.isWinter() || !WinterlyMod.CONFIG.getBoolean("thonly_in_winter", "decorations_on_mobs")) {
+                if(!this.world.getRegistryKey().equals(World.NETHER)) {
+                    int chance = WinterlyMod.CONFIG.getInteger("chance_percentage", "decorations_on_mobs");
+                    if(chance > 0 && Math.random() < (double)chance / 100) {
+                        getDataTracker().set(winterly$DECORATED, true);
+                        getDataTracker().set(winterly$INDEX, world.getRandom().nextInt(5));
+                    }
                 }
             }
         }

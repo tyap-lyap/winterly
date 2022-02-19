@@ -62,11 +62,14 @@ public abstract class ZombieExtension extends HostileEntity implements Decorated
     void initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, EntityData entityData, NbtCompound entityNbt, CallbackInfoReturnable<EntityData> cir) {
         if(!spawnReason.equals(SpawnReason.SPAWNER) && !spawnReason.equals(SpawnReason.CHUNK_GENERATION) && !isBaby()) {
             if(WinterlyMod.CONFIG.getBoolean("enabled", "decorations_on_mobs") && HolidayUtils.isWinter() || !WinterlyMod.CONFIG.getBoolean("only_in_winter", "decorations_on_mobs")) {
-                int chance = WinterlyMod.CONFIG.getInteger("chance_percentage", "decorations_on_mobs");
-                if(chance > 0 && Math.random() < (double)chance / 100) {
-                    getDataTracker().set(winterly$DECORATED, true);
-                    getDataTracker().set(winterly$INDEX, world.getRandom().nextInt(5));
+                if(!this.world.getRegistryKey().equals(World.NETHER)) {
+                    int chance = WinterlyMod.CONFIG.getInteger("chance_percentage", "decorations_on_mobs");
+                    if(chance > 0 && Math.random() < (double)chance / 100) {
+                        getDataTracker().set(winterly$DECORATED, true);
+                        getDataTracker().set(winterly$INDEX, world.getRandom().nextInt(5));
+                    }
                 }
+
             }
         }
     }

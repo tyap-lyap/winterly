@@ -1,9 +1,9 @@
 {
     "type": "minecraft:crafting_shaped",
     "pattern": [
-        " ##",
-        " D#",
-		"  #"
+        "## ",
+        "HD ",
+		"#  "
     ],
     "key": {
         "#": {
@@ -11,10 +11,13 @@
         },
         "D": {
             "item": "minecraft:red_dye"
+        },
+        "H": {
+            "item": "minecraft:honey_bottle"
         }
     },
     "result": {
         "item": "winterly:red_candy_cane",
-        "count": 1
+        "count": 4
     }
 }

@@ -37,7 +37,7 @@ public class CryomarblePickaxeItem extends PickaxeItem {
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-        target.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 100, 1));
+        target.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 60, 0));
         return super.postHit(stack, target, attacker);
     }
 }

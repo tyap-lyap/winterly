@@ -18,36 +18,38 @@ public class CryomarbleFeature extends Feature<DefaultFeatureConfig> {
 
     @Override
     public boolean generate(FeatureContext<DefaultFeatureConfig> context) {
-        boolean generated = false;
-
         StructureWorldAccess world = context.getWorld();
         BlockPos origin = context.getOrigin();
 
-        for(int i = 0; i < 100; i++) {
-            if(world.getBlockState(origin.up(i)).isAir()) {
-                origin = origin.up(i);
+        for(int i = -20; i < 20; i++) {
+            BlockPos newOrigin = new BlockPos(origin.getX(), i, origin.getZ());
+            if(world.getBlockState(newOrigin).isAir()) {
+                origin = newOrigin;
                 break;
             }
         }
+        if(context.getRandom().nextInt(16) != 0) return false;
 
-        for(int x = 0; x < 5; x++) {
-            for(int z = 0; z < 5; z++) {
-                for(int y = 0; y < 5; y++) {
+        int spawned = 0;
+
+        for(int x = -3; x < 3; x++) {
+            for(int z = -3; z < 3; z++) {
+                for(int y = -3; y < 3; y++) {
                     int xPos = origin.getX() + x;
                     int zPos = origin.getZ() + z;
                     int yPos = origin.getY() + y;
                     BlockPos pos = new BlockPos(xPos, yPos, zPos);
-                    if(context.getRandom().nextInt(5) == 0) {
-                        if(world.isAir(pos)) {
-                            if(isStone(world.getBlockState(pos.down()))) {
+                    if(context.getRandom().nextInt(Math.abs(x) + Math.abs(y) + Math.abs(z) + 1) == 0) {
+                        if(world.isAir(pos) && isStone(world.getBlockState(pos.down()))) {
+                            if(spawned < 3) {
                                 world.setBlockState(pos, WinterlyBlocks.RAW_CRYOMARBLE_SHARD.getDefaultState().with(IcicleBlock.FACING, Direction.UP), Block.NOTIFY_ALL);
-                                generated = true;
-                            }
+                                spawned++;
+                            }else return true;
                         }
                     }
                 }
             }
         }
-        return generated;
+        return true;
     }
 }
