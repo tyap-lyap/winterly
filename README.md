@@ -4,8 +4,8 @@
 [![img](http://cf.way2muchnoise.eu/full_winterly_downloads.svg)](https://curseforge.com/minecraft/mc-mods/winterly)
 [![img](http://cf.way2muchnoise.eu/versions/winterly_latest.svg)](https://curseforge.com/minecraft/mc-mods/winterly)
 
-[Discord](https://discord.gg/DcemWeskeZ), [Modrinth](https://modrinth.com/mod/winterly), [CurseForge](https://curseforge.com/minecraft/mc-mods/winterly)
-# The Winterly Craft RPG Minecraft Among Us Squid Game
+[Discord](https://discord.gg/DcemWeskeZ) | [Modrinth](https://modrinth.com/mod/winterly) | [CurseForge](https://curseforge.com/minecraft/mc-mods/winterly)
+# Winterly
 </div>
 
 ## About
@@ -15,4 +15,4 @@ Tyap-Lyap's MMD WinterJam 2021 Submission. A Minecraft Mod revolving around Wint
 ## License
 Code is free for everyone to use.
 
-Textures and models are ARR.
+Assets are ARR, ask before using.
