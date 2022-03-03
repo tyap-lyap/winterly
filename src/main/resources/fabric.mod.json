@@ -22,11 +22,21 @@
   },
   "mixins": ["winterly.mixins.json"],
 
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/DcemWeskeZ",
+        "modmenu.curseforge": "https://curseforge.com/minecraft/mc-mods/winterly",
+        "modmenu.modrinth": "https://modrinth.com/mod/winterly"
+      }
+    }
+  },
+
   "depends": {
-    "fabricloader": ">=0.11",
+    "fabricloader": "*",
     "fabric": "*",
-    "trinkets": ">=3.1.0",
-    "minecraft": ">=1.18",
+    "trinkets": "*",
+    "minecraft": ">=1.18.2",
     "java": ">=17"
   }
 }

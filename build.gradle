@@ -28,10 +28,9 @@ dependencies {
 
 	include modImplementation("ru.pinkgoosik:goosik-config:0.2.0-1.17.1-fabric")
 
-	modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:7.2.425"
-	modRuntimeOnly "com.terraformersmc:modmenu:3.0.1"
-	modRuntimeOnly "curse.maven:lazydfu-433518:3209972"
-	modRuntimeOnly "curse.maven:ferritecore-fabric-459857:3550048"
+	modLocalRuntime "me.shedaniel:RoughlyEnoughItems-fabric:8.0.442"
+	modLocalRuntime "com.terraformersmc:modmenu:3.1.0"
+	modLocalRuntime "curse.maven:lazydfu-433518:3209972"
 }
 
 processResources {

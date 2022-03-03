@@ -46,7 +46,7 @@ public class WinterlyItems {
     public static final Item BLUE_SCARF = add("blue_scarf", new ScarfItem(settings(), "blue"));
 
     private static Item add(String name, Item item) {
-        ITEMS.put(WinterlyMod.newId(name), item);
+        ITEMS.put(WinterlyMod.locate(name), item);
         return item;
     }
 

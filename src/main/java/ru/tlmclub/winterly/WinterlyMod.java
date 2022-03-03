@@ -24,7 +24,7 @@ public class WinterlyMod implements ModInitializer {
 
     private static ItemGroup createItemGroup() {
         return FabricItemGroupBuilder
-                .create(newId("items"))
+                .create(locate("items"))
                 .icon(() -> WinterlyBlocks.SNOWGUY.asItem().getDefaultStack())
                 .appendItems(stacks -> {
                     WinterlyItems.ITEMS.forEach((id, item) -> stacks.add(item.getDefaultStack()));
@@ -33,7 +33,7 @@ public class WinterlyMod implements ModInitializer {
                 .build();
     }
 
-    public static Identifier newId(String path) {
+    public static Identifier locate(String path) {
         return new Identifier(MOD_ID, path);
     }
 }

@@ -104,13 +104,13 @@ public class WinterlyBlocks {
         addBlock(name, block);
         if (item != null) {
             item.appendBlocks(Item.BLOCK_ITEMS, item);
-            ITEMS.put(WinterlyMod.newId(name), item);
+            ITEMS.put(WinterlyMod.locate(name), item);
         }
         return block;
     }
 
     private static Block addBlock(String name, Block block) {
-        BLOCKS.put(WinterlyMod.newId(name), block);
+        BLOCKS.put(WinterlyMod.locate(name), block);
         return block;
     }
 

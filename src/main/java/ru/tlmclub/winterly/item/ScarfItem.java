@@ -50,7 +50,7 @@ public class ScarfItem extends Item implements Trinket, TrinketRenderer {
     public void render(ItemStack stack, SlotReference slotReference, EntityModel<? extends LivingEntity> contextModel, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, LivingEntity entity, float limbAngle, float limbDistance, float tickDelta, float animationProgress, float headYaw, float headPitch) {
         if(contextModel instanceof BipedEntityModel<? extends LivingEntity> biped){
             WinterlyModels.SCARF_MODEL.scarf.copyTransform(biped.body);
-            VertexConsumer vertexConsumer = vertexConsumers.getBuffer(RenderLayer.getEntityCutout(WinterlyMod.newId("textures/entity/" + color + "_scarf.png")));
+            VertexConsumer vertexConsumer = vertexConsumers.getBuffer(RenderLayer.getEntityCutout(WinterlyMod.locate("textures/entity/" + color + "_scarf.png")));
             WinterlyModels.SCARF_MODEL.render(matrices, vertexConsumer, light, OverlayTexture.DEFAULT_UV, 1.0F, 1.0F, 1.0F, 1.0F);
         }
     }
