@@ -87,5 +87,11 @@
   "block.winterly.brown_present": "Brown Present",
 
   "tag.winterly.placeable": "Placeable",
-  "tag.winterly.cosmetic": "Cosmetic"
+  "tag.winterly.cosmetic": "Cosmetic",
+
+  "config.winterly.title": "Winterly Config",
+  "config.winterly.general": "General",
+  "config.winterly.option.mob_decorations.enabled": "Mob Decorations Enabled",
+  "config.winterly.option.mob_decorations.only_in_winter": "Mob Decorations Only in Winter",
+  "config.winterly.option.mob_decorations.chance": "Mob Decorations Chance"
 }

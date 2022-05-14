@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "Winterly",
-  "description": "Tyap-Lyap's MMD WinterJam 2021 Submission. A Mod revolving around Winter and Holiday-Themed Things.",
+  "description": "Tyap-Lyap's MMD WinterJam 2021 Submission. A mod revolving around winter and holiday-themed things.",
   "authors": ["PinkGoosik", "aSomik"],
   "contact": {
     "homepage": "https://modrinth.com/mod/winterly",
@@ -18,7 +18,8 @@
   "environment": "*",
   "entrypoints": {
     "main": ["ru.tlmclub.winterly.WinterlyMod"],
-    "client": ["ru.tlmclub.winterly.client.WinterlyClient"]
+    "client": ["ru.tlmclub.winterly.client.WinterlyClient"],
+    "modmenu": ["ru.tlmclub.winterly.compat.WinterlyModMenuIntegration"]
   },
   "mixins": ["winterly.mixins.json"],
 
@@ -38,5 +39,9 @@
     "trinkets": "*",
     "minecraft": ">=1.18.2",
     "java": ">=17"
+  },
+
+  "suggests": {
+    "cloth-config": "*"
   }
 }
