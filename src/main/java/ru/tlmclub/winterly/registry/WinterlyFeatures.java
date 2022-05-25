@@ -12,7 +12,7 @@ import ru.tlmclub.winterly.worldgen.UndergroundIcicleFeature;
 
 import java.util.List;
 
-import static ru.tlmclub.winterly.WinterlyMod.locate;
+import static ru.tlmclub.winterly.Winterly.id;
 
 @SuppressWarnings("deprecation")
 public class WinterlyFeatures {
@@ -25,9 +25,9 @@ public class WinterlyFeatures {
     public static final PlacedFeature CRYOMARBLE_FEATURE_PLACED = new PlacedFeature(RegistryEntry.of(CRYOMARBLE_FEATURE_CONFIG), List.of(PlacedFeatures.BOTTOM_TO_120_RANGE));
 
     public static void init() {
-        Registry.register(Registry.FEATURE, locate("underground_icicle_feature"), UNDERGROUND_ICICLE_FEATURE);
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, locate("underground_icicle_feature"), UNDERGROUND_ICICLE_FEATURE_CONFIG);
-        Registry.register(BuiltinRegistries.PLACED_FEATURE, locate("underground_icicle_feature"), UNDERGROUND_ICICLE_FEATURE_PLACED);
+        Registry.register(Registry.FEATURE, id("underground_icicle_feature"), UNDERGROUND_ICICLE_FEATURE);
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, id("underground_icicle_feature"), UNDERGROUND_ICICLE_FEATURE_CONFIG);
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, id("underground_icicle_feature"), UNDERGROUND_ICICLE_FEATURE_PLACED);
 
         BiomeModifications.addFeature(ctx -> {
                     Biome.Category category = Biome.getCategory(ctx.getBiomeRegistryEntry());
@@ -38,9 +38,9 @@ public class WinterlyFeatures {
                 BuiltinRegistries.PLACED_FEATURE.getKey(UNDERGROUND_ICICLE_FEATURE_PLACED).orElseThrow()
         );
 
-        Registry.register(Registry.FEATURE, locate("cryomarble_feature"), CRYOMARBLE_FEATURE);
-        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, locate("cryomarble_feature"), CRYOMARBLE_FEATURE_CONFIG);
-        Registry.register(BuiltinRegistries.PLACED_FEATURE, locate("cryomarble_feature"), CRYOMARBLE_FEATURE_PLACED);
+        Registry.register(Registry.FEATURE, id("cryomarble_feature"), CRYOMARBLE_FEATURE);
+        Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, id("cryomarble_feature"), CRYOMARBLE_FEATURE_CONFIG);
+        Registry.register(BuiltinRegistries.PLACED_FEATURE, id("cryomarble_feature"), CRYOMARBLE_FEATURE_PLACED);
 
         BiomeModifications.addFeature(ctx -> {
                     Biome.Category category = Biome.getCategory(ctx.getBiomeRegistryEntry());

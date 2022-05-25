@@ -17,7 +17,7 @@
 
   "environment": "*",
   "entrypoints": {
-    "main": ["ru.tlmclub.winterly.WinterlyMod"],
+    "main": ["ru.tlmclub.winterly.Winterly"],
     "client": ["ru.tlmclub.winterly.client.WinterlyClient"],
     "modmenu": ["ru.tlmclub.winterly.compat.WinterlyModMenuIntegration"]
   },

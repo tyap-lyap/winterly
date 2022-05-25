@@ -23,7 +23,7 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
-import ru.tlmclub.winterly.WinterlyMod;
+import ru.tlmclub.winterly.Winterly;
 import ru.tlmclub.winterly.client.model.WinterlyModels;
 
 import java.util.List;
@@ -50,7 +50,7 @@ public class SantaHatItem extends Item implements Trinket, TrinketRenderer {
     public void render(ItemStack stack, SlotReference slotReference, EntityModel<? extends LivingEntity> contextModel, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, LivingEntity entity, float limbAngle, float limbDistance, float tickDelta, float animationProgress, float headYaw, float headPitch) {
         if(contextModel instanceof BipedEntityModel<? extends LivingEntity> biped) {
             WinterlyModels.SANTA_HAT_MODEL.hat.copyTransform(biped.head);
-            VertexConsumer vertexConsumer = vertexConsumers.getBuffer(RenderLayer.getEntityCutout(WinterlyMod.locate("textures/entity/" + color + "_santa_hat.png")));
+            VertexConsumer vertexConsumer = vertexConsumers.getBuffer(RenderLayer.getEntityCutout(Winterly.id("textures/entity/" + color + "_santa_hat.png")));
             WinterlyModels.SANTA_HAT_MODEL.render(matrices, vertexConsumer, light, OverlayTexture.DEFAULT_UV, 1.0F, 1.0F, 1.0F, 1.0F);
         }
     }

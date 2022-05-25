@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import ru.tlmclub.winterly.WinterlyMod;
+import ru.tlmclub.winterly.Winterly;
 import ru.tlmclub.winterly.extension.DecoratedMob;
 import ru.tlmclub.winterly.util.HolidayUtils;
 
@@ -61,9 +61,9 @@ public abstract class SkeletonExtension extends AbstractSkeletonEntity implement
     public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason, EntityData entityData, NbtCompound entityNbt){
         entityData = super.initialize(world, difficulty, spawnReason, entityData, entityNbt);
         if(!spawnReason.equals(SpawnReason.SPAWNER) && !spawnReason.equals(SpawnReason.CHUNK_GENERATION)) {
-            if(WinterlyMod.config.mobDecorations.enabled && HolidayUtils.isWinter() || !WinterlyMod.config.mobDecorations.onlyInWinter) {
+            if(Winterly.config.mobDecorations.enabled && HolidayUtils.isWinter() || !Winterly.config.mobDecorations.onlyInWinter) {
                 if(!this.world.getRegistryKey().equals(World.NETHER)) {
-                    int chance = WinterlyMod.config.mobDecorations.chance;
+                    int chance = Winterly.config.mobDecorations.chance;
                     if(chance > 0 && Math.random() < (double)chance / 100) {
                         getDataTracker().set(winterly$DECORATED, true);
                         getDataTracker().set(winterly$INDEX, world.getRandom().nextInt(5));

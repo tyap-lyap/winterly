@@ -9,7 +9,7 @@ import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
 import net.minecraft.text.TranslatableText;
-import ru.tlmclub.winterly.WinterlyMod;
+import ru.tlmclub.winterly.Winterly;
 
 @Config(name = "winterly")
 public class WinterlyClothConfig extends WinterlyConfig implements ConfigData {
@@ -29,7 +29,7 @@ public class WinterlyClothConfig extends WinterlyConfig implements ConfigData {
     }
 
     public static void setupEntries(ConfigCategory category, ConfigEntryBuilder builder) {
-        var config = WinterlyMod.config;
+        var config = Winterly.config;
         category.addEntry(builder.startBooleanToggle(text("option.mob_decorations.enabled"), config.mobDecorations.enabled)
                 .setDefaultValue(true)
                 .setSaveConsumer(newValue -> config.mobDecorations.enabled = newValue)

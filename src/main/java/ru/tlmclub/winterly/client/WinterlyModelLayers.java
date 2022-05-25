@@ -5,14 +5,14 @@ import net.minecraft.client.render.entity.model.EntityModelLayer;
 
 import ru.tlmclub.winterly.client.model.SantaHatModel;
 import ru.tlmclub.winterly.client.model.ScarfModel;
-import static ru.tlmclub.winterly.WinterlyMod.locate;
+import static ru.tlmclub.winterly.Winterly.id;
 
 public class WinterlyModelLayers {
     public static final EntityModelLayer SANTA_HAT_LAYER = of("santa_hat");
     public static final EntityModelLayer SCARF_LAYER = of("scarf");
 
     private static EntityModelLayer of(String name){
-        return new EntityModelLayer(locate(name), "main");
+        return new EntityModelLayer(id(name), "main");
     }
 
     public static void init() {

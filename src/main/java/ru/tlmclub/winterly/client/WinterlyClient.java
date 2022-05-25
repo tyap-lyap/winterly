@@ -5,13 +5,17 @@ import dev.emi.trinkets.api.client.TrinketRendererRegistry;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.LivingEntityFeatureRendererRegistrationCallback;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.DrownedEntityRenderer;
 import net.minecraft.client.render.entity.SkeletonEntityRenderer;
 import net.minecraft.client.render.entity.ZombieEntityRenderer;
+import ru.tlmclub.winterly.Winterly;
 import ru.tlmclub.winterly.block.*;
 import ru.tlmclub.winterly.client.render.DecorationFeatureRenderer;
 import ru.tlmclub.winterly.client.render.MobDecorationRenderers;
+import ru.tlmclub.winterly.config.WinterlyClothConfig;
+import ru.tlmclub.winterly.config.WinterlyConfig;
 import ru.tlmclub.winterly.registry.WinterlyBlocks;
 import ru.tlmclub.winterly.registry.WinterlyItems;
 
@@ -48,5 +52,16 @@ public class WinterlyClient implements ClientModInitializer {
                 registrationHelper.register(new DecorationFeatureRenderer<>(renderer));
             }
         });
+
+        Winterly.config = createConfig();
     }
+
+    private static WinterlyConfig createConfig() {
+        if (FabricLoader.getInstance().isModLoaded("cloth-config")) {
+            WinterlyClothConfig.init();
+            return WinterlyClothConfig.getConfig();
+        }
+        else return new WinterlyConfig();
+    }
+
 }

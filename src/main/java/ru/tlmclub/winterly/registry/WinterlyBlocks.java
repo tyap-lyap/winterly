@@ -8,7 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import ru.tlmclub.winterly.WinterlyMod;
+import ru.tlmclub.winterly.Winterly;
 import ru.tlmclub.winterly.block.*;
 import ru.tlmclub.winterly.block.base.BasePaneBlock;
 import ru.tlmclub.winterly.block.base.BaseStairsBlock;
@@ -96,7 +96,7 @@ public class WinterlyBlocks {
 
     private static Block add(String name, Block block) {
         Item.Settings settings = new Item.Settings();
-        settings.group(WinterlyMod.ITEM_GROUP);
+        settings.group(Winterly.ITEM_GROUP);
         return addBlockItem(name, block, new BlockItem(block, settings));
     }
 
@@ -104,13 +104,13 @@ public class WinterlyBlocks {
         addBlock(name, block);
         if (item != null) {
             item.appendBlocks(Item.BLOCK_ITEMS, item);
-            ITEMS.put(WinterlyMod.locate(name), item);
+            ITEMS.put(Winterly.id(name), item);
         }
         return block;
     }
 
     private static Block addBlock(String name, Block block) {
-        BLOCKS.put(WinterlyMod.locate(name), block);
+        BLOCKS.put(Winterly.id(name), block);
         return block;
     }
 

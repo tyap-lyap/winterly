@@ -4,7 +4,7 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import ru.tlmclub.winterly.WinterlyMod;
+import ru.tlmclub.winterly.Winterly;
 import ru.tlmclub.winterly.item.*;
 import ru.tlmclub.winterly.item.tool.*;
 
@@ -46,13 +46,13 @@ public class WinterlyItems {
     public static final Item BLUE_SCARF = add("blue_scarf", new ScarfItem(settings(), "blue"));
 
     private static Item add(String name, Item item) {
-        ITEMS.put(WinterlyMod.locate(name), item);
+        ITEMS.put(Winterly.id(name), item);
         return item;
     }
 
     private static FabricItemSettings settings() {
         FabricItemSettings settings = new FabricItemSettings();
-        settings.group(WinterlyMod.ITEM_GROUP);
+        settings.group(Winterly.ITEM_GROUP);
         return settings;
     }
 
