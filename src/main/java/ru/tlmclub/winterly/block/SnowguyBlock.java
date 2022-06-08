@@ -11,7 +11,6 @@ import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.StateManager;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
@@ -46,7 +45,7 @@ public class SnowguyBlock extends HorizontalFacingBlock {
     @Environment(EnvType.CLIENT)
     @Override
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
-        tooltip.add(new TranslatableText("tag.winterly.placeable").formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("tag.winterly.placeable").formatted(Formatting.GRAY));
         super.appendTooltip(stack, world, tooltip, options);
     }
 }

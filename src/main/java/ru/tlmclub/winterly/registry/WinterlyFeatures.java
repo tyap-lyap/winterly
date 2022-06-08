@@ -1,10 +1,12 @@
 package ru.tlmclub.winterly.registry;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.minecraft.tag.BiomeTags;
+import net.minecraft.tag.TagKey;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryEntry;
-import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.*;
 import ru.tlmclub.winterly.worldgen.CryomarbleFeature;
@@ -14,7 +16,6 @@ import java.util.List;
 
 import static ru.tlmclub.winterly.Winterly.id;
 
-@SuppressWarnings("deprecation")
 public class WinterlyFeatures {
     public static final Feature<DefaultFeatureConfig> UNDERGROUND_ICICLE_FEATURE = new UndergroundIcicleFeature();
     public static final ConfiguredFeature<?, ?> UNDERGROUND_ICICLE_FEATURE_CONFIG = new ConfiguredFeature<>(UNDERGROUND_ICICLE_FEATURE, new DefaultFeatureConfig());
@@ -30,12 +31,12 @@ public class WinterlyFeatures {
         Registry.register(BuiltinRegistries.PLACED_FEATURE, id("underground_icicle_feature"), UNDERGROUND_ICICLE_FEATURE_PLACED);
 
         BiomeModifications.addFeature(ctx -> {
-                    Biome.Category category = Biome.getCategory(ctx.getBiomeRegistryEntry());
-                    return !category.equals(Biome.Category.NETHER) && !category.equals(Biome.Category.THEEND)
-                            && category.equals(Biome.Category.ICY);
-                },
-                GenerationStep.Feature.UNDERGROUND_DECORATION,
-                BuiltinRegistries.PLACED_FEATURE.getKey(UNDERGROUND_ICICLE_FEATURE_PLACED).orElseThrow()
+            var entry = ctx.getBiomeRegistryEntry();
+            var coldTag = TagKey.of(Registry.BIOME_KEY, new Identifier("c", "climate_cold"));
+            return !entry.isIn(BiomeTags.IS_NETHER) && !entry.isIn(BiomeTags.IS_END) && entry.isIn(coldTag);
+        },
+        GenerationStep.Feature.UNDERGROUND_DECORATION,
+        BuiltinRegistries.PLACED_FEATURE.getKey(UNDERGROUND_ICICLE_FEATURE_PLACED).orElseThrow()
         );
 
         Registry.register(Registry.FEATURE, id("cryomarble_feature"), CRYOMARBLE_FEATURE);
@@ -43,11 +44,11 @@ public class WinterlyFeatures {
         Registry.register(BuiltinRegistries.PLACED_FEATURE, id("cryomarble_feature"), CRYOMARBLE_FEATURE_PLACED);
 
         BiomeModifications.addFeature(ctx -> {
-                    Biome.Category category = Biome.getCategory(ctx.getBiomeRegistryEntry());
-                    return !category.equals(Biome.Category.NETHER) && !category.equals(Biome.Category.THEEND);
-                },
-                GenerationStep.Feature.UNDERGROUND_DECORATION,
-                BuiltinRegistries.PLACED_FEATURE.getKey(CRYOMARBLE_FEATURE_PLACED).orElseThrow()
+            var entry = ctx.getBiomeRegistryEntry();
+            return !entry.isIn(BiomeTags.IS_NETHER) && !entry.isIn(BiomeTags.IS_END);
+        },
+        GenerationStep.Feature.UNDERGROUND_DECORATION,
+        BuiltinRegistries.PLACED_FEATURE.getKey(CRYOMARBLE_FEATURE_PLACED).orElseThrow()
         );
     }
 }

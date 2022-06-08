@@ -8,7 +8,7 @@ import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
-import net.minecraft.text.TranslatableText;
+import net.minecraft.text.Text;
 import ru.tlmclub.winterly.Winterly;
 
 @Config(name = "winterly")
@@ -46,8 +46,8 @@ public class WinterlyClothConfig extends WinterlyConfig implements ConfigData {
                 .build());
     }
 
-    private static TranslatableText text(String key) {
-        return new TranslatableText("config.winterly." + key);
+    private static Text text(String key) {
+        return Text.translatable("config.winterly." + key);
     }
 
     public static void init() {

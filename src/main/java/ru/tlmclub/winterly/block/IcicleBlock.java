@@ -14,7 +14,6 @@ import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.BlockMirror;
 import net.minecraft.util.BlockRotation;
 import net.minecraft.util.Formatting;
@@ -114,7 +113,7 @@ public class IcicleBlock extends Block implements Waterloggable {
     @Environment(EnvType.CLIENT)
     @Override
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
-        tooltip.add(new TranslatableText("tag.winterly.placeable").formatted(Formatting.GRAY));
+        tooltip.add(Text.translatable("tag.winterly.placeable").formatted(Formatting.GRAY));
         super.appendTooltip(stack, world, tooltip, options);
     }
 }
