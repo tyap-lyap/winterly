@@ -13,6 +13,4 @@
 Tyap-Lyap's MMD WinterJam 2021 Submission. A Minecraft Mod revolving around Winter and Holiday-Themed Things. This simple mod will add some decorations that you can build with and cosmetics that you can wear. For example the Santa Hat or presents under the Christmas tree.
 
 ## License
-Code is free for everyone to use.
-
-Assets are ARR, ask before using.
+Code is free for everyone to use. Assets are ARR, ask before using.
