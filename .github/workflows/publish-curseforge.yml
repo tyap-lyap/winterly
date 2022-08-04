@@ -15,11 +15,6 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 17
-      - name: Build Changelog
-        id: build_changelog
-        uses: mikepenz/release-changelog-builder-action@v3.2.0-rc04
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: Change wrapper permissions
         run: chmod +x ./gradlew
       - name: Build artifacts
@@ -27,8 +22,6 @@ jobs:
       - name: publish artifacts
         uses: Kir-Antipov/mc-publish@v3.1
         with:
-          changelog: ${{steps.build_changelog.outputs.changelog}}
-          
           curseforge-id: 552628
           curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
 
