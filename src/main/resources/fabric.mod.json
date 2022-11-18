@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "winterly",
-  "version": "${version}",
+  "version": "dev",
 
   "name": "Winterly",
   "description": "Tyap-Lyap's MMD WinterJam 2021 Submission. A mod revolving around winter and holiday-themed things.",
@@ -35,13 +35,10 @@
 
   "depends": {
     "fabricloader": "*",
-    "fabric": "*",
+    "fabric-api": "*",
+    "cloth-config": "*",
     "trinkets": "*",
-    "minecraft": ">=1.18.2",
+    "minecraft": ">=1.19",
     "java": ">=17"
-  },
-
-  "suggests": {
-    "cloth-config": "*"
   }
 }
