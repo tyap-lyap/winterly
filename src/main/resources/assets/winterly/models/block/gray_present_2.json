@@ -2,7 +2,7 @@
   "parent": "winterly:block/base/present_model_2",
   "textures": {
     "present": "winterly:block/gray_present_model",
-	"present_2": "winterly:block/gray_present_model_2",
+    "present_2": "winterly:block/gray_present_model_2",
     "particle": "winterly:block/gray_paper_block"
   }
 }

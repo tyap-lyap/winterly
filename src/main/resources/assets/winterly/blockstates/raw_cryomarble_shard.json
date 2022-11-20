@@ -1,22 +1,42 @@
 {
   "variants": {
     "facing=down": [
-      {"model": "winterly:block/raw_cryomarble_shard", "x": 180}
+      {
+        "model": "winterly:block/raw_cryomarble_shard",
+        "x": 180
+      }
     ],
     "facing=east": [
-      {"model": "winterly:block/raw_cryomarble_shard", "x": 90, "y": 90}
+      {
+        "model": "winterly:block/raw_cryomarble_shard",
+        "x": 90,
+        "y": 90
+      }
     ],
     "facing=north": [
-      {"model": "winterly:block/raw_cryomarble_shard", "x": 90}
+      {
+        "model": "winterly:block/raw_cryomarble_shard",
+        "x": 90
+      }
     ],
     "facing=south": [
-      {"model": "winterly:block/raw_cryomarble_shard", "x": 90, "y": 180}
+      {
+        "model": "winterly:block/raw_cryomarble_shard",
+        "x": 90,
+        "y": 180
+      }
     ],
     "facing=up": [
-      {"model": "winterly:block/raw_cryomarble_shard"}
+      {
+        "model": "winterly:block/raw_cryomarble_shard"
+      }
     ],
     "facing=west": [
-      {"model": "winterly:block/raw_cryomarble_shard", "x": 90, "y": 270}
+      {
+        "model": "winterly:block/raw_cryomarble_shard",
+        "x": 90,
+        "y": 270
+      }
     ]
   }
 }

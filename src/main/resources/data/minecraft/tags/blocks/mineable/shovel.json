@@ -1,12 +1,12 @@
 {
   "replace": false,
   "values": [
-	"winterly:dense_snow",
+    "winterly:dense_snow",
     "winterly:dense_snow_stairs",
     "winterly:dense_snow_slab",
     "winterly:snow_bricks",
     "winterly:snowball_wall",
-	"winterly:snow_brick_stairs",
-	"winterly:snow_brick_slab"
+    "winterly:snow_brick_stairs",
+    "winterly:snow_brick_slab"
   ]
 }

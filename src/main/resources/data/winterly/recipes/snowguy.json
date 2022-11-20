@@ -1,23 +1,23 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "#S ",
-        "/S/",
-        " S "
-    ],
-    "key": {
-        "#": {
-            "item": "minecraft:carrot"
-        },
-        "S": {
-            "item": "minecraft:snow_block"
-        },
-        "/": {
-            "item": "minecraft:stick"
-        }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S ",
+    "/S/",
+    " S "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:carrot"
     },
-    "result": {
-        "item": "winterly:snowguy",
-        "count": 1
+    "S": {
+      "item": "minecraft:snow_block"
+    },
+    "/": {
+      "item": "minecraft:stick"
     }
+  },
+  "result": {
+    "item": "winterly:snowguy",
+    "count": 1
+  }
 }

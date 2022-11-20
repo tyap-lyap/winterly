@@ -1,17 +1,17 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "#",
-        "#",
-        "#"
-    ],
-    "key": {
-        "#": {
-            "item": "minecraft:blue_ice"
-        }
-    },
-    "result": {
-        "item": "winterly:icicle",
-        "count": 6
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:blue_ice"
     }
+  },
+  "result": {
+    "item": "winterly:icicle",
+    "count": 6
+  }
 }

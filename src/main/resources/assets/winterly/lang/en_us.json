@@ -1,19 +1,15 @@
 {
   "itemGroup.winterly.items": "Winterly",
-
   "item.winterly.red_candy_cane": "Red Candy Cane",
   "item.winterly.green_candy_cane": "Green Candy Cane",
   "item.winterly.blue_candy_cane": "Blue Candy Cane",
-
   "item.winterly.cryomarble_shard": "Cryomarble Shard",
   "item.winterly.cryomarble": "Cryomarble",
-
   "item.winterly.cryomarble_sword": "Cryomarble Sword",
   "item.winterly.cryomarble_shovel": "Cryomarble Shovel",
   "item.winterly.cryomarble_pickaxe": "Cryomarble Pickaxe",
   "item.winterly.cryomarble_axe": "Cryomarble Axe",
   "item.winterly.cryomarble_hoe": "Cryomarble Hoe",
-
   "item.winterly.red_santa_hat": "Red Santa Hat",
   "item.winterly.blue_santa_hat": "Blue Santa Hat",
   "item.winterly.white_scarf": "White Scarf",
@@ -21,7 +17,6 @@
   "item.winterly.red_scarf": "Red Scarf",
   "item.winterly.green_scarf": "Green Scarf",
   "item.winterly.rainbow_scarf": "Rainbow Scarf",
-
   "block.winterly.icicle": "Icicle",
   "block.winterly.icicle_block": "Icicle Block",
   "block.winterly.icicle_bars": "Icicle Bars",
@@ -34,11 +29,8 @@
   "block.winterly.snow_bricks": "Snow Bricks",
   "block.winterly.snow_brick_stairs": "Snow Brick Stairs",
   "block.winterly.snow_brick_slab": "Snow Brick Slab",
-
   "block.winterly.raw_cryomarble_shard": "Raw Cryomarble Shard",
-
   "block.winterly.light_blue_gift_box": "Light Blue Gift Box",
-
   "block.winterly.paper_block": "Paper Block (Deprecated)",
   "block.winterly.paper_bricks": "Paper Bricks (Deprecated)",
   "block.winterly.red_paper_block": "Red Paper Block (Deprecated)",
@@ -69,10 +61,8 @@
   "block.winterly.magenta_paper_bricks": "Magenta Paper Bricks (Deprecated)",
   "block.winterly.brown_paper_block": "Brown Paper Block (Deprecated)",
   "block.winterly.brown_paper_bricks": "Brown Paper Bricks (Deprecated)",
-
   "block.winterly.garland_lights": "Garland Lights",
   "block.winterly.rainy_garland_lights": "Rainy Garland Lights",
-
   "block.winterly.white_present": "White Present (Deprecated)",
   "block.winterly.red_present": "Red Present (Deprecated)",
   "block.winterly.green_present": "Green Present (Deprecated)",
@@ -88,10 +78,8 @@
   "block.winterly.gray_present": "Gray Present (Deprecated)",
   "block.winterly.magenta_present": "Magenta Present (Deprecated)",
   "block.winterly.brown_present": "Brown Present (Deprecated)",
-
   "tag.winterly.placeable": "Placeable",
   "tag.winterly.cosmetic": "Cosmetic",
-
   "config.winterly.title": "Winterly Config",
   "config.winterly.general": "General",
   "config.winterly.option.mob_decorations.enabled": "Mob Decorations Enabled",

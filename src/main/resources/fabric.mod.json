@@ -2,27 +2,34 @@
   "schemaVersion": 1,
   "id": "winterly",
   "version": "dev",
-
   "name": "Winterly",
   "description": "Tyap-Lyap's MMD WinterJam 2021 Submission. A mod revolving around winter and holiday-themed things.",
-  "authors": ["PinkGoosik", "aSomik"],
+  "authors": [
+    "PinkGoosik",
+    "aSomik"
+  ],
   "contact": {
     "homepage": "https://modrinth.com/mod/winterly",
     "sources": "https://github.com/tyap-lyap/winterly",
     "issues": "https://github.com/tyap-lyap/winterly/issues"
   },
-
   "license": "MIT",
   "icon": "assets/winterly/icon.png",
-
   "environment": "*",
   "entrypoints": {
-    "main": ["ru.tlmclub.winterly.Winterly"],
-    "client": ["ru.tlmclub.winterly.client.WinterlyClient"],
-    "modmenu": ["ru.tlmclub.winterly.compat.WinterlyModMenuIntegration"]
+    "main": [
+      "winterly.Winterly"
+    ],
+    "client": [
+      "winterly.client.WinterlyClient"
+    ],
+    "modmenu": [
+      "winterly.compat.WinterlyModMenuIntegration"
+    ]
   },
-  "mixins": ["winterly.mixins.json"],
-
+  "mixins": [
+    "winterly.mixins.json"
+  ],
   "custom": {
     "modmenu": {
       "links": {
@@ -32,7 +39,6 @@
       }
     }
   },
-
   "depends": {
     "fabricloader": "*",
     "fabric-api": "*",

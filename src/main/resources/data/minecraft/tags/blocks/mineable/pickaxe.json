@@ -2,9 +2,9 @@
   "replace": false,
   "values": [
     "winterly:raw_cryomarble_shard",
-	"winterly:icicle",
+    "winterly:icicle",
     "winterly:icicle_block",
     "winterly:icicle_bars",
-	"winterly:icicle_pane"
+    "winterly:icicle_pane"
   ]
 }

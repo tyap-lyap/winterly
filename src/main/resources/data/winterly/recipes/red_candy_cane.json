@@ -1,23 +1,23 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "## ",
-        "HD ",
-		"#  "
-    ],
-    "key": {
-        "#": {
-            "item": "minecraft:sugar"
-        },
-        "D": {
-            "item": "minecraft:red_dye"
-        },
-        "H": {
-            "item": "minecraft:honey_bottle"
-        }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "## ",
+    "HD ",
+    "#  "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:sugar"
     },
-    "result": {
-        "item": "winterly:red_candy_cane",
-        "count": 4
+    "D": {
+      "item": "minecraft:red_dye"
+    },
+    "H": {
+      "item": "minecraft:honey_bottle"
     }
+  },
+  "result": {
+    "item": "winterly:red_candy_cane",
+    "count": 4
+  }
 }

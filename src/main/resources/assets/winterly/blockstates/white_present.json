@@ -3,10 +3,10 @@
     "presents=1": {
       "model": "winterly:block/white_present"
     },
-	"presents=2": {
+    "presents=2": {
       "model": "winterly:block/white_present_2"
     },
-	"presents=3": {
+    "presents=3": {
       "model": "winterly:block/white_present_3"
     }
   }

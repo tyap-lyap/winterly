@@ -9,7 +9,7 @@
     },
     "facing=south": {
       "model": "winterly:block/snowguy",
-	  "y": 180
+      "y": 180
     },
     "facing=west": {
       "model": "winterly:block/snowguy",

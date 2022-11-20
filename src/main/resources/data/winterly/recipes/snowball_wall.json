@@ -1,16 +1,16 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "###",
-        "###"
-    ],
-    "key": {
-        "#": {
-            "item": "minecraft:snowball"
-        }
-    },
-    "result": {
-        "item": "winterly:snowball_wall",
-        "count": 1
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:snowball"
     }
+  },
+  "result": {
+    "item": "winterly:snowball_wall",
+    "count": 1
+  }
 }

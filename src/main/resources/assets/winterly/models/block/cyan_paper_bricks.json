@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-	"all": "winterly:block/cyan_paper_bricks"  
+    "all": "winterly:block/cyan_paper_bricks"
   }
 }

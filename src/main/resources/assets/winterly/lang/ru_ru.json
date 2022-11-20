@@ -1,28 +1,22 @@
 {
   "itemGroup.winterly.items": "Winterly",
-
   "item.winterly.red_candy_cane": "Красный леденец",
   "item.winterly.green_candy_cane": "Зеленый леденец",
   "item.winterly.blue_candy_cane": "Синий леденец",
-
   "item.winterly.cryomarble_shard": "Осколок криомрамор",
   "item.winterly.cryomarble": "Криомрамор",
-
   "item.winterly.cryomarble_sword": "Криомраморный меч",
   "item.winterly.cryomarble_shovel": "Криомраморная лопата",
   "item.winterly.cryomarble_pickaxe": "Криомраморная кирка",
   "item.winterly.cryomarble_axe": "Криомраморный топор",
   "item.winterly.cryomarble_hoe": "Криомраморная мотыга",
-
   "item.winterly.red_santa_hat": "Шапочка Деда Мороза",
   "item.winterly.blue_santa_hat": "Шапочка Санты",
   "item.winterly.white_scarf": "Белый шарф",
   "item.winterly.blue_scarf": "Синий шарф",
   "item.winterly.red_scarf": "Красный шарф",
   "item.winterly.green_scarf": "Зелёный шарф",
-
   "block.winterly.raw_cryomarble_shard": "Сырой осколок криомрамор",
-
   "block.winterly.icicle": "Сосульки",
   "block.winterly.icicle_block": "Сосулечный блок",
   "block.winterly.icicle_bars": "Прутья из сосулек",
@@ -35,13 +29,10 @@
   "block.winterly.snow_bricks": "Снежные кирпичи",
   "block.winterly.snow_brick_stairs": "Ступеньки из снежных кирпичей",
   "block.winterly.snow_brick_slab": "Плита из снежных кирпичей",
-
   "block.winterly.garland_lights": "Гирлянда",
   "block.winterly.rainy_garland_lights": "Гирлянда-дождик",
-
   "tag.winterly.placeable": "Размещаемый предмет",
   "tag.winterly.cosmetic": "Косметический предмет",
-
   "config.winterly.title": "Winterly Config",
   "config.winterly.general": "General",
   "config.winterly.option.mob_decorations.enabled": "Mob Decorations Enabled",

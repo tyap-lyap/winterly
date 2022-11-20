@@ -1,16 +1,16 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "##",
-        "##"
-    ],
-    "key": {
-        "#": {
-            "item": "winterly:cryomarble_shard"
-        }
-    },
-    "result": {
-        "item": "winterly:cryomarble",
-        "count": 1
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "winterly:cryomarble_shard"
     }
+  },
+  "result": {
+    "item": "winterly:cryomarble",
+    "count": 1
+  }
 }
