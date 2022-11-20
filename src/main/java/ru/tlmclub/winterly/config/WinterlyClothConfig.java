@@ -1,6 +1,5 @@
 package ru.tlmclub.winterly.config;
 
-import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
@@ -8,25 +7,21 @@ import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.text.Text;
 import ru.tlmclub.winterly.Winterly;
 
 @Config(name = "winterly")
 public class WinterlyClothConfig extends WinterlyConfig implements ConfigData {
 
-    public static ConfigScreenFactory<?> getModConfigScreenFactory() {
-        return parent -> {
-            ConfigBuilder builder = ConfigBuilder.create()
-                    .setParentScreen(parent)
-                    .setTitle(text("title"));
-
-            ConfigCategory general = builder.getOrCreateCategory(text("general"));
-            ConfigEntryBuilder entryBuilder = builder.entryBuilder();
-            WinterlyClothConfig.setupEntries(general, entryBuilder);
-
-            return builder.build();
-        };
-    }
+	public static Screen buildScreen(Screen parent) {
+		ConfigBuilder configBuilder = ConfigBuilder.create().setParentScreen(parent).setTitle(text("title"));
+		configBuilder.setSavingRunnable(() -> AutoConfig.getConfigHolder(WinterlyClothConfig.class).save());
+		ConfigCategory general = configBuilder.getOrCreateCategory(text("general"));
+		ConfigEntryBuilder entryBuilder = configBuilder.entryBuilder();
+		WinterlyClothConfig.setupEntries(general, entryBuilder);
+		return configBuilder.build();
+	}
 
     public static void setupEntries(ConfigCategory category, ConfigEntryBuilder builder) {
         var config = Winterly.config;
@@ -41,7 +36,7 @@ public class WinterlyClothConfig extends WinterlyConfig implements ConfigData {
                 .build());
 
         category.addEntry(builder.startIntSlider(text("option.mob_decorations.chance"), config.mobDecorations.chance, 0, 100)
-                .setDefaultValue(15)
+                .setDefaultValue(5)
                 .setSaveConsumer(newValue -> config.mobDecorations.chance = newValue)
                 .build());
     }
@@ -50,12 +45,9 @@ public class WinterlyClothConfig extends WinterlyConfig implements ConfigData {
         return Text.translatable("config.winterly." + key);
     }
 
-    public static void init() {
-        AutoConfig.register(WinterlyClothConfig.class, GsonConfigSerializer::new);
-    }
-
-    public static WinterlyClothConfig getConfig() {
-        return AutoConfig.getConfigHolder(WinterlyClothConfig.class).getConfig();
-    }
+	public static WinterlyClothConfig init() {
+		AutoConfig.register(WinterlyClothConfig.class, GsonConfigSerializer::new);
+		return AutoConfig.getConfigHolder(WinterlyClothConfig.class).getConfig();
+	}
 
 }

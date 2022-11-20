@@ -19,7 +19,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-@SuppressWarnings("deprecation")
+@Deprecated
 public class PresentBlock extends Block {
     public static final IntProperty PRESENTS = IntProperty.of("presents", 1, 3);
     public static final VoxelShape SHAPE = createCuboidShape(2, 0, 2, 14, 14, 14);

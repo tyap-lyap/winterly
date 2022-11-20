@@ -6,7 +6,7 @@ public class WinterlyConfig {
     public static class MobDecorationsConfig {
         public boolean enabled = true;
         public boolean onlyInWinter = true;
-        public int chance = 15;
+        public int chance = 5;
     }
 
 }
