@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "winterly:dense_snow",
+    "winterly:snow_bricks",
+    "winterly:frozen_grass"
+  ]
+}

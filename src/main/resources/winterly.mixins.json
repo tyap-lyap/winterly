@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "common.SkeletonExtension",
+    "common.SnowBlockMixin",
     "common.ZombieExtension"
   ],
   "client": [

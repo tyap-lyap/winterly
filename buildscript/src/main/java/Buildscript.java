@@ -54,8 +54,9 @@ public class Buildscript extends SimpleFabricProject {
 
 		d.addMaven("https://ladysnake.jfrog.io/artifactory/mods", new MavenId("dev.onyxstudios.cardinal-components-api", "cardinal-components-api", "5.0.2"), ModDependencyFlag.RUNTIME, ModDependencyFlag.COMPILE);
 		d.addMaven("https://ladysnake.jfrog.io/artifactory/mods", new MavenId("dev.onyxstudios.cardinal-components-api", "cardinal-components-base", "5.0.2"), ModDependencyFlag.RUNTIME, ModDependencyFlag.COMPILE);
+		jij(d.addMaven("https://ladysnake.jfrog.io/artifactory/mods", new MavenId("dev.onyxstudios.cardinal-components-api", "cardinal-components-world", "5.0.2"), ModDependencyFlag.RUNTIME, ModDependencyFlag.COMPILE));
 		d.addMaven("https://ladysnake.jfrog.io/artifactory/mods", new MavenId("dev.onyxstudios.cardinal-components-api", "cardinal-components-entity", "5.0.2"), ModDependencyFlag.RUNTIME, ModDependencyFlag.COMPILE);
-		d.addMaven("https://api.modrinth.com/maven/", new MavenId("maven.modrinth", "trinkets", "3.4.0"), ModDependencyFlag.RUNTIME, ModDependencyFlag.COMPILE);
+		d.addMaven("https://api.modrinth.com/maven/", new MavenId("maven.modrinth", "trinkets", "3.4.1"), ModDependencyFlag.RUNTIME, ModDependencyFlag.COMPILE);
 
 		d.addMaven("https://api.modrinth.com/maven/", new MavenId("maven.modrinth", "emi", "0.4.2+1.19"), ModDependencyFlag.RUNTIME);
 		d.addMaven("https://api.modrinth.com/maven/", new MavenId("maven.modrinth", "lazydfu", Properties.LAZY_DFU), ModDependencyFlag.RUNTIME);

@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "winterly:block/frozen_grass_2"
+    },
+    "layers=2": {
+      "model": "winterly:block/frozen_grass_4"
+    },
+    "layers=3": {
+      "model": "winterly:block/frozen_grass_6"
+    },
+    "layers=4": {
+      "model": "winterly:block/frozen_grass_8"
+    },
+    "layers=5": {
+      "model": "winterly:block/frozen_grass_10"
+    },
+    "layers=6": {
+      "model": "winterly:block/frozen_grass_12"
+    },
+    "layers=7": {
+      "model": "winterly:block/frozen_grass_14"
+    },
+    "layers=8": {
+      "model": "minecraft:block/snow_block"
+    }
+  }
+}

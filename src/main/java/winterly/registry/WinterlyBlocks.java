@@ -1,8 +1,6 @@
 package winterly.registry;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.GlassBlock;
-import net.minecraft.block.SlabBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.sound.BlockSoundGroup;
@@ -95,6 +93,8 @@ public class WinterlyBlocks {
     public static final Block MAGENTA_PAPER_BRICKS = addBlock("magenta_paper_bricks", new Block(copyOf(MAGENTA_WOOL)));
     public static final Block BROWN_PAPER_BLOCK = addBlock("brown_paper_block", new Block(copyOf(BROWN_WOOL)));
     public static final Block BROWN_PAPER_BRICKS = addBlock("brown_paper_bricks", new Block(copyOf(BROWN_WOOL)));
+
+	public static final Block FROZEN_GRASS = add("frozen_grass", new FrozenGrassBlock(copyOf(AbstractBlock.Settings.of(Material.SNOW_LAYER).ticksRandomly().strength(0.1F).requiresTool().sounds(BlockSoundGroup.SNOW).blockVision((state, world, pos) -> state.get(SnowBlock.LAYERS) >= 8))));
 
     private static Block add(String name, Block block) {
         Item.Settings settings = new Item.Settings();
