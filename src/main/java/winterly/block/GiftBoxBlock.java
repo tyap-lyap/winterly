@@ -116,5 +116,18 @@ public class GiftBoxBlock extends Block {
 				tooltip.add(Text.of("- " + name + " x" + st.getCount()).getWithStyle(Style.EMPTY.withColor(Formatting.GRAY)).get(0));
 			});
 		}
+		else {
+			Language lang = Language.getInstance();
+			String key = "description.winterly.gift_box.";
+
+			for(int i = 0; i <= 32; i++) {
+				if(lang.hasTranslation(key + i)) {
+					tooltip.add(Text.translatable(key + i).getWithStyle(Style.EMPTY.withColor(Formatting.GRAY)).get(0));
+				}
+				if(!lang.hasTranslation(key + (i + 1))) {
+					break;
+				}
+			}
+		}
 	}
 }

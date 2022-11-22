@@ -6,6 +6,7 @@ import net.minecraft.world.StructureWorldAccess;
 import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.util.FeatureContext;
+import winterly.Winterly;
 import winterly.registry.WinterlyBlocks;
 
 public class UndergroundIcicleFeature extends Feature<DefaultFeatureConfig> {
@@ -16,6 +17,7 @@ public class UndergroundIcicleFeature extends Feature<DefaultFeatureConfig> {
 
     @Override
     public boolean generate(FeatureContext context) {
+		if(!Winterly.config.generateUndergroundIcicle) return false;
         boolean generated = false;
         int randomY = context.getRandom().nextInt(100) - 50;
 

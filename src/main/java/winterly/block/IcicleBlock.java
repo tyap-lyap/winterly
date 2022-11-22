@@ -24,6 +24,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.Nullable;
+import winterly.registry.WinterlyBlocks;
 
 import java.util.List;
 
@@ -113,7 +114,9 @@ public class IcicleBlock extends Block implements Waterloggable {
     @Environment(EnvType.CLIENT)
     @Override
     public void appendTooltip(ItemStack stack, @Nullable BlockView world, List<Text> tooltip, TooltipContext options) {
-        tooltip.add(Text.translatable("tag.winterly.placeable").formatted(Formatting.GRAY));
+		if(this.equals(WinterlyBlocks.ICICLE)) {
+			tooltip.add(Text.translatable("tag.winterly.placeable").formatted(Formatting.GRAY));
+		}
         super.appendTooltip(stack, world, tooltip, options);
     }
 }

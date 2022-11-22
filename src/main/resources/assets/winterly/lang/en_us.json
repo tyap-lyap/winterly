@@ -32,6 +32,11 @@
   "block.winterly.snow_brick_stairs": "Snow Brick Stairs",
   "block.winterly.snow_brick_slab": "Snow Brick Slab",
   "block.winterly.raw_cryomarble_shard": "Raw Cryomarble Shard",
+  
+  "description.winterly.gift_box.0": "Place in the world and",
+  "description.winterly.gift_box.1": "right-click to put items.",
+  "description.winterly.gift_box.2": "You can put up to three items.",
+  "description.winterly.gift_box.3": "Use silk touch to collect.",
 
   "block.winterly.light_blue_gift_box": "Light Blue Gift Box",
 

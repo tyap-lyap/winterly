@@ -4,8 +4,10 @@
   "package": "winterly.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "common.ServerWorldMixin",
     "common.SkeletonExtension",
     "common.SnowBlockMixin",
+    "common.SpreadableBlockMixin",
     "common.ZombieExtension"
   ],
   "client": [
