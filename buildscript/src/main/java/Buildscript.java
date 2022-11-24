@@ -63,6 +63,11 @@ public class Buildscript extends SimpleFabricProject {
 		d.addMaven("https://api.modrinth.com/maven/", new MavenId("maven.modrinth", "ferrite-core", "5.0.0-fabric"), ModDependencyFlag.RUNTIME);
 		d.addMaven("https://api.modrinth.com/maven/", new MavenId("maven.modrinth", "starlight", "1.1.1+1.19"), ModDependencyFlag.RUNTIME);
 		d.addMaven("https://api.modrinth.com/maven/", new MavenId("maven.modrinth", "lithium", "mc1.19.2-0.10.2"), ModDependencyFlag.RUNTIME);
+
+		// Compatibility
+		d.addMaven("https://api.modrinth.com/maven/", new MavenId("maven.modrinth", "immersive-weathering", "1.2.3-1.19.2"), ModDependencyFlag.RUNTIME, ModDependencyFlag.COMPILE);
+		d.addMaven("https://api.modrinth.com/maven/", new MavenId("maven.modrinth", "moonlight", "ND0jV6Ba"), ModDependencyFlag.RUNTIME, ModDependencyFlag.COMPILE);
+		d.addMaven("https://maven.wispforest.io", new MavenId("io.wispforest", "owo-lib", "0.9.0+1.19"), ModDependencyFlag.RUNTIME, ModDependencyFlag.COMPILE);
 	}
 
 	public static void addFabricModules(ModDependencyCollector d) {

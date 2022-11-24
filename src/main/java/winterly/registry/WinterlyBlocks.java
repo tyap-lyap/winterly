@@ -1,5 +1,6 @@
 package winterly.registry;
 
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -28,8 +29,10 @@ public class WinterlyBlocks {
 
     public static final Block ICICLE = add("icicle", new IcicleBlock(copyOf(ICE)));
     public static final Block ICICLE_BLOCK = add("icicle_block", new GlassBlock(copyOf(PACKED_ICE).nonOpaque()));
+	public static final Block PACKED_ICICLE_BLOCK = add("packed_icicle_block", new GlassBlock(copyOf(PACKED_ICE).nonOpaque()));
     public static final Block ICICLE_PANE = add("icicle_pane", new BasePaneBlock(copyOf(PACKED_ICE).nonOpaque()));
     public static final Block ICICLE_BARS = add("icicle_bars", new BasePaneBlock(copyOf(ICE).nonOpaque()));
+	public static final Block CRYOMARBLE_BLOCK = add("cryomarble_block", new Block(copyOf(DIAMOND_BLOCK)));
     public static final Block SNOWGUY = add("snowguy", new SnowguyBlock(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
     public static final Block SNOWBALL_WALL = add("snowball_wall", new SnowballWallBlock(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW).nonOpaque()));
     public static final Block DENSE_SNOW = add("dense_snow", new Block(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
@@ -39,10 +42,18 @@ public class WinterlyBlocks {
     public static final Block SNOW_BRICKS = add("snow_bricks", new Block(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
     public static final Block SNOW_BRICK_STAIRS = add("snow_brick_stairs", new BaseStairsBlock(SNOW_BLOCK.getDefaultState(), copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
     public static final Block SNOW_BRICK_SLAB = add("snow_brick_slab", new SlabBlock(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
+	public static final Block FROZEN_GRASS = add("frozen_grass", new FrozenGrassBlock(copyOf(AbstractBlock.Settings.of(Material.SNOW_LAYER).ticksRandomly().strength(0.1F).requiresTool().sounds(BlockSoundGroup.SNOW).blockVision((state, world, pos) -> state.get(SnowBlock.LAYERS) >= 8))));
 
     public static final Block RAW_CRYOMARBLE_SHARD = add("raw_cryomarble_shard", new IcicleBlock(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.GLASS).luminance(12)));
 
-	public static final Block LIGHT_BLUE_GIFT_BOX = add("light_blue_gift_box", new GiftBoxBlock(copyOf(LIGHT_BLUE_WOOL)));
+	public static final Block RED_GIFT_BOX = add("red_gift_box", new GiftBoxBlock(copyOf(RED_WOOL)));
+	public static final Block YELLOW_GIFT_BOX = add("yellow_gift_box", new GiftBoxBlock(copyOf(YELLOW_WOOL)));
+	public static final Block GREEN_GIFT_BOX = add("green_gift_box", new GiftBoxBlock(copyOf(GREEN_WOOL)));
+	public static final Block CYAN_GIFT_BOX = add("cyan_gift_box", new GiftBoxBlock(copyOf(CYAN_WOOL)));
+	public static final Block BLUE_GIFT_BOX = add("blue_gift_box", new GiftBoxBlock(copyOf(BLUE_WOOL)));
+	public static final Block PURPLE_GIFT_BOX = add("purple_gift_box", new GiftBoxBlock(copyOf(PURPLE_WOOL)));
+	public static final Block BLACK_GIFT_BOX = add("black_gift_box", new GiftBoxBlock(copyOf(BLACK_WOOL)));
+	public static final Block WHITE_GIFT_BOX = add("white_gift_box", new GiftBoxBlock(copyOf(WHITE_WOOL)));
 
     public static final Block WHITE_PRESENT = addBlock("white_present", new PresentBlock(copyOf(WHITE_WOOL)));
     public static final Block RED_PRESENT = addBlock("red_present", new PresentBlock(copyOf(RED_WOOL)));
@@ -94,12 +105,8 @@ public class WinterlyBlocks {
     public static final Block BROWN_PAPER_BLOCK = addBlock("brown_paper_block", new Block(copyOf(BROWN_WOOL)));
     public static final Block BROWN_PAPER_BRICKS = addBlock("brown_paper_bricks", new Block(copyOf(BROWN_WOOL)));
 
-	public static final Block FROZEN_GRASS = add("frozen_grass", new FrozenGrassBlock(copyOf(AbstractBlock.Settings.of(Material.SNOW_LAYER).ticksRandomly().strength(0.1F).requiresTool().sounds(BlockSoundGroup.SNOW).blockVision((state, world, pos) -> state.get(SnowBlock.LAYERS) >= 8))));
-
     private static Block add(String name, Block block) {
-        Item.Settings settings = new Item.Settings();
-        settings.group(Winterly.ITEM_GROUP);
-        return addBlockItem(name, block, new BlockItem(block, settings));
+        return addBlockItem(name, block, new BlockItem(block, new FabricItemSettings().group(Winterly.itemGroup)));
     }
 
     private static Block addBlockItem(String name, Block block, BlockItem item) {

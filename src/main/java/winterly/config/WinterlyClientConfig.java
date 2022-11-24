@@ -4,10 +4,13 @@ import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.text.Text;
 import winterly.Winterly;
 
+@Environment(EnvType.CLIENT)
 public class WinterlyClientConfig {
 
 	public static Screen buildScreen(Screen parent) {
@@ -22,9 +25,9 @@ public class WinterlyClientConfig {
 	public static void setupEntries(ConfigCategory category, ConfigEntryBuilder builder) {
 		var config = Winterly.config;
 
-		category.addEntry(builder.startBooleanToggle(text("option.generate_underground_icicles"), config.generateUndergroundIcicle)
+		category.addEntry(builder.startBooleanToggle(text("option.generate_underground_icicles"), config.generateUndergroundIcicles)
 				.setDefaultValue(true)
-				.setSaveConsumer(newValue -> config.generateUndergroundIcicle = newValue)
+				.setSaveConsumer(newValue -> config.generateUndergroundIcicles = newValue)
 				.build());
 
 		category.addEntry(builder.startBooleanToggle(text("option.mob_decorations.enabled"), config.mobDecorations.enabled)

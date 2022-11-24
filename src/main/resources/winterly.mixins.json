@@ -8,12 +8,14 @@
     "common.SkeletonExtension",
     "common.SnowBlockMixin",
     "common.SpreadableBlockMixin",
-    "common.ZombieExtension"
+    "common.ZombieExtension",
+    "common.immersive_weathering.ModGrassBlockMixin"
   ],
   "client": [
     "client.ArmorRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1
-  }
+  },
+  "plugin": "winterly.mixin.WinterlyMixins"
 }

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "winterly:cryomarble_block"
+    }
+  },
+  "result": {
+    "item": "winterly:cryomarble",
+    "count": 9
+  }
+}

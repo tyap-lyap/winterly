@@ -53,9 +53,7 @@ public class WinterlyItems {
     }
 
     private static FabricItemSettings settings() {
-        FabricItemSettings settings = new FabricItemSettings();
-        settings.group(Winterly.ITEM_GROUP);
-        return settings;
+        return new FabricItemSettings().group(Winterly.itemGroup);
     }
 
     public static void init() {

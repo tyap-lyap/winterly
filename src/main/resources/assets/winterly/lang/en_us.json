@@ -1,5 +1,8 @@
 {
   "itemGroup.winterly.items": "Winterly",
+  "itemGroup.winterly.items.button.discord": "Join our Discord server!",
+
+  "modmenu.descriptionTranslation.winterly": "Tyap-Lyap's MMD WinterJam 2021 Submission. A mod revolving around winter and holiday-themed things.",
 
   "item.winterly.red_candy_cane": "Red Candy Cane",
   "item.winterly.green_candy_cane": "Green Candy Cane",
@@ -21,8 +24,10 @@
 
   "block.winterly.icicle": "Icicle",
   "block.winterly.icicle_block": "Icicle Block",
+  "block.winterly.packed_icicle_block": "Packed Icicle Block",
   "block.winterly.icicle_bars": "Icicle Bars",
   "block.winterly.icicle_pane": "Icicle Pane",
+  "block.winterly.cryomarble_block": "Cryomarble Block",
   "block.winterly.snowguy": "Snowguy",
   "block.winterly.snowball_wall": "Snowball Wall",
   "block.winterly.dense_snow": "Dense Snow",
@@ -32,13 +37,20 @@
   "block.winterly.snow_brick_stairs": "Snow Brick Stairs",
   "block.winterly.snow_brick_slab": "Snow Brick Slab",
   "block.winterly.raw_cryomarble_shard": "Raw Cryomarble Shard",
-  
+
   "description.winterly.gift_box.0": "Place in the world and",
   "description.winterly.gift_box.1": "right-click to put items.",
   "description.winterly.gift_box.2": "You can put up to three items.",
   "description.winterly.gift_box.3": "Use silk touch to collect.",
 
-  "block.winterly.light_blue_gift_box": "Light Blue Gift Box",
+  "block.winterly.blue_gift_box": "Blue Gift Box",
+  "block.winterly.red_gift_box": "Red Gift Box",
+  "block.winterly.green_gift_box": "Green Gift Box",
+  "block.winterly.purple_gift_box": "Purple Gift Box",
+  "block.winterly.yellow_gift_box": "Yellow Gift Box",
+  "block.winterly.black_gift_box": "Black Gift Box",
+  "block.winterly.white_gift_box": "White Gift Box",
+  "block.winterly.cyan_gift_box": "Cyan Gift Box",
 
   "block.winterly.paper_block": "Paper Block (Deprecated)",
   "block.winterly.paper_bricks": "Paper Bricks (Deprecated)",

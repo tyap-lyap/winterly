@@ -17,7 +17,7 @@ public class UndergroundIcicleFeature extends Feature<DefaultFeatureConfig> {
 
     @Override
     public boolean generate(FeatureContext context) {
-		if(!Winterly.config.generateUndergroundIcicle) return false;
+		if(!Winterly.config.generateUndergroundIcicles) return false;
         boolean generated = false;
         int randomY = context.getRandom().nextInt(100) - 50;
 

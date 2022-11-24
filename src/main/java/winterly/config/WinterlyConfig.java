@@ -1,7 +1,7 @@
 package winterly.config;
 
 public class WinterlyConfig {
-	public boolean generateUndergroundIcicle = true;
+	public boolean generateUndergroundIcicles = true;
     public MobDecorationsConfig mobDecorations = new MobDecorationsConfig();
 
     public static class MobDecorationsConfig {
