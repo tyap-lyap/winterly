@@ -1,8 +1,0 @@
-{
-  "parent": "winterly:block/base/present_model_2",
-  "textures": {
-    "present": "winterly:block/green_present_model",
-    "present_2": "winterly:block/green_present_model_2",
-    "particle": "winterly:block/green_paper_block"
-  }
-}
