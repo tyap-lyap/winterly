@@ -25,6 +25,11 @@ public class WinterlyClientConfig {
 	public static void setupEntries(ConfigCategory category, ConfigEntryBuilder builder) {
 		var config = Winterly.config;
 
+		category.addEntry(builder.startBooleanToggle(text("option.update_checker_enabled"), config.updateCheckerEnabled)
+				.setDefaultValue(true)
+				.setSaveConsumer(newValue -> config.updateCheckerEnabled = newValue)
+				.build());
+
 		category.addEntry(builder.startBooleanToggle(text("option.generate_underground_icicles"), config.generateUndergroundIcicles)
 				.setDefaultValue(true)
 				.setSaveConsumer(newValue -> config.generateUndergroundIcicles = newValue)

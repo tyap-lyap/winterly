@@ -1,6 +1,7 @@
 package winterly.config;
 
 public class WinterlyConfig {
+	public boolean updateCheckerEnabled = true;
 	public boolean generateUndergroundIcicles = true;
     public MobDecorationsConfig mobDecorations = new MobDecorationsConfig();
 

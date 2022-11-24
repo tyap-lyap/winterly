@@ -10,15 +10,22 @@ import net.minecraft.util.collection.DefaultedList;
 import winterly.Winterly;
 import winterly.registry.WinterlyBlocks;
 import winterly.registry.WinterlyItems;
+import winterly.util.UpdateChecker;
 
 public class WinterlyOwoLibIntegration {
 	public static final Identifier ICONS_TEXTURE = Winterly.id("textures/gui/icons.png");
 
 	public static ItemGroup createItemGroup() {
 		return new OwoItemGroup(Winterly.id("items")) {
+
 			@Override
 			protected void setup() {
 				this.addButton(ItemGroupButton.link(Icon.of(ICONS_TEXTURE, 0, 0, 64, 64), "discord", "https://discord.gg/DcemWeskeZ"));
+				UpdateChecker.check();
+				if(UpdateChecker.updated) {
+					this.addButton(ItemGroupButton.link(Icon.of(ICONS_TEXTURE, 16, 0, 64, 64), "updated", "https://modrinth.com/mod/winterly"));
+				}
+
 			}
 
 			@Override

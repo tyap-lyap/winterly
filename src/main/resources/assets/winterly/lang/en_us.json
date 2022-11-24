@@ -1,6 +1,8 @@
 {
   "itemGroup.winterly.items": "Winterly",
   "itemGroup.winterly.items.button.discord": "Join our Discord server!",
+  "itemGroup.winterly.items.button.updated": "New update available! Get it on Modrinth!",
+  "itemGroup.winterly.items.button.updated.todo": "New update available! %local_version% -> %remote_version%. Get it on Modrinth!",
 
   "modmenu.descriptionTranslation.winterly": "Tyap-Lyap's MMD WinterJam 2021 Submission. A mod revolving around winter and holiday-themed things.",
 
@@ -108,6 +110,8 @@
 
   "config.winterly.title": "Winterly Config",
   "config.winterly.general": "General",
+  "config.winterly.option.update_checker_enabled": "Update Checker Enabled",
+  "config.winterly.option.generate_underground_icicles": "Generate Underground Icicles",
   "config.winterly.option.mob_decorations.enabled": "Mob Decorations Enabled",
   "config.winterly.option.mob_decorations.only_in_winter": "Mob Decorations Only in Winter",
   "config.winterly.option.mob_decorations.chance": "Mob Decorations Chance"
