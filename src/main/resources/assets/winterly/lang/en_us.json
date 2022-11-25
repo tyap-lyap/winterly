@@ -42,8 +42,7 @@
 
   "description.winterly.gift_box.0": "Place in the world and then",
   "description.winterly.gift_box.1": "right-click to put items.",
-  "description.winterly.gift_box.2": "You can put up to three items.",
-  "description.winterly.gift_box.3": "Use silk touch to collect.",
+  "description.winterly.gift_box.2": "Use silk touch to collect.",
 
   "block.winterly.blue_gift_box": "Blue Gift Box",
   "block.winterly.red_gift_box": "Red Gift Box",
@@ -63,6 +62,7 @@
 
   "config.winterly.title": "Winterly Config",
   "config.winterly.general": "General",
+  "config.winterly.option.max_gift_box_capacity": "Max Gift Box Capacity",
   "config.winterly.option.update_checker_enabled": "Update Checker Enabled",
   "config.winterly.option.generate_underground_icicles": "Generate Underground Icicles",
   "config.winterly.option.mob_decorations.enabled": "Mob Decorations Enabled",

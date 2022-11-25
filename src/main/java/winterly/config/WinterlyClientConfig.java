@@ -25,6 +25,11 @@ public class WinterlyClientConfig {
 	public static void setupEntries(ConfigCategory category, ConfigEntryBuilder builder) {
 		var config = Winterly.config;
 
+		category.addEntry(builder.startIntField(text("option.max_gift_box_capacity"), config.maxGiftBoxCapacity)
+				.setDefaultValue(3)
+				.setSaveConsumer(newValue -> config.maxGiftBoxCapacity = newValue)
+				.build());
+
 		category.addEntry(builder.startBooleanToggle(text("option.update_checker_enabled"), config.updateCheckerEnabled)
 				.setDefaultValue(true)
 				.setSaveConsumer(newValue -> config.updateCheckerEnabled = newValue)

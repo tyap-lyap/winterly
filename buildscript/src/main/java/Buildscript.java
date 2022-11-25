@@ -50,14 +50,13 @@ public class Buildscript extends SimpleFabricProject {
 
 		d.addMaven("https://maven.shedaniel.me", new MavenId("me.shedaniel.cloth", "cloth-config-fabric", "8.2.88"), ModDependencyFlag.RUNTIME, ModDependencyFlag.COMPILE);
 		d.addMaven("https://maven.shedaniel.me", new MavenId("me.shedaniel.cloth", "basic-math", "0.6.1"), ModDependencyFlag.RUNTIME, ModDependencyFlag.COMPILE);
-		d.addMaven("https://api.modrinth.com/maven/", new MavenId("maven.modrinth", "modmenu", "4.0.6"), ModDependencyFlag.RUNTIME, ModDependencyFlag.COMPILE);
 
 		d.addMaven("https://ladysnake.jfrog.io/artifactory/mods", new MavenId("dev.onyxstudios.cardinal-components-api", "cardinal-components-api", "5.0.2"), ModDependencyFlag.RUNTIME, ModDependencyFlag.COMPILE);
 		d.addMaven("https://ladysnake.jfrog.io/artifactory/mods", new MavenId("dev.onyxstudios.cardinal-components-api", "cardinal-components-base", "5.0.2"), ModDependencyFlag.RUNTIME, ModDependencyFlag.COMPILE);
-		jij(d.addMaven("https://ladysnake.jfrog.io/artifactory/mods", new MavenId("dev.onyxstudios.cardinal-components-api", "cardinal-components-world", "5.0.2"), ModDependencyFlag.RUNTIME, ModDependencyFlag.COMPILE));
 		d.addMaven("https://ladysnake.jfrog.io/artifactory/mods", new MavenId("dev.onyxstudios.cardinal-components-api", "cardinal-components-entity", "5.0.2"), ModDependencyFlag.RUNTIME, ModDependencyFlag.COMPILE);
 		d.addMaven("https://api.modrinth.com/maven/", new MavenId("maven.modrinth", "trinkets", "3.4.1"), ModDependencyFlag.RUNTIME, ModDependencyFlag.COMPILE);
 
+		// Runtime Mods
 		d.addMaven("https://api.modrinth.com/maven/", new MavenId("maven.modrinth", "emi", "0.4.2+1.19"), ModDependencyFlag.RUNTIME);
 		d.addMaven("https://api.modrinth.com/maven/", new MavenId("maven.modrinth", "lazydfu", Properties.LAZY_DFU), ModDependencyFlag.RUNTIME);
 		d.addMaven("https://api.modrinth.com/maven/", new MavenId("maven.modrinth", "ferrite-core", "5.0.0-fabric"), ModDependencyFlag.RUNTIME);
@@ -65,6 +64,7 @@ public class Buildscript extends SimpleFabricProject {
 		d.addMaven("https://api.modrinth.com/maven/", new MavenId("maven.modrinth", "lithium", "mc1.19.2-0.10.2"), ModDependencyFlag.RUNTIME);
 
 		// Compatibility
+		d.addMaven("https://api.modrinth.com/maven/", new MavenId("maven.modrinth", "modmenu", "4.0.6"), ModDependencyFlag.RUNTIME, ModDependencyFlag.COMPILE);
 		d.addMaven("https://api.modrinth.com/maven/", new MavenId("maven.modrinth", "immersive-weathering", "1.2.3-1.19.2"), ModDependencyFlag.RUNTIME, ModDependencyFlag.COMPILE);
 		d.addMaven("https://api.modrinth.com/maven/", new MavenId("maven.modrinth", "moonlight", "ND0jV6Ba"), ModDependencyFlag.RUNTIME, ModDependencyFlag.COMPILE);
 		d.addMaven("https://maven.wispforest.io", new MavenId("io.wispforest", "owo-lib", "0.9.0+1.19"), ModDependencyFlag.RUNTIME, ModDependencyFlag.COMPILE);

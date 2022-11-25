@@ -1,9 +1,14 @@
 package winterly.config;
 
 public class WinterlyConfig {
+	public int maxGiftBoxCapacity = 3;
 	public boolean updateCheckerEnabled = true;
 	public boolean generateUndergroundIcicles = true;
     public MobDecorationsConfig mobDecorations = new MobDecorationsConfig();
+
+	public int getGiftBoxCapacity() {
+		return Math.max(1, maxGiftBoxCapacity);
+	}
 
     public static class MobDecorationsConfig {
         public boolean enabled = true;
