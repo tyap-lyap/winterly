@@ -47,6 +47,7 @@ public class WinterlyBlocks {
     public static final Block RAW_CRYOMARBLE_SHARD = add("raw_cryomarble_shard", new IcicleBlock(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.GLASS).luminance(12)));
 
 	public static final Block RED_GIFT_BOX = add("red_gift_box", new GiftBoxBlock(copyOf(RED_WOOL)));
+	public static final Block ORANGE_GIFT_BOX = add("orange_gift_box", new GiftBoxBlock(copyOf(ORANGE_WOOL)));
 	public static final Block YELLOW_GIFT_BOX = add("yellow_gift_box", new GiftBoxBlock(copyOf(YELLOW_WOOL)));
 	public static final Block GREEN_GIFT_BOX = add("green_gift_box", new GiftBoxBlock(copyOf(GREEN_WOOL)));
 	public static final Block CYAN_GIFT_BOX = add("cyan_gift_box", new GiftBoxBlock(copyOf(CYAN_WOOL)));

@@ -1,0 +1,7 @@
+{
+  "parent": "winterly:block/base/gift_box_model",
+  "textures": {
+    "box": "winterly:block/orange_gift_box",
+    "particle": "winterly:block/orange_gift_box_particle"
+  }
+}

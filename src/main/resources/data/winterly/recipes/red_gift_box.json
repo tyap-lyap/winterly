@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#D#",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:paper"
+    },
+    "D": {
+      "item": "minecraft:red_dye"
+    }
+  },
+  "result": {
+    "item": "winterly:red_gift_box",
+    "count": 1
+  }
+}
