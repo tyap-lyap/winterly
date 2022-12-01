@@ -47,7 +47,7 @@ public class WinterlyItems {
     public static final Item BLUE_SCARF = add("blue_scarf", new ScarfItem(settings(), "blue"));
 	public static final Item RAINBOW_SCARF = add("rainbow_scarf", new ScarfItem(settings(), "rainbow"));
 
-    private static Item add(String name, Item item) {
+    private static <T extends Item> T add(String name, T item) {
         ITEMS.put(Winterly.id(name), item);
         return item;
     }

@@ -7,6 +7,7 @@ import net.minecraft.world.StructureWorldAccess;
 import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.util.FeatureContext;
+import winterly.Winterly;
 import winterly.block.IcicleBlock;
 import winterly.registry.WinterlyBlocks;
 
@@ -18,6 +19,7 @@ public class CryomarbleFeature extends Feature<DefaultFeatureConfig> {
 
     @Override
     public boolean generate(FeatureContext<DefaultFeatureConfig> context) {
+		if(!Winterly.config.generateCryomarble) return false;
         StructureWorldAccess world = context.getWorld();
         BlockPos origin = context.getOrigin();
 

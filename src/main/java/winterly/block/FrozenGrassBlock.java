@@ -20,15 +20,16 @@ public class FrozenGrassBlock extends SnowBlock {
 
 	@Override
 	public boolean canReplace(BlockState state, ItemPlacementContext context) {
-		int i = state.get(LAYERS);
-		if (!context.getStack().isOf(Blocks.SNOW.asItem()) || i >= 8) {
-			return i == 1;
+		int layers = state.get(LAYERS);
+
+		if(layers == 8) {
+			return false;
 		}
-		else if (context.canReplaceExisting()) {
+		if(context.getStack().isOf(Blocks.SNOW.asItem())) {
 			return context.getSide() == Direction.UP;
-		} else {
-			return true;
 		}
+
+		return layers == 1;
 	}
 
 	@Override

@@ -4,6 +4,9 @@ public class WinterlyConfig {
 	public int maxGiftBoxCapacity = 3;
 	public boolean updateCheckerEnabled = true;
 	public boolean generateUndergroundIcicles = true;
+	public boolean generateCryomarble = true;
+	public boolean generateFrozenGrass = true;
+	public boolean generateFrozenFlowers = true;
     public MobDecorationsConfig mobDecorations = new MobDecorationsConfig();
 
 	public int getGiftBoxCapacity() {
@@ -11,9 +14,9 @@ public class WinterlyConfig {
 	}
 
     public static class MobDecorationsConfig {
-        public boolean enabled = true;
+        public boolean enabled = false;
         public boolean onlyInWinter = true;
-        public int chance = 5;
+        public int chance = 15;
     }
 
 }

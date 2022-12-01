@@ -1,0 +1,31 @@
+{
+  "variants": {
+	"layers=0": {
+      "model": "winterly:block/frozen_flower"
+    },
+    "layers=1": {
+      "model": "winterly:block/frozen_flower_2"
+    },
+    "layers=2": {
+      "model": "winterly:block/frozen_flower_4"
+    },
+    "layers=3": {
+      "model": "winterly:block/frozen_flower_6"
+    },
+    "layers=4": {
+      "model": "winterly:block/frozen_flower_8"
+    },
+    "layers=5": {
+      "model": "winterly:block/frozen_flower_10"
+    },
+    "layers=6": {
+      "model": "winterly:block/frozen_flower_12"
+    },
+    "layers=7": {
+      "model": "winterly:block/frozen_flower_14"
+    },
+    "layers=8": {
+      "model": "minecraft:block/snow_block"
+    }
+  }
+}

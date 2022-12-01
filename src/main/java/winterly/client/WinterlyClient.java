@@ -25,11 +25,11 @@ public class WinterlyClient implements ClientModInitializer {
         BlockRenderLayerMap map = BlockRenderLayerMap.INSTANCE;
         WinterlyBlocks.BLOCKS.forEach((id, block) -> {
 			if(block instanceof GiftBoxBlock) map.putBlock(block, RenderLayer.getCutout());
-            if(block instanceof PresentBlock) map.putBlock(block, RenderLayer.getCutout());
             if(block instanceof GarlandLightsBlock) map.putBlock(block, RenderLayer.getCutout());
             if(block instanceof SnowguyBlock) map.putBlock(block, RenderLayer.getCutout());
             if(block instanceof IcicleBlock) map.putBlock(block, RenderLayer.getCutout());
 			if(block instanceof FrozenGrassBlock) map.putBlock(block, RenderLayer.getCutout());
+			if(block instanceof FrozenFlowerBlock) map.putBlock(block, RenderLayer.getCutout());
         });
         map.putBlock(WinterlyBlocks.ICICLE_BLOCK, RenderLayer.getTranslucent());
         map.putBlock(WinterlyBlocks.ICICLE_PANE, RenderLayer.getTranslucent());

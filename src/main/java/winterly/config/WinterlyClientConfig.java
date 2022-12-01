@@ -40,8 +40,23 @@ public class WinterlyClientConfig {
 				.setSaveConsumer(newValue -> config.generateUndergroundIcicles = newValue)
 				.build());
 
-		category.addEntry(builder.startBooleanToggle(text("option.mob_decorations.enabled"), config.mobDecorations.enabled)
+		category.addEntry(builder.startBooleanToggle(text("option.generate_cryomarble"), config.generateCryomarble)
 				.setDefaultValue(true)
+				.setSaveConsumer(newValue -> config.generateCryomarble = newValue)
+				.build());
+
+		category.addEntry(builder.startBooleanToggle(text("option.generate_frozen_grass"), config.generateFrozenGrass)
+				.setDefaultValue(true)
+				.setSaveConsumer(newValue -> config.generateFrozenGrass = newValue)
+				.build());
+
+		category.addEntry(builder.startBooleanToggle(text("option.generate_frozen_flowers"), config.generateFrozenFlowers)
+				.setDefaultValue(true)
+				.setSaveConsumer(newValue -> config.generateFrozenFlowers = newValue)
+				.build());
+
+		category.addEntry(builder.startBooleanToggle(text("option.mob_decorations.enabled"), config.mobDecorations.enabled)
+				.setDefaultValue(false)
 				.setSaveConsumer(newValue -> config.mobDecorations.enabled = newValue)
 				.build());
 
@@ -51,7 +66,7 @@ public class WinterlyClientConfig {
 				.build());
 
 		category.addEntry(builder.startIntSlider(text("option.mob_decorations.chance"), config.mobDecorations.chance, 0, 100)
-				.setDefaultValue(5)
+				.setDefaultValue(15)
 				.setSaveConsumer(newValue -> config.mobDecorations.chance = newValue)
 				.build());
 	}

@@ -16,7 +16,7 @@ public abstract class SpreadableBlockMixin {
 	@Inject(method = "canSurvive", at = @At("HEAD"), cancellable = true)
 	private static void canSurvive(BlockState state, WorldView world, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
 		BlockState up = world.getBlockState(pos.up());
-		if(up.isOf(WinterlyBlocks.FROZEN_GRASS)) {
+		if(up.isOf(WinterlyBlocks.FROZEN_GRASS) || up.isOf(WinterlyBlocks.FROZEN_FLOWER)) {
 			cir.setReturnValue(true);
 		}
 	}

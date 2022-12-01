@@ -43,6 +43,7 @@ public class WinterlyBlocks {
     public static final Block SNOW_BRICK_STAIRS = add("snow_brick_stairs", new BaseStairsBlock(SNOW_BLOCK.getDefaultState(), copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
     public static final Block SNOW_BRICK_SLAB = add("snow_brick_slab", new SlabBlock(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
 	public static final Block FROZEN_GRASS = add("frozen_grass", new FrozenGrassBlock(copyOf(AbstractBlock.Settings.of(Material.SNOW_LAYER).ticksRandomly().strength(0.1F).requiresTool().sounds(BlockSoundGroup.SNOW).blockVision((state, world, pos) -> state.get(SnowBlock.LAYERS) >= 8))));
+	public static final Block FROZEN_FLOWER = add("frozen_flower", new FrozenFlowerBlock(copyOf(AbstractBlock.Settings.of(Material.SNOW_LAYER).ticksRandomly().strength(0.1F).requiresTool().sounds(BlockSoundGroup.GRASS).blockVision((state, world, pos) -> state.get(FrozenFlowerBlock.LAYERS) >= 8))));
 
     public static final Block RAW_CRYOMARBLE_SHARD = add("raw_cryomarble_shard", new IcicleBlock(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.GLASS).luminance(12)));
 
@@ -59,11 +60,11 @@ public class WinterlyBlocks {
     public static final Block GARLAND_LIGHTS = add("garland_lights", new GarlandLightsBlock(copyOf(GREEN_WOOL).noCollision().sounds(BlockSoundGroup.CANDLE)));
     public static final Block RAINY_GARLAND_LIGHTS = add("rainy_garland_lights", new GarlandLightsBlock(copyOf(WHITE_WOOL).noCollision().sounds(BlockSoundGroup.CANDLE)));
 
-    private static Block add(String name, Block block) {
+    private static <T extends Block> T add(String name, T block) {
         return addBlockItem(name, block, new BlockItem(block, new FabricItemSettings().group(Winterly.itemGroup)));
     }
 
-    private static Block addBlockItem(String name, Block block, BlockItem item) {
+    private static <T extends Block> T addBlockItem(String name, T block, BlockItem item) {
         addBlock(name, block);
         if (item != null) {
             item.appendBlocks(Item.BLOCK_ITEMS, item);
@@ -72,7 +73,7 @@ public class WinterlyBlocks {
         return block;
     }
 
-    private static Block addBlock(String name, Block block) {
+    private static <T extends Block> T addBlock(String name, T block) {
         BLOCKS.put(Winterly.id(name), block);
         return block;
     }
