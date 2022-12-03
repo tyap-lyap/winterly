@@ -22,7 +22,7 @@ public class FrozenGrassBlock extends SnowBlock {
 	public boolean canReplace(BlockState state, ItemPlacementContext context) {
 		int layers = state.get(LAYERS);
 
-		if(layers == 8) {
+		if(layers == 8 || context.getStack().isOf(this.asItem())) {
 			return false;
 		}
 		if(context.getStack().isOf(Blocks.SNOW.asItem())) {

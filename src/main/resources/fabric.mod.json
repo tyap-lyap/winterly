@@ -3,7 +3,7 @@
   "id": "winterly",
   "version": "0.1.0",
   "name": "Winterly",
-  "description": "Tyap-Lyap's MMD WinterJam 2021 Submission. A mod revolving around winter and holiday-themed things.",
+  "description": "Winter expansion mod adding cold and sloppy stuff.",
   "authors": [
     "PinkGoosik",
     "aSomik"
@@ -41,7 +41,7 @@
   },
   "depends": {
     "fabricloader": "*",
-    "fabric-api": "*",
+    "fabric": "*",
     "cloth-config": "*",
     "trinkets": "*",
     "minecraft": ">=1.19",

@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.annotations.SerializedName;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.SharedConstants;
 import net.minecraft.text.Text;
 import net.minecraft.util.Language;
 import winterly.Winterly;
@@ -88,7 +89,7 @@ public class UpdateChecker {
 			var array = new ArrayList<ProjectVersion>();
 
 			Arrays.asList(versions).forEach(version -> {
-				if(version.gameVersions.contains("1.19.2")) array.add(version);
+				if(version.gameVersions.contains(SharedConstants.getGameVersion().getName())) array.add(version);
 			});
 
 			return Optional.of(array);

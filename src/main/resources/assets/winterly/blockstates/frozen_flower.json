@@ -1,31 +1,145 @@
 {
   "variants": {
-	"layers=0": {
-      "model": "winterly:block/frozen_flower"
-    },
-    "layers=1": {
-      "model": "winterly:block/frozen_flower_2"
-    },
-    "layers=2": {
-      "model": "winterly:block/frozen_flower_4"
-    },
-    "layers=3": {
-      "model": "winterly:block/frozen_flower_6"
-    },
-    "layers=4": {
-      "model": "winterly:block/frozen_flower_8"
-    },
-    "layers=5": {
-      "model": "winterly:block/frozen_flower_10"
-    },
-    "layers=6": {
-      "model": "winterly:block/frozen_flower_12"
-    },
-    "layers=7": {
-      "model": "winterly:block/frozen_flower_14"
-    },
-    "layers=8": {
-      "model": "minecraft:block/snow_block"
-    }
+    "layers=0": [
+      {
+        "model": "winterly:block/frozen_flower"
+      },
+      {
+        "model": "winterly:block/frozen_flower",
+        "y": 90
+      },
+      {
+        "model": "winterly:block/frozen_flower",
+        "y": 180
+      },
+      {
+        "model": "winterly:block/frozen_flower",
+        "y": 270
+      }
+    ],
+    "layers=1": [
+      {
+        "model": "winterly:block/frozen_flower_2"
+      },
+      {
+        "model": "winterly:block/frozen_flower_2",
+        "y": 90
+      },
+      {
+        "model": "winterly:block/frozen_flower_2",
+        "y": 180
+      },
+      {
+        "model": "winterly:block/frozen_flower_2",
+        "y": 270
+      }
+    ],
+    "layers=2": [
+      {
+        "model": "winterly:block/frozen_flower_4"
+      },
+      {
+        "model": "winterly:block/frozen_flower_4",
+        "y": 90
+      },
+      {
+        "model": "winterly:block/frozen_flower_4",
+        "y": 180
+      },
+      {
+        "model": "winterly:block/frozen_flower_4",
+        "y": 270
+      }
+    ],
+    "layers=3": [
+      {
+        "model": "winterly:block/frozen_flower_6"
+      },
+      {
+        "model": "winterly:block/frozen_flower_6",
+        "y": 90
+      },
+      {
+        "model": "winterly:block/frozen_flower_6",
+        "y": 180
+      },
+      {
+        "model": "winterly:block/frozen_flower_6",
+        "y": 270
+      }
+    ],
+    "layers=4": [
+      {
+        "model": "winterly:block/frozen_flower_8"
+      },
+      {
+        "model": "winterly:block/frozen_flower_8",
+        "y": 90
+      },
+      {
+        "model": "winterly:block/frozen_flower_8",
+        "y": 180
+      },
+      {
+        "model": "winterly:block/frozen_flower_8",
+        "y": 270
+      }
+    ],
+    "layers=5": [
+      {
+        "model": "winterly:block/frozen_flower_10"
+      },
+      {
+        "model": "winterly:block/frozen_flower_10",
+        "y": 90
+      },
+      {
+        "model": "winterly:block/frozen_flower_10",
+        "y": 180
+      },
+      {
+        "model": "winterly:block/frozen_flower_10",
+        "y": 270
+      }
+    ],
+    "layers=6": [
+      {
+        "model": "winterly:block/frozen_flower_12"
+      },
+      {
+        "model": "winterly:block/frozen_flower_12",
+        "y": 90
+      },
+      {
+        "model": "winterly:block/frozen_flower_12",
+        "y": 180
+      },
+      {
+        "model": "winterly:block/frozen_flower_12",
+        "y": 270
+      }
+    ],
+    "layers=7": [
+      {
+        "model": "winterly:block/frozen_flower_14"
+      },
+      {
+        "model": "winterly:block/frozen_flower_14",
+        "y": 90
+      },
+      {
+        "model": "winterly:block/frozen_flower_14",
+        "y": 180
+      },
+      {
+        "model": "winterly:block/frozen_flower_14",
+        "y": 270
+      }
+    ],
+    "layers=8": [
+      {
+        "model": "minecraft:block/snow_block"
+      }
+    ]
   }
 }

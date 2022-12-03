@@ -1,9 +1,6 @@
 package winterly.mixin.common;
 
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FlowerBlock;
-import net.minecraft.block.SnowyBlock;
+import net.minecraft.block.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.LightType;
 import net.minecraft.world.StructureWorldAccess;
@@ -27,19 +24,25 @@ public abstract class FreezeTopLayerMixin {
 			BlockState state = view.getBlockState(pos);
 			if(view instanceof StructureWorldAccess world) {
 
-				if (state.isOf(Blocks.GRASS) && Winterly.config.generateFrozenGrass) {
+				if (Winterly.config.generateFrozenGrass && (state.isOf(Blocks.GRASS) || state.isOf(Blocks.FERN) || state.isOf(Blocks.LARGE_FERN) || state.isOf(Blocks.TALL_GRASS))) {
 					world.setBlockState(pos, WinterlyBlocks.FROZEN_GRASS.getDefaultState(), 3);
-					BlockState st = world.getBlockState(pos.down());
-					if (st.contains(SnowyBlock.SNOWY)) {
-						world.setBlockState(pos.down(), st.with(SnowyBlock.SNOWY, Boolean.TRUE), 2);
+					BlockState floor = world.getBlockState(pos.down());
+					if (floor.contains(SnowyBlock.SNOWY)) {
+						world.setBlockState(pos.down(), floor.with(SnowyBlock.SNOWY, Boolean.TRUE), 2);
+					}
+					if(state.isOf(Blocks.LARGE_FERN) || state.isOf(Blocks.TALL_GRASS)) {
+						world.setBlockState(pos.up(), Blocks.AIR.getDefaultState(), 2);
 					}
 					return false;
 				}
-				else if(state.getBlock() instanceof FlowerBlock && Winterly.config.generateFrozenFlowers) {
+				else if(Winterly.config.generateFrozenFlowers && (state.getBlock() instanceof FlowerBlock || state.getBlock() instanceof TallFlowerBlock)) {
 					world.setBlockState(pos, WinterlyBlocks.FROZEN_FLOWER.getDefaultState().with(FrozenFlowerBlock.LAYERS, 1), 3);
-					BlockState st = world.getBlockState(pos.down());
-					if (st.contains(SnowyBlock.SNOWY)) {
-						world.setBlockState(pos.down(), st.with(SnowyBlock.SNOWY, Boolean.TRUE), 2);
+					BlockState floor = world.getBlockState(pos.down());
+					if (floor.contains(SnowyBlock.SNOWY)) {
+						world.setBlockState(pos.down(), floor.with(SnowyBlock.SNOWY, Boolean.TRUE), 2);
+					}
+					if(state.getBlock() instanceof TallFlowerBlock) {
+						world.setBlockState(pos.up(), Blocks.AIR.getDefaultState(), 2);
 					}
 					return false;
 				}

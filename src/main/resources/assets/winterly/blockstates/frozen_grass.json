@@ -1,28 +1,128 @@
 {
   "variants": {
-    "layers=1": {
-      "model": "winterly:block/frozen_grass_2"
-    },
-    "layers=2": {
-      "model": "winterly:block/frozen_grass_4"
-    },
-    "layers=3": {
-      "model": "winterly:block/frozen_grass_6"
-    },
-    "layers=4": {
-      "model": "winterly:block/frozen_grass_8"
-    },
-    "layers=5": {
-      "model": "winterly:block/frozen_grass_10"
-    },
-    "layers=6": {
-      "model": "winterly:block/frozen_grass_12"
-    },
-    "layers=7": {
-      "model": "winterly:block/frozen_grass_14"
-    },
-    "layers=8": {
-      "model": "minecraft:block/snow_block"
-    }
+    "layers=1": [
+      {
+        "model": "winterly:block/frozen_grass_2"
+      },
+      {
+        "model": "winterly:block/frozen_grass_2",
+        "y": 90
+      },
+      {
+        "model": "winterly:block/frozen_grass_2",
+        "y": 180
+      },
+      {
+        "model": "winterly:block/frozen_grass_2",
+        "y": 270
+      }
+    ],
+    "layers=2": [
+      {
+        "model": "winterly:block/frozen_grass_4"
+      },
+      {
+        "model": "winterly:block/frozen_grass_4",
+        "y": 90
+      },
+      {
+        "model": "winterly:block/frozen_grass_4",
+        "y": 180
+      },
+      {
+        "model": "winterly:block/frozen_grass_4",
+        "y": 270
+      }
+    ],
+    "layers=3": [
+      {
+        "model": "winterly:block/frozen_grass_6"
+      },
+      {
+        "model": "winterly:block/frozen_grass_6",
+        "y": 90
+      },
+      {
+        "model": "winterly:block/frozen_grass_6",
+        "y": 180
+      },
+      {
+        "model": "winterly:block/frozen_grass_6",
+        "y": 270
+      }
+    ],
+    "layers=4": [
+      {
+        "model": "winterly:block/frozen_grass_8"
+      },
+      {
+        "model": "winterly:block/frozen_grass_8",
+        "y": 90
+      },
+      {
+        "model": "winterly:block/frozen_grass_8",
+        "y": 180
+      },
+      {
+        "model": "winterly:block/frozen_grass_8",
+        "y": 270
+      }
+    ],
+    "layers=5": [
+      {
+        "model": "winterly:block/frozen_grass_10"
+      },
+      {
+        "model": "winterly:block/frozen_grass_10",
+        "y": 90
+      },
+      {
+        "model": "winterly:block/frozen_grass_10",
+        "y": 180
+      },
+      {
+        "model": "winterly:block/frozen_grass_10",
+        "y": 270
+      }
+    ],
+    "layers=6": [
+      {
+        "model": "winterly:block/frozen_grass_12"
+      },
+      {
+        "model": "winterly:block/frozen_grass_12",
+        "y": 90
+      },
+      {
+        "model": "winterly:block/frozen_grass_12",
+        "y": 180
+      },
+      {
+        "model": "winterly:block/frozen_grass_12",
+        "y": 270
+      }
+    ],
+    "layers=7": [
+      {
+        "model": "winterly:block/frozen_grass_14"
+      },
+      {
+        "model": "winterly:block/frozen_grass_14",
+        "y": 90
+      },
+      {
+        "model": "winterly:block/frozen_grass_14",
+        "y": 180
+      },
+      {
+        "model": "winterly:block/frozen_grass_14",
+        "y": 270
+      }
+    ],
+    "layers=8": [
+      {
+        "model": "minecraft:block/snow_block"
+      }
+    ]
   }
 }
