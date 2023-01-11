@@ -1,5 +1,6 @@
 package winterly.block;
 
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -49,10 +50,11 @@ public class FrozenGrassBlock extends SnowBlock {
 			dropStacks(state, world, pos);
 			world.setBlockState(pos, Blocks.GRASS.getDefaultState());
 		}
-
-		if(!state.get(PERSISTENT) && world.getLightLevel(LightType.SKY, pos) > 0 && world.getBiome(pos).value().getTemperature(pos) >= 0.15F) {
-			dropStacks(state, world, pos);
-			world.setBlockState(pos, Blocks.GRASS.getDefaultState());
+		else if(FabricLoader.getInstance().isModLoaded("seasons")) {
+			if(!state.get(PERSISTENT) && world.getLightLevel(LightType.SKY, pos) > 0 && world.getBiome(pos).value().getTemperature(pos) >= 0.15F) {
+				dropStacks(state, world, pos);
+				world.setBlockState(pos, Blocks.GRASS.getDefaultState());
+			}
 		}
 	}
 

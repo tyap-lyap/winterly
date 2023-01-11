@@ -21,11 +21,11 @@ public abstract class SnowBlockMixin {
 		BlockState state = ctx.getWorld().getBlockState(ctx.getBlockPos());
 		if(state.isOf(WinterlyBlocks.FROZEN_GRASS)) {
 			int layers = state.get(SnowBlock.LAYERS);
-			cir.setReturnValue(state.with(SnowBlock.LAYERS, Math.min(8, layers + 1)));
+			cir.setReturnValue(state.with(SnowBlock.LAYERS, Math.min(8, layers + 1)).with(FrozenGrassBlock.PERSISTENT, true));
 		}
 		else if(state.isOf(WinterlyBlocks.FROZEN_FLOWER)) {
 			int layers = state.get(FrozenFlowerBlock.LAYERS);
-			cir.setReturnValue(state.with(FrozenFlowerBlock.LAYERS, Math.min(8, layers + 1)));
+			cir.setReturnValue(state.with(FrozenFlowerBlock.LAYERS, Math.min(8, layers + 1)).with(FrozenGrassBlock.PERSISTENT, true));
 		}
 		else if(state.isOf(Blocks.GRASS)) {
 			cir.setReturnValue(WinterlyBlocks.FROZEN_GRASS.getDefaultState().with(FrozenGrassBlock.PERSISTENT, true));

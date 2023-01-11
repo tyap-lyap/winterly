@@ -1,5 +1,6 @@
 package winterly.block;
 
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -127,11 +128,13 @@ public class FrozenFlowerBlock extends Block {
 				world.setBlockState(pos, Objects.requireNonNullElse(cachedFlower, this).getDefaultState());
 			}
 		}
-		else if(!state.get(PERSISTENT) && world.getLightLevel(LightType.SKY, pos) > 0 && world.getBiome(pos).value().getTemperature(pos) >= 0.15F) {
-			dropStacks(state, world, pos);
-			if(state.get(LAYERS) != 0) {
-				var cachedFlower = CachedFlowers.getFlower(world.getRegistryKey(), pos);
-				world.setBlockState(pos, Objects.requireNonNullElse(cachedFlower, this).getDefaultState());
+		else if(FabricLoader.getInstance().isModLoaded("seasons")) {
+			if(!state.get(PERSISTENT) && world.getLightLevel(LightType.SKY, pos) > 0 && world.getBiome(pos).value().getTemperature(pos) >= 0.15F) {
+				dropStacks(state, world, pos);
+				if(state.get(LAYERS) != 0) {
+					var cachedFlower = CachedFlowers.getFlower(world.getRegistryKey(), pos);
+					world.setBlockState(pos, Objects.requireNonNullElse(cachedFlower, this).getDefaultState());
+				}
 			}
 		}
 	}
