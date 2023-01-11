@@ -1,0 +1,2 @@
+accessWidener	v1	named
+accessible	method	net/minecraft/world/biome/Biome	getTemperature	(Lnet/minecraft/util/math/BlockPos;)F

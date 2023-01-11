@@ -14,6 +14,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import winterly.Winterly;
 import winterly.block.FrozenFlowerBlock;
+import winterly.data.CachedFlowers;
 import winterly.registry.WinterlyBlocks;
 
 @Mixin(ServerWorld.class)
@@ -31,6 +32,7 @@ public abstract class ServerWorldMixin {
 				}
 				else if(state.getBlock() instanceof FlowerBlock && Winterly.config.generateFrozenFlowers) {
 					world.setBlockState(pos, WinterlyBlocks.FROZEN_FLOWER.getDefaultState().with(FrozenFlowerBlock.LAYERS, 1));
+					CachedFlowers.cacheFlower(((World) view).getRegistryKey(), pos, state.getBlock());
 					return false;
 				}
 			}

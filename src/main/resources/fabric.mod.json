@@ -23,6 +23,9 @@
     "client": [
       "winterly.client.WinterlyClient"
     ],
+    "cardinal-components": [
+      "winterly.data.WinterlyComponents"
+    ],
     "modmenu": [
       "winterly.compat.WinterlyModMenuIntegration"
     ]
@@ -30,6 +33,7 @@
   "mixins": [
     "winterly.mixins.json"
   ],
+  "accessWidener": "winterly.accesswidener",
   "custom": {
     "modmenu": {
       "links": {
@@ -37,7 +41,10 @@
         "modmenu.curseforge": "https://curseforge.com/minecraft/mc-mods/winterly",
         "modmenu.modrinth": "https://modrinth.com/mod/winterly"
       }
-    }
+    },
+    "cardinal-components": [
+      "winterly:world_data"
+    ]
   },
   "depends": {
     "fabricloader": "*",

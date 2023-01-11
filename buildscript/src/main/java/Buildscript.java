@@ -61,6 +61,7 @@ public class Buildscript extends SimpleFabricProject {
 		d.addMaven("https://ladysnake.jfrog.io/artifactory/mods", new MavenId("dev.onyxstudios.cardinal-components-api", "cardinal-components-api", cardinalComponents), RUNTIME, COMPILE);
 		d.addMaven("https://ladysnake.jfrog.io/artifactory/mods", new MavenId("dev.onyxstudios.cardinal-components-api", "cardinal-components-base", cardinalComponents), RUNTIME, COMPILE);
 		d.addMaven("https://ladysnake.jfrog.io/artifactory/mods", new MavenId("dev.onyxstudios.cardinal-components-api", "cardinal-components-entity", cardinalComponents), RUNTIME, COMPILE);
+		jij(d.addMaven("https://ladysnake.jfrog.io/artifactory/mods", new MavenId("dev.onyxstudios.cardinal-components-api", "cardinal-components-world", cardinalComponents), RUNTIME, COMPILE));
 		d.addMaven("https://maven.terraformersmc.com", new MavenId("dev.emi", "trinkets", this.getProperties().getProperty("trinkets")), RUNTIME, COMPILE);
 
 		// Runtime Mods
@@ -75,6 +76,7 @@ public class Buildscript extends SimpleFabricProject {
 		d.addMaven("https://api.modrinth.com/maven", new MavenId("maven.modrinth", "immersive-weathering", "1.2.3-1.19.2"), RUNTIME, COMPILE);
 		d.addMaven("https://api.modrinth.com/maven", new MavenId("maven.modrinth", "moonlight", "ND0jV6Ba"), RUNTIME, COMPILE);
 		d.addMaven("https://maven.wispforest.io", new MavenId("io.wispforest", "owo-lib", "0.9.0+1.19"), RUNTIME, COMPILE);
+		d.addMaven("https://api.modrinth.com/maven", new MavenId("maven.modrinth", "fabric-seasons", "1.4-BETA+1.19"), RUNTIME, COMPILE);
 	}
 
 	public void addFabricModules(ModDependencyCollector d) {

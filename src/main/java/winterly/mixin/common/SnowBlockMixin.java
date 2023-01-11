@@ -10,6 +10,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import winterly.block.FrozenFlowerBlock;
+import winterly.block.FrozenGrassBlock;
 import winterly.registry.WinterlyBlocks;
 
 @Mixin(SnowBlock.class)
@@ -27,10 +28,10 @@ public abstract class SnowBlockMixin {
 			cir.setReturnValue(state.with(FrozenFlowerBlock.LAYERS, Math.min(8, layers + 1)));
 		}
 		else if(state.isOf(Blocks.GRASS)) {
-			cir.setReturnValue(WinterlyBlocks.FROZEN_GRASS.getDefaultState());
+			cir.setReturnValue(WinterlyBlocks.FROZEN_GRASS.getDefaultState().with(FrozenGrassBlock.PERSISTENT, true));
 		}
 		else if(state.getBlock() instanceof FlowerBlock) {
-			cir.setReturnValue(WinterlyBlocks.FROZEN_FLOWER.getDefaultState().with(FrozenFlowerBlock.LAYERS, 1));
+			cir.setReturnValue(WinterlyBlocks.FROZEN_FLOWER.getDefaultState().with(FrozenFlowerBlock.LAYERS, 1).with(FrozenFlowerBlock.PERSISTENT, true));
 		}
 	}
 }

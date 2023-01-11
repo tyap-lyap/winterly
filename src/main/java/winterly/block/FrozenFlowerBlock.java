@@ -9,7 +9,9 @@ import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.StateManager;
+import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
+import net.minecraft.state.property.Properties;
 import net.minecraft.tag.BlockTags;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -21,11 +23,15 @@ import net.minecraft.world.LightType;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.Nullable;
+import winterly.data.CachedFlowers;
 import winterly.registry.WinterlyBlocks;
+
+import java.util.Objects;
 
 @SuppressWarnings("deprecation")
 public class FrozenFlowerBlock extends Block {
 	public static final IntProperty LAYERS = IntProperty.of("layers", 0, 8);
+	public static final BooleanProperty PERSISTENT = Properties.PERSISTENT;
 
 	protected static final VoxelShape[] LAYERS_TO_SHAPE = new VoxelShape[] {
 			Block.createCuboidShape(5.0, 0.0, 5.0, 11.0, 10.0, 11.0),
@@ -41,7 +47,7 @@ public class FrozenFlowerBlock extends Block {
 
 	public FrozenFlowerBlock(Settings settings) {
 		super(settings);
-		this.setDefaultState(this.stateManager.getDefaultState().with(LAYERS, 0));
+		this.setDefaultState(this.stateManager.getDefaultState().with(LAYERS, 0).with(PERSISTENT, false));
 	}
 
 	@Override
@@ -117,7 +123,15 @@ public class FrozenFlowerBlock extends Block {
 		if (world.getLightLevel(LightType.BLOCK, pos) > 11) {
 			dropStacks(state, world, pos);
 			if(state.get(LAYERS) != 0) {
-				world.setBlockState(pos, this.getDefaultState());
+				var cachedFlower = CachedFlowers.getFlower(world.getRegistryKey(), pos);
+				world.setBlockState(pos, Objects.requireNonNullElse(cachedFlower, this).getDefaultState());
+			}
+		}
+		else if(!state.get(PERSISTENT) && world.getLightLevel(LightType.SKY, pos) > 0 && world.getBiome(pos).value().getTemperature(pos) >= 0.15F) {
+			dropStacks(state, world, pos);
+			if(state.get(LAYERS) != 0) {
+				var cachedFlower = CachedFlowers.getFlower(world.getRegistryKey(), pos);
+				world.setBlockState(pos, Objects.requireNonNullElse(cachedFlower, this).getDefaultState());
 			}
 		}
 	}
@@ -125,8 +139,10 @@ public class FrozenFlowerBlock extends Block {
 	@Override
 	public void onBroken(WorldAccess world, BlockPos pos, BlockState state) {
 		super.onBroken(world, pos, state);
-		if(state.get(LAYERS) != 0) {
-			world.setBlockState(pos, this.getDefaultState(), Block.NOTIFY_ALL);
+
+		if(state.get(LAYERS) != 0 && world instanceof ServerWorld server) {
+			var cachedFlower = CachedFlowers.getFlower(server.getRegistryKey(), pos);
+			world.setBlockState(pos, Objects.requireNonNullElse(cachedFlower, this).getDefaultState(), Block.NOTIFY_ALL);
 		}
 	}
 
@@ -153,7 +169,7 @@ public class FrozenFlowerBlock extends Block {
 	public BlockState getPlacementState(ItemPlacementContext ctx) {
 		BlockState state = ctx.getWorld().getBlockState(ctx.getBlockPos());
 		if(state.isOf(Blocks.SNOW) || state.isOf(WinterlyBlocks.FROZEN_GRASS)) {
-			return getDefaultState().with(LAYERS, 1);
+			return getDefaultState().with(LAYERS, 1).with(PERSISTENT, true);
 		}
 		else {
 			return super.getPlacementState(ctx);
@@ -163,5 +179,6 @@ public class FrozenFlowerBlock extends Block {
 	@Override
 	protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
 		builder.add(LAYERS);
+		builder.add(PERSISTENT);
 	}
 }
