@@ -12,8 +12,7 @@
     "common.SnowBlockMixin",
     "common.SnowyBlockMixin",
     "common.SpreadableBlockMixin",
-    "common.ZombieExtension",
-    "common.immersive_weathering.ModGrassBlockMixin"
+    "common.ZombieExtension"
   ],
   "client": [
     "client.ArmorRendererMixin"

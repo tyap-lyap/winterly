@@ -22,11 +22,6 @@ public class WinterlyMixins implements IMixinConfigPlugin {
 
 	@Override
 	public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-		
-		if(mixinClassName.contains("immersive_weathering")) {
-			return FabricLoader.getInstance().isModLoaded("immersive_weathering");
-		}
-
 		return true;
 	}
 
