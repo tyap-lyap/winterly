@@ -65,18 +65,14 @@ public class Buildscript extends SimpleFabricProject {
 		d.addMaven("https://maven.terraformersmc.com", new MavenId("dev.emi", "trinkets", this.getProperties().getProperty("trinkets")), RUNTIME, COMPILE);
 
 		// Runtime Mods
-		d.addMaven("https://api.modrinth.com/maven", new MavenId("maven.modrinth", "emi", "0.4.2+1.19"), RUNTIME);
-		d.addMaven("https://api.modrinth.com/maven", new MavenId("maven.modrinth", "lazydfu", "0.1.3"), RUNTIME);
-		d.addMaven("https://api.modrinth.com/maven", new MavenId("maven.modrinth", "ferrite-core", "5.0.0-fabric"), RUNTIME);
-		d.addMaven("https://api.modrinth.com/maven", new MavenId("maven.modrinth", "starlight", "1.1.1+1.19"), RUNTIME);
-		d.addMaven("https://api.modrinth.com/maven", new MavenId("maven.modrinth", "lithium", "mc1.19.2-0.10.2"), RUNTIME);
+		d.addMaven("https://api.modrinth.com/maven", new MavenId("maven.modrinth", "emi", "0.7.0+1.19.3"), RUNTIME);
 
 		// Compatibility
-		d.addMaven("https://maven.terraformersmc.com", new MavenId("com.terraformersmc", "modmenu", "4.1.1"), RUNTIME, COMPILE);
-		d.addMaven("https://api.modrinth.com/maven", new MavenId("maven.modrinth", "immersive-weathering", "1.2.3-1.19.2"), RUNTIME, COMPILE);
-		d.addMaven("https://api.modrinth.com/maven", new MavenId("maven.modrinth", "moonlight", "ND0jV6Ba"), RUNTIME, COMPILE);
-		d.addMaven("https://maven.wispforest.io", new MavenId("io.wispforest", "owo-lib", "0.9.0+1.19"), RUNTIME, COMPILE);
-		d.addMaven("https://api.modrinth.com/maven", new MavenId("maven.modrinth", "fabric-seasons", "1.4-BETA+1.19"), RUNTIME, COMPILE);
+		d.addMaven("https://maven.terraformersmc.com", new MavenId("com.terraformersmc", "modmenu", "5.1.0-beta.4"), RUNTIME, COMPILE);
+		//d.addMaven("https://api.modrinth.com/maven", new MavenId("maven.modrinth", "immersive-weathering", "1.2.3-1.19.2"), RUNTIME, COMPILE);
+		//d.addMaven("https://api.modrinth.com/maven", new MavenId("maven.modrinth", "moonlight", "ND0jV6Ba"), RUNTIME, COMPILE);
+		d.addMaven("https://maven.wispforest.io", new MavenId("io.wispforest", "owo-lib", "0.10.2+1.19.3"), RUNTIME, COMPILE);
+		//d.addMaven("https://api.modrinth.com/maven", new MavenId("maven.modrinth", "fabric-seasons", "1.4-BETA+1.19"), RUNTIME, COMPILE);
 	}
 
 	public void addFabricModules(ModDependencyCollector d) {

@@ -2,8 +2,9 @@ package winterly.registry;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.*;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 import winterly.Winterly;
 import winterly.item.SantaHatItem;
 import winterly.item.ScarfItem;
@@ -53,10 +54,10 @@ public class WinterlyItems {
     }
 
     private static FabricItemSettings settings() {
-        return new FabricItemSettings().group(Winterly.itemGroup);
+        return new FabricItemSettings();
     }
 
     public static void init() {
-        ITEMS.forEach((id, item) -> Registry.register(Registry.ITEM, id, item));
+        ITEMS.forEach((id, item) -> Registry.register(Registries.ITEM, id, item));
     }
 }

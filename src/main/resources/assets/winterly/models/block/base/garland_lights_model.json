@@ -1,7 +1,7 @@
 {
   "ambientocclusion": false,
   "textures": {
-    "lights": "#lights",
+    "lights": "winterly:block/garland_lights",
     "particle": "#lights"
   },
   "elements": [

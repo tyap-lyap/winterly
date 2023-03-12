@@ -5,8 +5,8 @@
     32
   ],
   "textures": {
-    "box": "#box",
-    "particle": "#box"
+    "box": "winterly:block/black_gift_box",
+    "particle": "winterly:block/black_gift_box_particle"
   },
   "elements": [
     {

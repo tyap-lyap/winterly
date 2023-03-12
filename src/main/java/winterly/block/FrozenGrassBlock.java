@@ -44,6 +44,7 @@ public class FrozenGrassBlock extends SnowBlock {
 		return layers == 1;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
 		if (world.getLightLevel(LightType.BLOCK, pos) > 11) {

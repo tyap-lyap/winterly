@@ -4,9 +4,10 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 import winterly.Winterly;
 import winterly.block.*;
 import winterly.block.base.BasePaneBlock;
@@ -61,7 +62,7 @@ public class WinterlyBlocks {
     public static final Block RAINY_GARLAND_LIGHTS = add("rainy_garland_lights", new GarlandLightsBlock(copyOf(WHITE_WOOL).noCollision().sounds(BlockSoundGroup.CANDLE)));
 
     private static <T extends Block> T add(String name, T block) {
-        return addBlockItem(name, block, new BlockItem(block, new FabricItemSettings().group(Winterly.itemGroup)));
+        return addBlockItem(name, block, new BlockItem(block, new FabricItemSettings()));
     }
 
     private static <T extends Block> T addBlockItem(String name, T block, BlockItem item) {
@@ -79,7 +80,7 @@ public class WinterlyBlocks {
     }
 
     public static void init() {
-        ITEMS.forEach((id, item) -> Registry.register(Registry.ITEM, id, item));
-        BLOCKS.forEach((id, block) -> Registry.register(Registry.BLOCK, id, block));
+        ITEMS.forEach((id, item) -> Registry.register(Registries.ITEM, id, item));
+        BLOCKS.forEach((id, block) -> Registry.register(Registries.BLOCK, id, block));
     }
 }

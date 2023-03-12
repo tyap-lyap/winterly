@@ -30,7 +30,7 @@ public class UpdateChecker {
 	public static boolean updated = false;
 	public static Text text = null;
 
-	public static void check() {
+	public static boolean check() {
 		if(Winterly.config.updateCheckerEnabled) {
 			var local = getLocalVersion();
 			var remote = getLatestRemote();
@@ -48,13 +48,14 @@ public class UpdateChecker {
 				updated = true;
 			}
 		}
+		return updated;
 	}
 
 	static String getLatestRemote() {
 		if(ChronoUnit.HOURS.between(lastCheck, Instant.now()) >= 4) {
 			String remote = "0";
 			var versions = getModrinthVersions();
-			if(versions.isPresent()) {
+			if(versions.isPresent() && !versions.get().isEmpty()) {
 				remote = versions.get().get(0).versionNumber;
 			}
 			cachedLatest = remote;

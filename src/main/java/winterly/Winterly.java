@@ -1,7 +1,8 @@
 package winterly;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
@@ -29,6 +30,11 @@ public class Winterly implements ModInitializer {
 		WinterlyBlockEntities.init();
         WinterlyFeatures.init();
 
+		ItemGroupEvents.modifyEntriesEvent(itemGroup).register(entries -> {
+			WinterlyItems.ITEMS.forEach((id, item) -> entries.add(item.getDefaultStack()));
+			WinterlyBlocks.ITEMS.forEach((id, item) -> entries.add(item.getDefaultStack()));
+		});
+
 		if(FabricLoader.getInstance().isModLoaded("owo")) {
 			WinterlyOwoLibIntegration.initItemGroup();
 		}
@@ -38,15 +44,7 @@ public class Winterly implements ModInitializer {
 		if(FabricLoader.getInstance().isModLoaded("owo")) {
 			return WinterlyOwoLibIntegration.createItemGroup();
 		}
-
-        return FabricItemGroupBuilder
-                .create(id("items"))
-                .icon(() -> WinterlyBlocks.SNOWGUY.asItem().getDefaultStack())
-                .appendItems(stacks -> {
-                    WinterlyItems.ITEMS.forEach((id, item) -> stacks.add(item.getDefaultStack()));
-                    WinterlyBlocks.ITEMS.forEach((id, item) -> stacks.add(item.getDefaultStack()));
-                })
-                .build();
+        return FabricItemGroup.builder(id("items")).icon(() -> WinterlyBlocks.SNOWGUY.asItem().getDefaultStack()).build();
     }
 
     public static Identifier id(String path) {
