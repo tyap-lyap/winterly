@@ -62,7 +62,7 @@ public abstract class SkeletonExtension extends AbstractSkeletonEntity implement
         entityData = super.initialize(world, difficulty, spawnReason, entityData, entityNbt);
         if(!spawnReason.equals(SpawnReason.SPAWNER) && !spawnReason.equals(SpawnReason.CHUNK_GENERATION)) {
             if(Winterly.config.mobDecorations.enabled && HolidayUtils.isWinter() || !Winterly.config.mobDecorations.onlyInWinter) {
-                if(!this.world.getRegistryKey().equals(World.NETHER)) {
+                if(!this.getWorld().getRegistryKey().equals(World.NETHER)) {
                     int chance = Winterly.config.mobDecorations.chance;
                     if(chance > 0 && Math.random() < (double)chance / 100) {
                         getDataTracker().set(winterly$DECORATED, true);
