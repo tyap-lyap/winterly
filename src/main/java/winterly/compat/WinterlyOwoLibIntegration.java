@@ -16,9 +16,9 @@ public class WinterlyOwoLibIntegration {
 		return OwoItemGroup.builder(Winterly.id("items"), () -> Icon.of(WinterlyBlocks.SNOWGUY))
 				.initializer(group -> {
 					group.addButton(ItemGroupButton.link(group, Icon.of(ICONS_TEXTURE, 0, 0, 64, 64), "discord", "https://discord.gg/DcemWeskeZ"));
-					if(UpdateChecker.check()) {
-						group.addButton(ItemGroupButton.link(group, Icon.of(ICONS_TEXTURE, 16, 0, 64, 64), "updated", "https://modrinth.com/mod/winterly"));
-					}
+//					if(UpdateChecker.check()) {
+//						group.addButton(ItemGroupButton.link(group, Icon.of(ICONS_TEXTURE, 16, 0, 64, 64), "updated", "https://modrinth.com/mod/winterly"));
+//					}
 				}).build();
 	}
 

@@ -44,8 +44,8 @@ public class WinterlyBlocks {
     public static final Block SNOW_BRICKS = add("snow_bricks", new Block(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
     public static final Block SNOW_BRICK_STAIRS = add("snow_brick_stairs", new BaseStairsBlock(SNOW_BLOCK.getDefaultState(), copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
     public static final Block SNOW_BRICK_SLAB = add("snow_brick_slab", new SlabBlock(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.SNOW)));
-	public static final Block FROZEN_GRASS = add("frozen_grass", new FrozenGrassBlock(copyOf(AbstractBlock.Settings.create().mapColor(MapColor.WHITE).replaceable().notSolid().ticksRandomly().strength(0.1F).requiresTool().sounds(BlockSoundGroup.SNOW).blockVision((state, world, pos) -> state.get(SnowBlock.LAYERS) >= 8).pistonBehavior(PistonBehavior.DESTROY))));
-	public static final Block FROZEN_FLOWER = add("frozen_flower", new FrozenFlowerBlock(copyOf(AbstractBlock.Settings.create().mapColor(MapColor.WHITE).replaceable().notSolid().ticksRandomly().strength(0.1F).requiresTool().sounds(BlockSoundGroup.GRASS).blockVision((state, world, pos) -> state.get(SnowBlock.LAYERS) >= 8).pistonBehavior(PistonBehavior.DESTROY))));
+	public static final Block FROZEN_GRASS = add("frozen_grass", new FrozenGrassBlock(copyOf(AbstractBlock.Settings.create().mapColor(MapColor.WHITE).replaceable().notSolid().ticksRandomly().strength(0.1F).requiresTool().sounds(BlockSoundGroup.SNOW).blockVision((state, world, pos) -> state.get(FrozenGrassBlock.LAYERS) >= 8).pistonBehavior(PistonBehavior.DESTROY))));
+	public static final Block FROZEN_FLOWER = add("frozen_flower", new FrozenFlowerBlock(copyOf(AbstractBlock.Settings.create().mapColor(MapColor.WHITE).replaceable().notSolid().ticksRandomly().strength(0.1F).requiresTool().sounds(BlockSoundGroup.GRASS).blockVision((state, world, pos) -> state.get(FrozenFlowerBlock.LAYERS) >= 8).pistonBehavior(PistonBehavior.DESTROY))));
 
     public static final Block RAW_CRYOMARBLE_SHARD = add("raw_cryomarble_shard", new IcicleBlock(copyOf(WHITE_WOOL).sounds(BlockSoundGroup.GLASS).luminance(12)));
 

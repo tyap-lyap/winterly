@@ -2,8 +2,11 @@ package winterly;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
@@ -32,6 +35,10 @@ public class Winterly implements ModInitializer {
 
 		if(FabricLoader.getInstance().isModLoaded("owo")) {
 			WinterlyOwoLibIntegration.initItemGroup();
+			ItemGroupEvents.modifyEntriesEvent(Registries.ITEM_GROUP.getKey(itemGroup).get()).register(entries -> {
+				WinterlyItems.ITEMS.forEach((id, item) -> entries.add(item.getDefaultStack()));
+				WinterlyBlocks.ITEMS.forEach((id, item) -> entries.add(item.getDefaultStack()));
+			});
 		}
     }
 
@@ -39,12 +46,14 @@ public class Winterly implements ModInitializer {
 		if(FabricLoader.getInstance().isModLoaded("owo")) {
 			return WinterlyOwoLibIntegration.createItemGroup();
 		}
-        return FabricItemGroup.builder().displayName(Text.translatable("itemGroup.winterly.items"))
+        var group = FabricItemGroup.builder().displayName(Text.translatable("itemGroup.winterly.items"))
 			.icon(() -> WinterlyBlocks.SNOWGUY.asItem().getDefaultStack())
 			.entries((displayContext, entries) -> {
 				WinterlyItems.ITEMS.forEach((id, item) -> entries.add(item.getDefaultStack()));
 				WinterlyBlocks.ITEMS.forEach((id, item) -> entries.add(item.getDefaultStack()));
 			}).build();
+		Registry.register(Registries.ITEM_GROUP, id("items"), group);
+		return group;
     }
 
     public static Identifier id(String path) {
