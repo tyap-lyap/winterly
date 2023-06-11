@@ -67,6 +67,7 @@ public class Buildscript extends SimpleFabricProject {
 		// Compatibility
 		d.addMaven("https://maven.terraformersmc.com", new MavenId("com.terraformersmc", "modmenu", this.getProperties().getProperty("modmenu")), RUNTIME, COMPILE);
 		d.addMaven("https://maven.wispforest.io", new MavenId("io.wispforest", "owo-lib", this.getProperties().getProperty("owo-lib")), RUNTIME, COMPILE);
+		d.addMaven("https://repo.maven.apache.org/maven2/", new MavenId("blue.endless", "jankson", "1.2.2"), RUNTIME, COMPILE);
 	}
 
 	public void addFabricModules(ModDependencyCollector d) {
