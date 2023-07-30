@@ -1,12 +1,15 @@
 {
-  "type": "minecraft:smithing",
-  "base": {
-    "item": "minecraft:iron_hoe"
-  },
-  "addition": {
-    "item": "winterly:cryomarble"
-  },
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_hoe"
+    },
+    {
+      "item": "winterly:cryomarble"
+    }
+  ],
   "result": {
-    "item": "winterly:cryomarble_hoe"
+    "item": "winterly:cryomarble_hoe",
+    "count": 1
   }
 }

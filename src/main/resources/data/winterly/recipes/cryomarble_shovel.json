@@ -1,12 +1,15 @@
 {
-  "type": "minecraft:smithing",
-  "base": {
-    "item": "minecraft:iron_shovel"
-  },
-  "addition": {
-    "item": "winterly:cryomarble"
-  },
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_shovel"
+    },
+    {
+      "item": "winterly:cryomarble"
+    }
+  ],
   "result": {
-    "item": "winterly:cryomarble_shovel"
+    "item": "winterly:cryomarble_shovel",
+    "count": 1
   }
 }
