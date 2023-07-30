@@ -57,10 +57,10 @@ public class Buildscript extends SimpleFabricProject {
 		d.addMaven("https://maven.shedaniel.me", new MavenId("me.shedaniel.cloth", "basic-math", "0.6.1"), RUNTIME, COMPILE);
 
 		String cardinalComponents = this.getProperties().getProperty("cardinalComponents");
-		d.addMaven("https://ladysnake.jfrog.io/artifactory/mods", new MavenId("dev.onyxstudios.cardinal-components-api", "cardinal-components-api", cardinalComponents), RUNTIME, COMPILE);
-		d.addMaven("https://ladysnake.jfrog.io/artifactory/mods", new MavenId("dev.onyxstudios.cardinal-components-api", "cardinal-components-base", cardinalComponents), RUNTIME, COMPILE);
-		d.addMaven("https://ladysnake.jfrog.io/artifactory/mods", new MavenId("dev.onyxstudios.cardinal-components-api", "cardinal-components-entity", cardinalComponents), RUNTIME, COMPILE);
-		jij(d.addMaven("https://ladysnake.jfrog.io/artifactory/mods", new MavenId("dev.onyxstudios.cardinal-components-api", "cardinal-components-world", cardinalComponents), RUNTIME, COMPILE));
+		d.addMaven("https://maven.ladysnake.org/releases", new MavenId("dev.onyxstudios.cardinal-components-api", "cardinal-components-api", cardinalComponents), RUNTIME, COMPILE);
+		d.addMaven("https://maven.ladysnake.org/releases", new MavenId("dev.onyxstudios.cardinal-components-api", "cardinal-components-base", cardinalComponents), RUNTIME, COMPILE);
+		d.addMaven("https://maven.ladysnake.org/releases", new MavenId("dev.onyxstudios.cardinal-components-api", "cardinal-components-entity", cardinalComponents), RUNTIME, COMPILE);
+		jij(d.addMaven("https://maven.ladysnake.org/releases", new MavenId("dev.onyxstudios.cardinal-components-api", "cardinal-components-world", cardinalComponents), RUNTIME, COMPILE));
 		d.addMaven("https://maven.terraformersmc.com", new MavenId("dev.emi", "trinkets", this.getProperties().getProperty("trinkets")), RUNTIME, COMPILE);
 
 		// Compatibility
