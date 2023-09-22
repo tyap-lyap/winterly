@@ -20,7 +20,7 @@ import winterly.registry.WinterlyBlocks;
 @Mixin(ServerWorld.class)
 public abstract class ServerWorldMixin {
 
-	@Redirect(method = "tickChunk", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/biome/Biome;canSetSnow(Lnet/minecraft/world/WorldView;Lnet/minecraft/util/math/BlockPos;)Z"))
+	@Redirect(method = "tickIceAndSnow", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/biome/Biome;canSetSnow(Lnet/minecraft/world/WorldView;Lnet/minecraft/util/math/BlockPos;)Z"))
 	boolean canSetSnow(Biome biome, WorldView view, BlockPos pos) {
 
 		if(!biome.doesNotSnow(pos) && (pos.getY() >= view.getBottomY() && pos.getY() < view.getTopY() && view.getLightLevel(LightType.BLOCK, pos) < 10)) {
