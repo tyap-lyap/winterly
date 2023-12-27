@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "winterly",
-  "version": "0.1.0",
+  "version": "${version}",
   "name": "Winterly",
   "description": "Winter expansion mod adding cold and sloppy stuff.",
   "authors": [
@@ -48,10 +48,10 @@
   },
   "depends": {
     "fabricloader": "*",
-    "fabric": "*",
+    "fabric-api": "*",
     "cloth-config": "*",
     "trinkets": "*",
-    "minecraft": ">=1.20.2 <1.21",
+    "minecraft": ">=1.20.3 <1.21",
     "java": ">=17"
   }
 }

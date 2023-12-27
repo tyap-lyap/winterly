@@ -30,8 +30,8 @@ public class WinterlyBlocks {
 //    public static final Block BLUE_SOCK = add("blue_sock", new SockBlock(copyOf(CANDLE).sounds(BlockSoundGroup.WOOL)));
 
     public static final Block ICICLE = add("icicle", new IcicleBlock(copyOf(ICE).pistonBehavior(PistonBehavior.DESTROY)));
-    public static final Block ICICLE_BLOCK = add("icicle_block", new GlassBlock(copyOf(PACKED_ICE).nonOpaque()));
-	public static final Block PACKED_ICICLE_BLOCK = add("packed_icicle_block", new GlassBlock(copyOf(PACKED_ICE).nonOpaque()));
+    public static final Block ICICLE_BLOCK = add("icicle_block", new TransparentBlock(copyOf(PACKED_ICE).nonOpaque()));
+	public static final Block PACKED_ICICLE_BLOCK = add("packed_icicle_block", new TransparentBlock(copyOf(PACKED_ICE).nonOpaque()));
     public static final Block ICICLE_PANE = add("icicle_pane", new BasePaneBlock(copyOf(PACKED_ICE).nonOpaque()));
     public static final Block ICICLE_BARS = add("icicle_bars", new BasePaneBlock(copyOf(ICE).nonOpaque()));
 	public static final Block CRYOMARBLE_BLOCK = add("cryomarble_block", new Block(copyOf(DIAMOND_BLOCK)));

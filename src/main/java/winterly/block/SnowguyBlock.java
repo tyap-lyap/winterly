@@ -1,5 +1,6 @@
 package winterly.block;
 
+import com.mojang.serialization.MapCodec;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.block.Block;
@@ -27,7 +28,12 @@ public class SnowguyBlock extends HorizontalFacingBlock {
         super(settings);
     }
 
-    @Override
+	@Override
+	protected MapCodec<? extends HorizontalFacingBlock> getCodec() {
+		return null;
+	}
+
+	@Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
     }

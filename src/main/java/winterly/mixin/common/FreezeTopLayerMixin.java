@@ -24,7 +24,7 @@ public abstract class FreezeTopLayerMixin {
 			BlockState state = view.getBlockState(pos);
 			if(view instanceof StructureWorldAccess world) {
 
-				if (Winterly.config.generateFrozenGrass && (state.isOf(Blocks.GRASS) || state.isOf(Blocks.FERN) || state.isOf(Blocks.LARGE_FERN) || state.isOf(Blocks.TALL_GRASS))) {
+				if (Winterly.config.generateFrozenGrass && (state.isOf(Blocks.SHORT_GRASS) || state.isOf(Blocks.FERN) || state.isOf(Blocks.LARGE_FERN) || state.isOf(Blocks.TALL_GRASS))) {
 					world.setBlockState(pos, WinterlyBlocks.FROZEN_GRASS.getDefaultState(), 3);
 					BlockState floor = world.getBlockState(pos.down());
 					if (floor.contains(SnowyBlock.SNOWY)) {

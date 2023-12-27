@@ -26,7 +26,7 @@ public abstract class ServerWorldMixin {
 		if(!biome.doesNotSnow(pos) && (pos.getY() >= view.getBottomY() && pos.getY() < view.getTopY() && view.getLightLevel(LightType.BLOCK, pos) < 10)) {
 			BlockState state = view.getBlockState(pos);
 			if(view instanceof World world) {
-				if (state.isOf(Blocks.GRASS) && Winterly.config.generateFrozenGrass) {
+				if (state.isOf(Blocks.SHORT_GRASS) && Winterly.config.generateFrozenGrass) {
 					world.setBlockState(pos, WinterlyBlocks.FROZEN_GRASS.getDefaultState());
 					return false;
 				}

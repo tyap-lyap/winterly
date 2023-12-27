@@ -1,5 +1,6 @@
 package winterly.block;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalFacingBlock;
@@ -18,7 +19,12 @@ public class SnowballWallBlock extends HorizontalFacingBlock {
         super(settings);
     }
 
-    @Override
+	@Override
+	protected MapCodec<? extends HorizontalFacingBlock> getCodec() {
+		return null;
+	}
+
+	@Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
         return SHAPE;
     }

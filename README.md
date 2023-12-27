@@ -9,9 +9,4 @@ Winterly is a Minecraft mod for fabric loader. The mod is revolving around winte
 
 #### [Discord Server](https://discord.gg/DcemWeskeZ) | [Modrinth Page](https://modrinth.com/mod/winterly) | [CurseForge Page](https://curseforge.com/minecraft/mc-mods/winterly)
 
-## Development
-Unlike any other projects Winterly uses [brachyura build tool](https://github.com/CoolCrabs/brachyura), to set up development environment close you IDE and open
-a command prompt or terminal, run `java -jar brachyura-bootstrap-0.jar idea`, replace `idea` with `jdt` if you use VS Code
-or Eclipse, and `netbeans` if its Netbeans, reopen the IDE and allow it to import the project.
-
 ![Image](https://i.imgur.com/zRirSaD.png)

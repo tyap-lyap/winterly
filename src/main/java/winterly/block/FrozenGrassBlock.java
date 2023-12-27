@@ -49,12 +49,12 @@ public class FrozenGrassBlock extends SnowBlock {
 	public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
 		if (world.getLightLevel(LightType.BLOCK, pos) > 11) {
 			dropStacks(state, world, pos);
-			world.setBlockState(pos, Blocks.GRASS.getDefaultState());
+			world.setBlockState(pos, Blocks.SHORT_GRASS.getDefaultState());
 		}
 		else if(FabricLoader.getInstance().isModLoaded("seasons")) {
 			if(!state.get(PERSISTENT) && world.getLightLevel(LightType.SKY, pos) > 0 && world.getBiome(pos).value().getTemperature(pos) >= 0.15F) {
 				dropStacks(state, world, pos);
-				world.setBlockState(pos, Blocks.GRASS.getDefaultState());
+				world.setBlockState(pos, Blocks.SHORT_GRASS.getDefaultState());
 			}
 		}
 	}
@@ -62,6 +62,6 @@ public class FrozenGrassBlock extends SnowBlock {
 	@Override
 	public void onBroken(WorldAccess world, BlockPos pos, BlockState state) {
 		super.onBroken(world, pos, state);
-		world.setBlockState(pos, Blocks.GRASS.getDefaultState(), Block.NOTIFY_ALL);
+		world.setBlockState(pos, Blocks.SHORT_GRASS.getDefaultState(), Block.NOTIFY_ALL);
 	}
 }

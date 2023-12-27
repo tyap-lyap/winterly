@@ -56,7 +56,7 @@ public class GiftBoxBlock extends Block implements BlockEntityProvider {
 	}
 
 	@Override
-	public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+	public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
 		super.onBreak(world, pos, state, player);
 
 		if(!world.isClient && world.getBlockEntity(pos) instanceof GiftBoxBlockEntity entity) {
@@ -80,6 +80,7 @@ public class GiftBoxBlock extends Block implements BlockEntityProvider {
 				dropStack(world, pos, box);
 			}
 		}
+		return state;
 	}
 
 	@Override

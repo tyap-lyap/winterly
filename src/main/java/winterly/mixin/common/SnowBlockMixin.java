@@ -27,7 +27,7 @@ public abstract class SnowBlockMixin {
 			int layers = state.get(FrozenFlowerBlock.LAYERS);
 			cir.setReturnValue(state.with(FrozenFlowerBlock.LAYERS, Math.min(8, layers + 1)).with(FrozenGrassBlock.PERSISTENT, true));
 		}
-		else if(state.isOf(Blocks.GRASS)) {
+		else if(state.isOf(Blocks.SHORT_GRASS)) {
 			cir.setReturnValue(WinterlyBlocks.FROZEN_GRASS.getDefaultState().with(FrozenGrassBlock.PERSISTENT, true));
 		}
 		else if(state.getBlock() instanceof FlowerBlock) {
