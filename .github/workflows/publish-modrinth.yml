@@ -32,12 +32,12 @@ jobs:
 
           files: |
             fabric/build/libs/!(*-@(dev|sources|javadoc)).jar
-            fabric/build/libs/*-@(sources).jar
+            fabric/build/libs/*-sources.jar
             
           name: Winterly ${{ github.event.release.tag_name }}+fabric
           version: ${{ github.event.release.tag_name }}+fabric
 
-          version-type: beta
+          version-type: release
           loaders: |
             fabric
             quilt
@@ -65,12 +65,12 @@ jobs:
 
           files: |
             neoforge/build/libs/!(*-@(dev|sources|javadoc)).jar
-            neoforge/build/libs/*-@(sources).jar
+            neoforge/build/libs/*-sources.jar
 
           name: Winterly ${{ github.event.release.tag_name }}+neoforge
           version: ${{ github.event.release.tag_name }}+neoforge
 
-          version-type: beta
+          version-type: alpha
           loaders: |
             neoforge
 
