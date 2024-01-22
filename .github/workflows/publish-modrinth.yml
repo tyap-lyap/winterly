@@ -31,10 +31,10 @@ jobs:
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
 
           files: |
-            fabric/build/libs/!(*-@(dev|sources|javadoc)).jar
-            fabric/build/libs/*-sources.jar
+            fabric/build/libs/winterly-fabric-${{ github.event.release.tag_name }}.jar
+            fabric/build/libs/winterly-fabric-${{ github.event.release.tag_name }}-sources.jar
             
-          name: Winterly ${{ github.event.release.tag_name }}+fabric
+          name: Winterly Fabric ${{ github.event.release.tag_name }}
           version: ${{ github.event.release.tag_name }}+fabric
 
           version-type: release
@@ -64,10 +64,10 @@ jobs:
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
 
           files: |
-            neoforge/build/libs/!(*-@(dev|sources|javadoc)).jar
-            neoforge/build/libs/*-sources.jar
+            neoforge/build/libs/winterly-neoforge-${{ github.event.release.tag_name }}.jar
+            neoforge/build/libs/winterly-neoforge-${{ github.event.release.tag_name }}-sources.jar
 
-          name: Winterly ${{ github.event.release.tag_name }}+neoforge
+          name: Winterly NeoForge ${{ github.event.release.tag_name }}
           version: ${{ github.event.release.tag_name }}+neoforge
 
           version-type: alpha

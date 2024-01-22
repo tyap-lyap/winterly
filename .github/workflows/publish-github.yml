@@ -22,5 +22,5 @@ jobs:
       - name: Upload assets to GitHub
         uses: AButler/upload-release-assets@v3.0
         with:
-          files: "fabric/build/libs/*;neoforge/build/libs/*"
+          files: "fabric/build/libs/winterly-fabric-${{ github.event.release.tag_name }}.jar;fabric/build/libs/winterly-fabric-${{ github.event.release.tag_name }}-sources.jar;neoforge/build/libs/winterly-neoforge-${{ github.event.release.tag_name }}.jar;neoforge/build/libs/winterly-neoforge-${{ github.event.release.tag_name }}-sources.jar"
           repo-token: ${{ secrets.GH_TOKEN }}
