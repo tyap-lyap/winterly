@@ -32,7 +32,7 @@ jobs:
 
           files: |
             fabric/build/libs/!(*-@(dev|sources|javadoc)).jar
-            fabric/build/libs/*-@(dev|sources|javadoc).jar
+            fabric/build/libs/*-@(sources).jar
             
           name: Winterly ${{ github.event.release.tag_name }}+fabric
           version: ${{ github.event.release.tag_name }}+fabric
@@ -65,7 +65,7 @@ jobs:
 
           files: |
             neoforge/build/libs/!(*-@(dev|sources|javadoc)).jar
-            neoforge/build/libs/*-@(dev|sources|javadoc).jar
+            neoforge/build/libs/*-@(sources).jar
 
           name: Winterly ${{ github.event.release.tag_name }}+neoforge
           version: ${{ github.event.release.tag_name }}+neoforge
