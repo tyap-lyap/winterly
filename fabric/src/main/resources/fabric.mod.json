@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "${id}",
+  "version": "${version}",
+  "name": "${name}",
+  "description": "${description}",
+  "authors": [
+    "PinkGoosik",
+    "VioletSomik"
+  ],
+  "contact": {
+    "homepage": "${homepage_url}",
+    "sources": "${sources_url}",
+    "issues": "${issue_tracker_url}"
+  },
+  "license": "${license}",
+  "icon": "assets/winterly/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "winterly.fabric.WinterlyFabric"
+    ],
+    "client": [
+      "winterly.fabric.client.WinterlyFabricClient"
+    ],
+    "cardinal-components": [
+      "winterly.fabric.data.WinterlyComponents"
+    ],
+    "modmenu": [
+      "winterly.fabric.compat.WinterlyModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "${id}-common.mixins.json",
+    "${id}.mixins.json"
+  ],
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/DcemWeskeZ",
+        "modmenu.curseforge": "https://curseforge.com/minecraft/mc-mods/winterly",
+        "modmenu.modrinth": "https://modrinth.com/mod/winterly"
+      }
+    },
+    "cardinal-components": [
+      "winterly:world_data"
+    ]
+  },
+  "depends": {
+    "fabricloader": "*",
+    "fabric-api": "*",
+    "cloth-config": "*",
+    "trinkets": "*",
+    "minecraft": "${minecraft_version_range_fabric}",
+    "java": ">=17"
+  }
+}

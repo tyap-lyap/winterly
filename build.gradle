@@ -1,73 +1,79 @@
 plugins {
-	id "fabric-loom" version "1.4-SNAPSHOT"
+    id "architectury-plugin" version "3.4-SNAPSHOT"
+    id "dev.architectury.loom" version "1.4-SNAPSHOT" apply false
 }
 
-version = project.mod_version
-group = project.maven_group
+architectury {
+    minecraft = rootProject.minecraft_version
+}
 
-repositories {
-	maven {
-        url "https://api.modrinth.com/maven"
-        content { includeGroup "maven.modrinth" }
+subprojects {
+    apply plugin: "dev.architectury.loom"
+
+    loom {
+        silentMojangMappingsLicense()
     }
-	maven { url "https://maven.ladysnake.org/releases" } //CCA
-	maven { url "https://maven.terraformersmc.com" } //trinkets
-	maven { url "https://maven.wispforest.io" } //owo-lib
-	maven { url "https://maven.shedaniel.me/" } //cloth-config
+
+    dependencies {
+        minecraft "com.mojang:minecraft:${rootProject.minecraft_version}"
+        mappings loom.officialMojangMappings()
+    }
+
+    repositories {
+        maven {
+            name "NeoForged"
+            url "https://maven.neoforged.net/releases/"
+        }
+    }
+
+    processResources {
+        def expandProps = [
+                "name": rootProject.mod_name,
+                "version": rootProject.mod_version,
+                "description": rootProject.mod_description,
+                "id": rootProject.mod_id,
+                "homepage_url": rootProject.homepage_url,
+                "sources_url": rootProject.sources_url,
+                "issue_tracker_url": rootProject.issue_tracker_url,
+                "license": rootProject.license,
+                "minecraft_version": rootProject.minecraft_version,
+                "minecraft_version_range": rootProject.minecraft_version_range,
+				"minecraft_version_range_fabric": rootProject.minecraft_version_range_fabric,
+                "fabric_loader_version": rootProject.fabric_loader_version,
+                "fabric_version": rootProject.fabric_api_version,
+                "neoforge_version": rootProject.neoforge_version,
+                "neoforge_version_range": rootProject.neoforge_version_range
+        ]
+
+        filesMatching(['pack.mcmeta', 'fabric.mod.json', 'META-INF/mods.toml', '*.mixins.json']) {
+            expand expandProps
+        }
+
+        inputs.properties(expandProps)
+    }
 }
 
-dependencies {
-	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+allprojects {
+    apply plugin: "java"
+    apply plugin: "architectury-plugin"
+    apply plugin: "maven-publish"
 
-	modImplementation "net.fabricmc:fabric-loader:${project.fabric_loader}"
-	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api}"
-	modImplementation "dev.emi:trinkets:${project.trinkets_version}"
+    base {
+        archivesName = rootProject.archives_base_name
+    }
 
-	// we don't include these because trinkets already does it
-	modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}"
-	modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}"
+    version = rootProject.mod_version
+    group = rootProject.maven_group
 
-	modImplementation include("dev.onyxstudios.cardinal-components-api:cardinal-components-world:${project.cca_version}")
+    repositories {
+    }
 
-	// use modApi when owo lib is compatible with mc version
-	modApi "io.wispforest:owo-lib:${project.owo_lib}"
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+        options.release = 17
+    }
 
-	modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config}") { exclude(group: "net.fabricmc.fabric-api") }
-	modApi "com.terraformersmc:modmenu:${project.modmenu_version}"
-
-	modLocalRuntime "maven.modrinth:here-be-no-dragons:1.0.0"
-	modLocalRuntime "dev.emi:emi-fabric:1.0.29+1.20.4"
-}
-
-loom {
-	accessWidenerPath = file("src/main/resources/winterly.accesswidener")
-}
-
-base {
-	archivesName = project.archives_base_name
-}
-
-processResources {
-	inputs.property "version", project.version
-	filesMatching("fabric.mod.json") {
-		expand "version": project.version
-	}
-}
-
-tasks.withType(JavaCompile).configureEach {
-	it.options.encoding = "UTF-8"
-	it.options.release = 17
-}
-
-java {
-	sourceCompatibility = JavaVersion.VERSION_17
-	targetCompatibility = JavaVersion.VERSION_17
-	withSourcesJar()
-}
-
-jar {
-	from("LICENSE") {
-		rename { "${it}_${project.base.archivesName.get()}"}
-	}
+    java {
+        withSourcesJar()
+    }
 }

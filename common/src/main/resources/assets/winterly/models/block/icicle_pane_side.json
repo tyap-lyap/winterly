@@ -1,0 +1,8 @@
+{
+  "render_type": "minecraft:translucent",
+  "parent": "block/template_glass_pane_side",
+  "textures": {
+    "pane": "winterly:block/icicle_block",
+    "edge": "winterly:block/icicle_block"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "render_type": "minecraft:cutout",
+  "parent": "block/iron_bars_cap",
+  "textures": {
+    "bars": "winterly:block/icicle_bars",
+    "edge": "#bars",
+    "particle": "#bars"
+  }
+}

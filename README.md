@@ -1,6 +1,6 @@
 # Winterly
 
-<img align="right" width="160" src="src/main/resources/assets/winterly/icon.png">
+<img align="right" width="160" src="common/src/main/resources/icon.png">
 
 [![CurseForge Downloads](https://cf.way2muchnoise.eu/full_winterly_downloads.svg)](https://curseforge.com/minecraft/mc-mods/winterly)
 [![MC Versions](https://cf.way2muchnoise.eu/versions/winterly.svg)](https://curseforge.com/minecraft/mc-mods/winterly)

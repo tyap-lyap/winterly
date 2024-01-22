@@ -1,0 +1,18 @@
+modLoader = "javafml"
+loaderVersion = "[2,)"
+issueTrackerURL = "${issue_tracker_url}" # Change this to the link to your mod's issue tracker.
+license = "${license}"
+
+[[mods]]
+modId = "${id}"
+displayName = "${name}"
+version = "${version}"
+description = '''${description}'''
+authors = "PinkGoosik"
+logoFile = "assets/winterly/icon.png"
+
+[[mixins]]
+config = "${id}-common.mixins.json"
+
+[[mixins]]
+config = "${id}.mixins.json"

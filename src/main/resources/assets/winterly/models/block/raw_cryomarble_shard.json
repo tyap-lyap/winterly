@@ -1,6 +1,0 @@
-{
-  "parent": "block/tinted_cross",
-  "textures": {
-    "cross": "winterly:block/raw_cryomarble_shard"
-  }
-}

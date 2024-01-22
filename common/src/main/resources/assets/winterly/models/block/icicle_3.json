@@ -1,0 +1,7 @@
+{
+  "render_type": "minecraft:cutout",
+  "parent": "block/tinted_cross",
+  "textures": {
+    "cross": "winterly:block/icicle_3"
+  }
+}
