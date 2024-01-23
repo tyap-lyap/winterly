@@ -55,7 +55,7 @@ jobs:
 
           retry-attempts: 2
           retry-delay: 10000
-          fail-mode: fail
+          fail-mode: skip
 
       - name: Publish neoforge artifacts
         uses: Kir-Antipov/mc-publish@v3.3.0
@@ -86,4 +86,4 @@ jobs:
 
           retry-attempts: 2
           retry-delay: 10000
-          fail-mode: fail
+          fail-mode: skip

@@ -31,11 +31,18 @@ jobs:
         run: chmod +x ./gradlew
       - name: Build
         run: ./gradlew build
+      - uses: BrycensRanch/read-properties-action@v1
+        id: gradle_props
+        with:
+          file: gradle.properties
+          all: true
       - name: Capture build artifacts
         if: ${{ runner.os == 'Linux' && matrix.java == '17' }} # Only upload artifacts built from latest java on one OS
         uses: actions/upload-artifact@v4
         with:
           name: Artifacts
           path: |
-            fabric/build/libs/
-            neoforge/build/libs/
+            fabric/build/libs/winterly-fabric-${{ steps.gradle_props.outputs.mod_version }}.jar
+            fabric/build/libs/winterly-fabric-${{ steps.gradle_props.outputs.mod_version }}-sources.jar
+            neoforge/build/libs/winterly-neoforge-${{ steps.gradle_props.outputs.mod_version }}.jar
+            neoforge/build/libs/winterly-neoforge-${{ steps.gradle_props.outputs.mod_version }}-sources.jar
