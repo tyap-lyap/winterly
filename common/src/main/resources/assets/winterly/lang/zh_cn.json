@@ -5,6 +5,12 @@
 
   "modmenu.descriptionTranslation.winterly": "Winter expansion mod adding cold and sloppy stuff.",
 
+  "tip.winterly.requires_trinkets.0": "Requires Trinkets mod to be installed",
+  "tip.winterly.requires_trinkets.1": "in order to be wearable.",
+
+  "tip.winterly.requires_curios.0": "Requires Curios API to be installed",
+  "tip.winterly.requires_curios.1": "in order to be wearable.",
+
   "item.winterly.red_candy_cane": "红色条纹拐杖糖",
   "item.winterly.green_candy_cane": "绿色条纹拐杖糖",
   "item.winterly.blue_candy_cane": "蓝色条纹拐杖糖",

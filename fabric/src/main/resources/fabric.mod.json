@@ -50,7 +50,6 @@
     "fabricloader": "*",
     "fabric-api": "*",
     "cloth-config": "*",
-    "trinkets": "*",
     "minecraft": "${minecraft_version_range_fabric}",
     "java": ">=17"
   }

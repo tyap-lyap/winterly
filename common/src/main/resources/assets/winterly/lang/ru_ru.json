@@ -5,6 +5,12 @@
 
   "modmenu.descriptionTranslation.winterly": "Мод расширяющий зиму и добавляющий праздничные предметы.",
 
+  "tip.winterly.requires_trinkets.0": "Для ношения требуется",
+  "tip.winterly.requires_trinkets.1": "установка мода Trinkets.",
+
+  "tip.winterly.requires_curios.0": "Для ношения требуется",
+  "tip.winterly.requires_curios.1": "установка мода Curios API.",
+
   "item.winterly.red_candy_cane": "Красный леденец",
   "item.winterly.green_candy_cane": "Зеленый леденец",
   "item.winterly.blue_candy_cane": "Синий леденец",

@@ -36,7 +36,7 @@ dependencies {
 
     // Remove the next line if you don't want to depend on the API
 //    modApi "dev.architectury:architectury-neoforge:${rootProject.architectury_version}"
-	
+
 	modCompileOnly("top.theillusivec4.curios:curios-neoforge:${rootProject.curios_version}:api")
     // Use the full Curios API jar at runtime
     modRuntimeOnly("top.theillusivec4.curios:curios-neoforge:${rootProject.curios_version}")
@@ -46,7 +46,6 @@ dependencies {
     common(project(path: ":common", configuration: "namedElements")) { transitive false }
     shadowCommon(project(path: ":common", configuration: "transformProductionNeoForge")) { transitive = false }
 }
-
 
 processResources {
     inputs.property "version", project.version
