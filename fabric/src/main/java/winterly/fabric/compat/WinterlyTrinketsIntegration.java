@@ -28,7 +28,6 @@ import java.util.Optional;
 
 public class WinterlyTrinketsIntegration {
 
-
 	public static void registerTrinket(Item item) {
 		TrinketsApi.registerTrinket(item, new Trinket() {});
 	}

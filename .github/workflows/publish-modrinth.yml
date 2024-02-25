@@ -34,7 +34,7 @@ jobs:
             fabric/build/libs/winterly-fabric-${{ github.event.release.tag_name }}.jar
             fabric/build/libs/winterly-fabric-${{ github.event.release.tag_name }}-sources.jar
             
-          name: Winterly Fabric ${{ github.event.release.tag_name }}
+          name: ${{ github.event.release.tag_name }}+fabric
           version: ${{ github.event.release.tag_name }}+fabric
 
           version-type: release
@@ -67,7 +67,7 @@ jobs:
             neoforge/build/libs/winterly-neoforge-${{ github.event.release.tag_name }}.jar
             neoforge/build/libs/winterly-neoforge-${{ github.event.release.tag_name }}-sources.jar
 
-          name: Winterly NeoForge ${{ github.event.release.tag_name }}
+          name: ${{ github.event.release.tag_name }}+neoforge
           version: ${{ github.event.release.tag_name }}+neoforge
 
           version-type: alpha

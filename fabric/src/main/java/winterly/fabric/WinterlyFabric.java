@@ -9,7 +9,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import winterly.Winterly;
-import winterly.config.WinterlyClothConfig;
 import winterly.fabric.compat.WinterlyOwoLibIntegration;
 import winterly.fabric.registry.WinterlyBlockEntities;
 import winterly.fabric.registry.WinterlyBlocks;

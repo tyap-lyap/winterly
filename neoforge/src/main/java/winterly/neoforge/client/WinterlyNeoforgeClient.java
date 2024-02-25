@@ -25,18 +25,18 @@ import winterly.registry.CommonWinterlyItems;
 @OnlyIn(Dist.CLIENT)
 public class WinterlyNeoforgeClient {
 
-	public void init(IEventBus bus) {
-		bus.addListener(this::clientSetup);
-		bus.addListener(this::registerModelLayers);
-		bus.addListener(this::registerRenderLayers);
+	public static void init(IEventBus bus) {
+		bus.addListener(WinterlyNeoforgeClient::clientSetup);
+		bus.addListener(WinterlyNeoforgeClient::registerModelLayers);
+		bus.addListener(WinterlyNeoforgeClient::registerRenderLayers);
 	}
 
-	private void registerModelLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+	private static void registerModelLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
 		event.registerLayerDefinition(WinterlyModelLayers.SANTA_HAT_LAYER, SantaHatModel::getTexturedModelData);
 		event.registerLayerDefinition(WinterlyModelLayers.SCARF_LAYER, ScarfModel::getTexturedModelData);
 	}
 
-	private void registerRenderLayers(EntityRenderersEvent.AddLayers event) {
+	private static void registerRenderLayers(EntityRenderersEvent.AddLayers event) {
 		event.getContext().getEntityRenderDispatcher().renderers.forEach((entityType, entityRenderer) -> {
 			if(entityRenderer instanceof ZombieRenderer renderer) {
 				renderer.addLayer(new DecorationFeatureRenderer<>(renderer));
@@ -50,7 +50,7 @@ public class WinterlyNeoforgeClient {
 		});
 	}
 
-	private void clientSetup(FMLClientSetupEvent event) {
+	private static void clientSetup(FMLClientSetupEvent event) {
 		if(ModList.get().isLoaded("curios")) {
 			CommonWinterlyItems.ITEMS.forEach((resourceLocation, item) -> {
 				if(item instanceof CommonScarfItem scarf) WinterlyCuriosIntegration.registerScarfRenderer(scarf);

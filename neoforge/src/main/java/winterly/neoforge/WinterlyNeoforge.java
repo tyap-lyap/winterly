@@ -26,7 +26,7 @@ import java.util.function.Supplier;
 public class WinterlyNeoforge {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, "winterly");
 
-    public static Supplier<CreativeModeTab> WINTERLY_TAB = CREATIVE_MODE_TABS.register("winterly", () -> CreativeModeTab.builder().icon(CommonWinterlyBlocks.SNOWGUY.asItem()::getDefaultInstance).title(Component.literal("Winterly")).build());
+    public static final Supplier<CreativeModeTab> WINTERLY_TAB = CREATIVE_MODE_TABS.register("winterly", () -> CreativeModeTab.builder().icon(CommonWinterlyBlocks.SNOWGUY.asItem()::getDefaultInstance).title(Component.translatable("itemGroup.winterly.items")).build());
 
     public WinterlyNeoforge(IEventBus bus) {
         CREATIVE_MODE_TABS.register(bus);
@@ -41,7 +41,7 @@ public class WinterlyNeoforge {
 		bus.addListener(this::commonSetup);
 
 		if(FMLEnvironment.dist.isClient()) {
-			new WinterlyNeoforgeClient().init(bus);
+			WinterlyNeoforgeClient.init(bus);
 		}
     }
 

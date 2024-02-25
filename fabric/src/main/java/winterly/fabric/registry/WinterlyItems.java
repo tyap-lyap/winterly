@@ -1,6 +1,5 @@
 package winterly.fabric.registry;
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.food.FoodProperties;
@@ -45,9 +44,5 @@ public class WinterlyItems {
     private static <T extends Item> T add(String name, T item) {
         ITEMS.put(Winterly.id(name), item);
         return item;
-    }
-
-    private static FabricItemSettings settings() {
-        return new FabricItemSettings();
     }
 }

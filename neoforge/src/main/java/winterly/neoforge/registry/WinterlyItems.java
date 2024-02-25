@@ -42,21 +42,14 @@ public class WinterlyItems {
         add("blue_scarf", () -> BLUE_SCARF = new ScarfItem(settings(), "blue"));
         add("rainbow_scarf", () -> RAINBOW_SCARF = new ScarfItem(settings(), "rainbow"));
 
-//        ITEMS.forEach((id, item) -> Registry.register(BuiltInRegistries.ITEM, id, item));
         ITEMS_REGISTERER.register(eventBus);
     }
 
-    private static <T extends Item> T add(String name, Supplier<? extends T> sup) {
-//        ITEMS.put(Winterly.id(name), null);
+    private static <T extends Item> void add(String name, Supplier<? extends T> sup) {
         ITEMS_REGISTERER.register(name, () -> {
             var item = sup.get();
             ITEMS.put(Winterly.id(name), item);
             return item;
         });
-        return null;
-    }
-
-    private static Item.Properties settings() {
-        return new Item.Properties();
     }
 }
