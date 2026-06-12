@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#D#",
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:paper",
+    "D": "minecraft:yellow_dye"
+  },
+  "result": {
+    "id": "winterly:yellow_gift_box",
+    "count": 1
+  }
+}

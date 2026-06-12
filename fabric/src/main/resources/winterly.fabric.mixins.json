@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "ru.pinkgoosik.winterly.mixin",
+  "refmap": "${mod_id}.refmap.json",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [],
+  "client": [
+    "client.fabric.AbstractSkeletonRendererMixin",
+    "client.fabric.AbstractZombieRendererMixin",
+    "client.fabric.ArmorRendererMixin",
+    "client.fabric.LivingEntityRendererMixin"
+  ],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
+  

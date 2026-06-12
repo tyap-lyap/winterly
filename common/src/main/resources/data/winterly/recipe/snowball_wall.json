@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:snowball"
+  },
+  "result": {
+    "id": "winterly:snowball_wall",
+    "count": 1
+  }
+}

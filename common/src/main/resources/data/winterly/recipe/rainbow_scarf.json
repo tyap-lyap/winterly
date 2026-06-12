@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  0",
+    "321",
+    "4  "
+  ],
+  "key": {
+    "0": "minecraft:red_wool",
+    "1": "minecraft:yellow_wool",
+    "2": "minecraft:green_wool",
+    "3": "minecraft:blue_wool",
+    "4": "minecraft:purple_wool"
+  },
+  "result": {
+    "id": "winterly:rainbow_scarf",
+    "count": 1
+  }
+}

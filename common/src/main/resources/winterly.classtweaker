@@ -1,0 +1,8 @@
+accessWidener v2 official
+# Generated from common/src/main/resources/META-INF/accesstransformer.cfg
+# Only Minecraft vanilla (net.minecraft.*) access widening is auto-converted.
+# For non-vanilla entries or unsupported directives, handle manually.
+# Descriptor inference source: common\build\moddev\artifacts\vanilla-26.1.2-1-sources.jar
+
+# Manual entries
+accessible class net/minecraft/world/item/CreativeModeTab$Output

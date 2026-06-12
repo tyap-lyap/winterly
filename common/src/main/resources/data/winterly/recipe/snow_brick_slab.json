@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": "winterly:snow_bricks"
+  },
+  "result": {
+    "id": "winterly:snow_brick_slab",
+    "count": 6
+  }
+}

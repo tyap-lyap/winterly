@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:iron_axe",
+    "winterly:cryomarble"
+  ],
+  "result": {
+    "id": "winterly:cryomarble_axe",
+    "count": 1
+  }
+}

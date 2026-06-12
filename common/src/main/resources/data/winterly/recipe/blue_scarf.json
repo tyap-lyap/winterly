@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  #",
+    "###",
+    "#  "
+  ],
+  "key": {
+    "#": "minecraft:blue_wool"
+  },
+  "result": {
+    "id": "winterly:blue_scarf",
+    "count": 1
+  }
+}

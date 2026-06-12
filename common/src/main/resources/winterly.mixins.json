@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "ru.pinkgoosik.winterly.mixin",
+  "refmap": "${mod_id}.refmap.json",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "common.AbstractSkeletonMixin",
+    "common.BlockStateMixin",
+    "common.FreezeTopLayerMixin",
+    "common.ServerWorldMixin",
+    "common.SkeletonExtension",
+    "common.SnowBlockMixin",
+    "common.SnowyBlockMixin",
+    "common.SpreadableBlockMixin",
+    "common.ZombieExtension"
+  ],
+  "client": [],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

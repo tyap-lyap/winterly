@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "## ",
+    "HD ",
+    "#  "
+  ],
+  "key": {
+    "#": "minecraft:sugar",
+    "D": "minecraft:red_dye",
+    "H": "minecraft:honey_bottle"
+  },
+  "result": {
+    "id": "winterly:red_candy_cane",
+    "count": 4
+  }
+}

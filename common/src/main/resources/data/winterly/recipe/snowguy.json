@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#S ",
+    "/S/",
+    " S "
+  ],
+  "key": {
+    "#": "minecraft:carrot",
+    "S": "minecraft:snow_block",
+    "/": "minecraft:stick"
+  },
+  "result": {
+    "id": "winterly:snowguy",
+    "count": 1
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:iron_hoe",
+    "winterly:cryomarble"
+  ],
+  "result": {
+    "id": "winterly:cryomarble_hoe",
+    "count": 1
+  }
+}

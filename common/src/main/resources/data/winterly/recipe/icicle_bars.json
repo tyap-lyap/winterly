@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": "winterly:icicle"
+  },
+  "result": {
+    "id": "winterly:icicle_bars",
+    "count": 8
+  }
+}

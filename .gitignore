@@ -1,41 +1,24 @@
-# Gradle
-.gradle/
-build/
-out/
-output/
-classes/
-libs/
-Merged/
-
-# Eclipse
+# eclipse
+bin
 *.launch
+.settings
+.metadata
 .classpath
 .project
 
-# IntelliJ IDEA
-.idea/
-*.iml
+# idea
+out
 *.ipr
 *.iws
+*.iml
+.idea/*
+!.idea/scopes
 
-# Visual Studio Code
-.settings/
-.vscode/
-bin/
+# gradle
+build
+.gradle
 
-# macOS
-*.DS_Store
-
-# Minecraft/Fabric
-run/
-
-# Java
-hs_err_*.log
-replay_*.log
-*.hprof
-*.jfr
-
-# Misc
-.metadata
-.settings
-.architectury-transformer
+# other
+eclipse
+run
+runs

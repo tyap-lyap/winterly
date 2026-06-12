@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "RRR",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:white_wool",
+    "R": "minecraft:red_wool"
+  },
+  "result": {
+    "id": "winterly:red_santa_hat",
+    "count": 1
+  }
+}

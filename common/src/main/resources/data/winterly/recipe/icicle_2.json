@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": "minecraft:packed_ice"
+  },
+  "result": {
+    "id": "winterly:icicle",
+    "count": 4
+  }
+}
