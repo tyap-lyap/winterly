@@ -1,4 +1,5 @@
 {
+  "render_type": "minecraft:cutout",
   "credit": "Made in Blockbench by PinkGoosik",
   "textures": {
     "grass": "winterly:block/frozen_grass",

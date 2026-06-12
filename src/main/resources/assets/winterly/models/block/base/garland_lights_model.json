@@ -1,4 +1,5 @@
 {
+  "render_type": "minecraft:cutout",
   "ambientocclusion": false,
   "textures": {
     "lights": "winterly:block/garland_lights",

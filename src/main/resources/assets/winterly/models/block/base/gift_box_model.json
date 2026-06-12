@@ -1,9 +1,7 @@
 {
+  "render_type": "minecraft:cutout",
   "credit": "Made in Blockbench by PinkGoosik",
-  "texture_size": [
-    32,
-    32
-  ],
+  "texture_size": [32, 32],
   "textures": {
     "box": "winterly:block/black_gift_box",
     "particle": "winterly:block/black_gift_box_particle"

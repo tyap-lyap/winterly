@@ -1,4 +1,5 @@
 {
+	"render_type": "minecraft:cutout",
 	"credit": "Made in Blockbench by PinkGoosik",
     "textures": {
 		"flower": "winterly:block/frozen_flower",

@@ -1,4 +1,5 @@
 {
+  "render_type": "minecraft:cutout",
   "textures": {
     "guy": "winterly:block/snowguy_model",
     "particle": "winterly:block/snow_bricks"

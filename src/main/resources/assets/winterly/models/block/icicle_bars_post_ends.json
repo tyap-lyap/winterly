@@ -1,4 +1,5 @@
 {
+  "render_type": "minecraft:cutout",
   "parent": "block/iron_bars_post_ends",
   "textures": {
     "edge": "winterly:block/icicle_bars",

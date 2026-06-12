@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": "winterly:underground_icicle",
+  "step": "underground_decoration"
+}

@@ -1,4 +1,5 @@
 {
+  "render_type": "minecraft:translucent",
   "parent": "block/template_glass_pane_noside",
   "textures": {
     "pane": "winterly:block/icicle_block"

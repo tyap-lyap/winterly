@@ -5,6 +5,17 @@
 
   "modmenu.descriptionTranslation.winterly": "Winter expansion mod adding cold and sloppy stuff.",
 
+  "tip.winterly.requires_trinkets.0": "Requires Trinkets mod to be installed",
+  "tip.winterly.requires_trinkets.1": "in order to be wearable.",
+
+  "tip.winterly.requires_curios.0": "Requires Curios API to be installed",
+  "tip.winterly.requires_curios.1": "in order to be wearable.",
+
+  "tag.item.winterly.candy_canes": "Candy Canes",
+  "tag.item.winterly.scarfs": "Scarfs",
+  "tag.block.winterly.gift_boxes": "Gift Boxes",
+  "tag.enchantment.winterly.gift_box_pickup": "Gift Box Pickup",
+
   "item.winterly.red_candy_cane": "Red Candy Cane",
   "item.winterly.green_candy_cane": "Green Candy Cane",
   "item.winterly.blue_candy_cane": "Blue Candy Cane",
@@ -57,10 +68,8 @@
   "block.winterly.cyan_gift_box": "Cyan Gift Box",
   "block.winterly.orange_gift_box": "Orange Gift Box",
 
-  "tag.winterly.placeable": "Placeable",
-  "tag.winterly.cosmetic": "Cosmetic",
-
   "config.winterly.title": "Winterly Config",
+  "config.winterly.option.title": "Winterly Config",
   "config.winterly.general": "General",
   "config.winterly.option.max_gift_box_capacity": "Max Gift Box Capacity",
   "config.winterly.option.update_checker_enabled": "Update Checker Enabled",
@@ -68,7 +77,8 @@
   "config.winterly.option.generate_cryomarble": "Generate Cryomarble",
   "config.winterly.option.generate_frozen_grass": "Generate Frozen Grass",
   "config.winterly.option.generate_frozen_flowers": "Generate Frozen Flowers",
+  "config.winterly.option.mob_decorations": "Mob Decorations",
   "config.winterly.option.mob_decorations.enabled": "Mob Decorations Enabled",
-  "config.winterly.option.mob_decorations.only_in_winter": "Mob Decorations Only in Winter",
+  "config.winterly.option.mob_decorations.only_in_winter": "Mob Decorations Only in Winter Holidays",
   "config.winterly.option.mob_decorations.chance": "Mob Decorations Chance"
 }

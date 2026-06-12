@@ -1,4 +1,5 @@
 {
+  "render_type": "minecraft:translucent",
   "parent": "item/generated",
   "textures": {
     "layer0": "winterly:block/icicle_block"
